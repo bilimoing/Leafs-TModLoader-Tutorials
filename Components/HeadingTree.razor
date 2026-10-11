@@ -1,10 +1,19 @@
 @using 叶子的TModLoader教程.Services
+@inject IJSRuntime JS
 <ul class='heading-tree'>
 @foreach(var node in Nodes) {
-<li @key='node.Entry.Id'>
-@if(node.Children.Count > 0) { <details open><summary><a href='@(ArticleUrl + "#" + Uri.EscapeDataString(node.Entry.Id))' @onclick:stopPropagation='true' @onclick='OnNavigate'>@node.Entry.Title</a></summary><HeadingTree Nodes='node.Children' ArticleUrl='ArticleUrl' OnNavigate='OnNavigate' /></details> }
-else { <a href='@(ArticleUrl + "#" + Uri.EscapeDataString(node.Entry.Id))' @onclick='OnNavigate'>@node.Entry.Title</a> }
+<li>
+@if(node.Children.Count > 0) {
+<details open><summary><a href='@(ArticleUrl + "#" + Uri.EscapeDataString(node.Entry.Id))' @onclick:preventDefault='true' @onclick:stopPropagation='true' @onclick='() => ScrollTo(node.Entry.Id)'>@node.Entry.Title</a></summary><HeadingTree Nodes='node.Children' ArticleUrl='ArticleUrl' OnNavigate='OnNavigate' /></details>
+} else {
+<a href='@(ArticleUrl + "#" + Uri.EscapeDataString(node.Entry.Id))' @onclick:preventDefault='true' @onclick='() => ScrollTo(node.Entry.Id)'>@node.Entry.Title</a>
+}
 </li>
 }
 </ul>
-@code { [Parameter] public List<HeadingNode> Nodes { get; set; } = []; [Parameter] public string ArticleUrl { get; set; } = ""; [Parameter] public EventCallback OnNavigate { get; set; } }
+@code {
+[Parameter] public List<HeadingNode> Nodes { get; set; } = [];
+[Parameter] public string ArticleUrl { get; set; } = "";
+[Parameter] public EventCallback OnNavigate { get; set; }
+private async Task ScrollTo(string id) { var found = await JS.InvokeAsync<bool>("tutorialSite.scrollToHeading", id); if(found) await OnNavigate.InvokeAsync(); }
+}
