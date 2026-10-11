@@ -59,7 +59,7 @@ public sealed class TutorialLibrary
         Articles.Sort((a, b) => a.Order != b.Order ? a.Order.CompareTo(b.Order) : StringComparer.Ordinal.Compare(a.Title, b.Title));
         foreach (var article in Articles)
         {
-            var document = Markdown.Parse(article.Source, pipeline);
+            var document = Markdown.Parse(CleanLegacyNavigation(article.Source), pipeline);
             foreach (var link in document.Descendants<LinkInline>())
             {
                 if (link.Url is null) continue;
@@ -78,6 +78,22 @@ public sealed class TutorialLibrary
         }
     }
 
+    private static string CleanLegacyNavigation(string source)
+    {
+        var lines = source.Split((char)10);
+        var result = new List<string>();
+        for (var i = 0; i < lines.Length; i++)
+        {
+            var line = lines[i].Trim();
+            if (line.StartsWith("|") && (line.Contains("上一篇") || line.Contains("下一篇")) && i + 1 < lines.Length && lines[i + 1].Contains("---"))
+            {
+                while (i + 1 < lines.Length && lines[i + 1].TrimStart().StartsWith("|")) i++;
+                continue;
+            }
+            result.Add(lines[i]);
+        }
+        return string.Join((char)10, result);
+    }
     public Tutorial? Find(string? title) => Articles.FirstOrDefault(a => a.Title == title);
     public IEnumerable<Tutorial> Search(string query) => Articles.Where(a => a.Title != "主页" && query.Split(' ', StringSplitOptions.RemoveEmptyEntries).All(word => (a.Title + " " + a.SearchText).Contains(word, StringComparison.OrdinalIgnoreCase)));
     public static string Plain(string html) => WebUtility.HtmlDecode(Regex.Replace(html, "<[^>]+>", " ")).Trim();

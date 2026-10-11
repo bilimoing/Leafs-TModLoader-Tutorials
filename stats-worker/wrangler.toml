@@ -1,0 +1,11 @@
+name = 'leaf-tutorial-stats'
+main = 'worker.mjs'
+compatibility_date = '2026-10-01'
+[vars]
+ALLOWED_ORIGIN = 'https://bilimoing.github.io'
+[[durable_objects.bindings]]
+name = 'STATS'
+class_name = 'SiteStats'
+[[migrations]]
+tag = 'v1'
+new_sqlite_classes = ['SiteStats']
