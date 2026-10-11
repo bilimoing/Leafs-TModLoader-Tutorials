@@ -13,3 +13,9 @@ const html = original.slice(0,start) + '<base href=' + String.fromCharCode(34) +
 fs.writeFileSync(entry, html);
 fs.writeFileSync(path.join(output, '.nojekyll'), '');
 console.log('已配置 GitHub Pages 路径：' + base);
+
+const version=process.env.GITHUB_SHA?.slice(0,12)||Date.now().toString();
+let versioned=fs.readFileSync(entry,'utf8');
+for(const asset of ['css/app.css','js/site.js','js/stats.js','js/highlight.js','js/wind.js','images/tree.svg','images/leaf.svg'])versioned=versioned.split(asset+String.fromCharCode(34)).join(asset+'?v='+version+String.fromCharCode(34));
+fs.writeFileSync(entry,versioned);
+fs.writeFileSync(path.join(output,'version.json'),JSON.stringify({version,builtAt:new Date().toISOString()}));

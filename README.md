@@ -29,3 +29,11 @@ ALLOWED_ORIGIN 已限制为 https://bilimoing.github.io，更换域名时需同�
 主题切换直接切换深浅色并保存偏好。搜索固定在顶部导航中，支持按 / 聚焦。首页保留开始学习和资源入口；叶子图标使用透明背景。首页右侧显示不规则树冠大树，落叶从树冠间歇向左下漂移；文章页不显示这组装饰，减少动态效果偏好会停用动画。
 
 文章 Markdown 按需渲染并缓存，首页启动不再解析全部文章。代码块采用本地轻量词法高亮和 Visual Studio 风格深浅色配色，保持原始文本与复制内容一致；不提供 IDE 级语义分析。首次访问仍需要下载 Blazor WebAssembly 运行时，当前改动主要减少首屏解析及装饰渲染开销。
+
+## 图片本地化工具
+
+图片接口需要金山登录。先在 Chrome 或 Edge 登录 https://www.kdocs.cn 并打开自己的文档，在开发者工具 Console 中运行 scripts/image-migration/download-in-browser.js 的全部内容，选择本机一个空文件夹保存图片。此脚本仅访问清单中的图片，不读取或输出登录 Cookie。浏览器权限或金山服务仍可能阻止下载；失败原因在 results.json 中。请只在自己的已登录文档页面运行。
+
+将下载的文件放到项目 import/images 文件夹，然后从项目根目录运行 node scripts/image-migration/import.mjs。导入器检查图片类型，复制到 wwwroot/images/tutorials 并把 Markdown 地址改为站内图片，保留未成功下载的外链。提交文档与图片一起发布。
+
+全站背景树由公共布局加载，落叶随机从树冠内生成并持续沿弯曲轨迹飘落。浏览器后台或开启减少动态效果时停止生成。自动发布会为脚本与样式附加提交版本参数，减少旧缓存影响，version.json 可查看实际部署版本。

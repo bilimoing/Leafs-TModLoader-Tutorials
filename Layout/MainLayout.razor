@@ -2,6 +2,7 @@
 @inject IJSRuntime JS
 @inject 叶子的TModLoader教程.Services.SearchState Search
 <header class='site-header'><a class='brand' href='.'><img class='brand-icon leaf-logo' src='images/leaf.svg' alt='叶子标志' /><span>叶子的 <strong>tModLoader</strong> 教程<small>从第一行代码，到你的第一个模组</small></span></a><label class='header-search search-box'><span aria-hidden='true'>⌕</span><input aria-label='搜索教程全文' placeholder='搜索教程、函数、关键词…' @bind='Search.Query' @bind:event='oninput' /><kbd>/</kbd></label><nav aria-label='主导航'><a href='.'>教程首页</a><a href='?article=主页'>资源与索引</a><button @onclick='ToggleTheme' aria-label='切换深浅色主题'>◐ 切换主题</button></nav></header>
+<div class='home-woodland' aria-hidden='true'><div class='woodland-tree'><img src='images/tree.svg' alt='' /></div><div id='wind-layer'></div></div>
 @Body
 <footer class='site-footer'><span>叶子的 tModLoader 教程 · 用热爱创造更多可能</span><span>.NET 10 / TML 1.4.5 · QQ 群：921853970</span><span class='site-counter' role='status'>在线 <b id='stats-online'>未启用</b> · 总访问 <b id='stats-visits'>--</b> · 本页访问 <b id='stats-page'>--</b></span></footer>
-@code { private async Task ToggleTheme() { await JS.InvokeVoidAsync("tutorialSite.toggleTheme"); }  protected override async Task OnAfterRenderAsync(bool firstRender) { if(firstRender) await JS.InvokeVoidAsync("tutorialSite.startStats"); } }
+@code { private async Task ToggleTheme() { await JS.InvokeVoidAsync("tutorialSite.toggleTheme"); }  protected override async Task OnAfterRenderAsync(bool firstRender) { if(firstRender) { await JS.InvokeVoidAsync("tutorialSite.startStats"); await JS.InvokeVoidAsync("tutorialWind.start"); } } }
