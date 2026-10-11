@@ -1,206 +1,3369 @@
 [
   {
     "title": "0-有哪些绘制函数",
-    "expected": 0,
-    "word": 1,
-    "status": "导入"
+    "count": 0,
+    "mapping": []
   },
   {
     "title": "1-基础绘制",
-    "expected": 0,
-    "word": 2,
-    "status": "导入"
+    "count": 0,
+    "mapping": []
   },
   {
     "title": "1.4 生成源信息IEntitySource的用法",
-    "expected": 7,
-    "word": 7,
-    "status": "导入"
+    "count": 7,
+    "mapping": [
+      {
+        "url": "images/tutorials/07faa097ceff73cc52616334.png",
+        "width": 553.33,
+        "height": 351.22,
+        "relationship": "rId5",
+        "wordFile": "1.4 生成源信息IEntitySource的用法-image1.png",
+        "previous": "那么让我们进游戏看看效果吧！",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/cb4713d93e3dfaa6355fdd0f.png",
+        "width": 553.33,
+        "height": 433.62,
+        "relationship": "rId6",
+        "wordFile": "1.4 生成源信息IEntitySource的用法-image2.png",
+        "previous": "相比之下，克脑就显得弱势很多了",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/6b7d85edf2dcd8a6f738cfa6.png",
+        "width": 553.33,
+        "height": 327.09,
+        "relationship": "rId7",
+        "wordFile": "1.4 生成源信息IEntitySource的用法-image3.png",
+        "previous": "然而由于目前还不太完善，会出现一些Bug，比如作为Boss一部分的火星飞碟部件也会受到这个增益：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/931343a9fbf26a1ff14fa877.png",
+        "width": 353,
+        "height": 201,
+        "relationship": "rId8",
+        "wordFile": "1.4 生成源信息IEntitySource的用法-image4.png",
+        "previous": "效果：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/2c157dbc75555e6bf64c635c.png",
+        "width": 548,
+        "height": 493,
+        "relationship": "rId9",
+        "wordFile": "1.4 生成源信息IEntitySource的用法-image5.png",
+        "previous": "还不够？再多来点",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/5a811c530d4efe72025d821c.png",
+        "width": 397,
+        "height": 313,
+        "relationship": "rId10",
+        "wordFile": "1.4 生成源信息IEntitySource的用法-image6.png",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/847a5c1c422e255cd3fe26b0.png",
+        "width": 497,
+        "height": 423,
+        "relationship": "rId11",
+        "wordFile": "1.4 生成源信息IEntitySource的用法-image7.png",
+        "previous": "",
+        "text": ""
+      }
+    ]
   },
   {
     "title": "2-Draw各重载详解",
-    "expected": 0,
-    "word": 3,
-    "status": "导入"
+    "count": 0,
+    "mapping": []
   },
   {
     "title": "3-Begin参数详解",
-    "expected": 2,
-    "word": 49,
-    "status": "导入"
+    "count": 2,
+    "mapping": [
+      {
+        "url": "images/tutorials/d2c5fe4bdade575f9506d0f2.png",
+        "width": 553.33,
+        "height": 338.04,
+        "relationship": "rId18",
+        "wordFile": "3-Begin参数详解-image13.png",
+        "previous": "可选的值如下(金山文档这边公式不是很好用所以主播直接截图了)",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/6c96300dd6dc2d3b3f394d89.png",
+        "width": 290,
+        "height": 172,
+        "relationship": "rId99",
+        "wordFile": "3-Begin参数详解-image94.png",
+        "previous": "于是矩阵如下",
+        "text": ""
+      }
+    ]
   },
   {
     "title": "Korate：从零开始的简单坐骑",
-    "expected": 8,
-    "word": 8,
-    "status": "导入"
+    "count": 8,
+    "mapping": [
+      {
+        "url": "images/tutorials/734660ec3c4f99c0a51c03dd.jpeg",
+        "width": 224,
+        "height": 224,
+        "relationship": "rId5",
+        "wordFile": "Korate：从零开始的简单坐骑-image1.jpeg",
+        "previous": "资料，于是自己摸了源码后，来教大火简单写个坐骑。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/1b002483433c6ed2dba4f7e6.png",
+        "width": 339.33,
+        "height": 339.33,
+        "relationship": "rId6",
+        "wordFile": "Korate：从零开始的简单坐骑-image2.png",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/30346226142cbb6749894bf0.png",
+        "width": 199.6,
+        "height": 339.33,
+        "relationship": "rId7",
+        "wordFile": "Korate：从零开始的简单坐骑-image3.png",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/f64cfb458bdca9023ea42aa1.png",
+        "width": 183.36,
+        "height": 660.08,
+        "relationship": "rId8",
+        "wordFile": "Korate：从零开始的简单坐骑-image4.png",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/f64cfb458bdca9023ea42aa1.png",
+        "width": 183.36,
+        "height": 660.08,
+        "relationship": "rId9",
+        "wordFile": "Korate：从零开始的简单坐骑-image5.png",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/d8269d79012f6afd08f2b371.png",
+        "width": 165.02,
+        "height": 660.08,
+        "relationship": "rId10",
+        "wordFile": "Korate：从零开始的简单坐骑-image6.png",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/d9e4ef3fc93f34a78273a8bc.jpeg",
+        "width": 234,
+        "height": 282.66,
+        "relationship": "rId11",
+        "wordFile": "Korate：从零开始的简单坐骑-image7.jpeg",
+        "previous": "那么如何写一个自♂由的坐骑呢？",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/c8ceeb17583c9803c72f26d1.gif",
+        "width": 161,
+        "height": 152.61,
+        "relationship": "rId12",
+        "wordFile": "Korate：从零开始的简单坐骑-image8.gif",
+        "previous": "",
+        "text": ""
+      }
+    ]
   },
   {
     "title": "NET SDK安装与配置",
-    "expected": 4,
-    "word": 6,
-    "status": "导入"
+    "count": 4,
+    "mapping": [
+      {
+        "url": "images/tutorials/edf14ac5c4524253e5563c56.png",
+        "width": 553.33,
+        "height": 332.77,
+        "relationship": "rId5",
+        "wordFile": "NET SDK安装与配置-image1.png",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/1d6844d9c77e74f6f7fcf270.png",
+        "width": 553.33,
+        "height": 415.51,
+        "relationship": "rId6",
+        "wordFile": "NET SDK安装与配置-image2.png",
+        "previous": "大部分 Windows 10 / Windows 11 无脑选择x64即可",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/df72b6dfae05ac97703ee34a.png",
+        "width": 553.33,
+        "height": 327.71,
+        "relationship": "rId7",
+        "wordFile": "NET SDK安装与配置-image3.png",
+        "previous": " HYPERLINK \"https://dotnet.microsoft.com/zh-cn/download/dotnet/10.0\" https://dotnet.microsoft.com/zh-cn/download/dotnet/10.0",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/af563135f3a01e2a3f89af74.png",
+        "width": 553.33,
+        "height": 423.53,
+        "relationship": "rId8",
+        "wordFile": "NET SDK安装与配置-image4.png",
+        "previous": "dotnet --list-sdks",
+        "text": ""
+      }
+    ]
   },
   {
     "title": "Shader简介",
-    "expected": 41,
-    "word": 41,
-    "status": "导入"
+    "count": 41,
+    "mapping": [
+      {
+        "url": "images/tutorials/3e268491b5737d735a2d46a4.png",
+        "width": 553.33,
+        "height": 280.36,
+        "relationship": "rId5",
+        "wordFile": "Shader简介-image1.png",
+        "previous": "我们来看看要把一张图片绘制到屏幕上会进行哪些操作，这里我引用了一下OpenGL的渲染管线，XNA的渲染管线不会有太大区别",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/0e1e076a5a7b1ae333faf40a.jpeg",
+        "width": 553.33,
+        "height": 373.6,
+        "relationship": "rId6",
+        "wordFile": "Shader简介-image2.jpeg",
+        "previous": "那么它可以用来做什么呢？比如黑白电视，",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/37f8dd239fe7961787beaf44.png",
+        "width": 506,
+        "height": 417,
+        "relationship": "rId7",
+        "wordFile": "Shader简介-image3.png",
+        "previous": "比如局部放大（可以用来做空气扭曲效果）",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/509b63bbf2b3c899847395ff.jpeg",
+        "width": 553.33,
+        "height": 326.79,
+        "relationship": "rId8",
+        "wordFile": "Shader简介-image4.jpeg",
+        "previous": "或者高斯模糊效果：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/a9ed5c6548b63184a26040fb.png",
+        "width": 553.33,
+        "height": 225.07,
+        "relationship": "rId9",
+        "wordFile": "Shader简介-image5.png",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/1d7aa3d73c0f4d1240843977.png",
+        "width": 553.33,
+        "height": 235.6,
+        "relationship": "rId10",
+        "wordFile": "Shader简介-image6.png",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/eb43bb21a70f51ba96e26330.png",
+        "width": 433,
+        "height": 252.03,
+        "relationship": "rId11",
+        "wordFile": "Shader简介-image7.png",
+        "previous": "运行成功",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/3c86fc76302aa47559cf105c.png",
+        "width": 274,
+        "height": 144,
+        "relationship": "rId12",
+        "wordFile": "Shader简介-image8.png",
+        "previous": "如果在编译中途报错，可以查看文件夹内的EasyXnb_Log来查找错误信息。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/79164b1a37731a9284b5b2d9.gif",
+        "width": 553.33,
+        "height": 350.2,
+        "relationship": "rId13",
+        "wordFile": "Shader简介-image9.gif",
+        "previous": "编写着色器",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/6d46f8388f17e7fda6a43867.png",
+        "width": 553.33,
+        "height": 478.96,
+        "relationship": "rId14",
+        "wordFile": "Shader简介-image10.png",
+        "previous": "值得一提的就是，这些向量做切片操作（Slicing）都相当轻松，假设我们有个四维向量x，我们可以通过x.rgb来得到一个三维向量，存储它的前三个浮点数信息。也可以用x.rga来得到一个三位向量，只不过这次是第一二四个浮点数的信息。此外，我们还可以用x.xyz来达到和x.rgb相同的效果。你甚至还可以做到更多，比如下标访问，甚至x.aaaa获取一个四维向量，四个值全都是第一个位置的值。我经常滥用这个特性，爱死它了。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/25df80a8da8c07d36673ff0a.png",
+        "width": 553.33,
+        "height": 319.69,
+        "relationship": "rId15",
+        "wordFile": "Shader简介-image11.png",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/220b0c90a5815911dccd36bd.png",
+        "width": 260,
+        "height": 71.91,
+        "relationship": "rId16",
+        "wordFile": "Shader简介-image12.png",
+        "previous": "到这里，我们就写出了一个基本的着色器脚本，把它编译一下就能得到xnb文件。接下来我们要在TML里面加载以及使用这个着色器。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/13d57857e2c93c08e7f7ad17.png",
+        "width": 523,
+        "height": 302.26,
+        "relationship": "rId17",
+        "wordFile": "Shader简介-image13.png",
+        "previous": "接着把代码粘贴进去，然后你就会发现....",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/9f88ee45e1faf1d8006f2e89.png",
+        "width": 324,
+        "height": 153,
+        "relationship": "rId18",
+        "wordFile": "Shader简介-image14.png",
+        "previous": "这些代码在窗口内显示的全都是白色。对于习惯了编译器 花花绿绿 的我们来说，这样子看着实在难受。这是因为 Visual Studio 只能识别 .cs 文件以及一些常见格式，没有识别 .fx 文件的能力。那么，我们该怎么办呢？",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/4032c2561f058642751cabfc.png",
+        "width": 553.33,
+        "height": 237.46,
+        "relationship": "rId19",
+        "wordFile": "Shader简介-image15.png",
+        "previous": "其实很简单，只需要在 VS 里装一个小小的扩展。，点击 扩展 → 管理扩展，打开扩展管理器。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/da4a30111f61141dcc4136c0.png",
+        "width": 548,
+        "height": 420.25,
+        "relationship": "rId20",
+        "wordFile": "Shader简介-image16.png",
+        "previous": "然后在扩展管理器的搜索框里搜索 HLSL，弹出来的第一个扩展就是我们要的。点击安装。重新进入后，我们就会看到....",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/0c20352209edf9371eb5bd2a.png",
+        "width": 553.33,
+        "height": 358.09,
+        "relationship": "rId21",
+        "wordFile": "Shader简介-image17.png",
+        "previous": "如果是 Additive 模式，那么绘制结果的颜色是 Ca + Cb，是一种非常暴力的混合方式，白色封顶，这样的效果会比较亮，而且感觉上会很透明，尤其适合技能特效方面的绘制。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/2d68cf139b2a48634deae8c5.png",
+        "width": 337,
+        "height": 253,
+        "relationship": "rId22",
+        "wordFile": "Shader简介-image18.png",
+        "previous": "多个npc重合在一起就会发亮",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/22701ac932c6a53cec17394b.png",
+        "width": 500,
+        "height": 367,
+        "relationship": "rId23",
+        "wordFile": "Shader简介-image19.png",
+        "previous": "为了实现彩虹色的效果，我们需要用一种新的颜色生成方法。众所周知，颜色可以表示为RGB色，分别代表红绿蓝三色的强度。但是这种表示方法显然很难完成我们想要的彩虹色功能，否则我们需要好几次线性插值来生成颜色",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/edb2b36b5c16e375b2922115.png",
+        "width": 347,
+        "height": 347,
+        "relationship": "rId25",
+        "wordFile": "Shader简介-image20.png",
+        "previous": "不过好在我们颜色的表示方法不止RGB，还有一种常用的方法叫做HSV/HSL表示法。 HSV即色相、饱和度、明度（Hue, Saturation, Value） 表示法，和我们熟悉的RGB色不同，仅用H就能表示主体颜色，其他两个值只是在主体颜色下变化。而H主要是以角度（弧度？）表示的，如下图所示，代表了一个圆外圈的颜色。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/35274a2f6173beae390b2f0a.gif",
+        "width": 487,
+        "height": 408,
+        "relationship": "rId27",
+        "wordFile": "Shader简介-image21.gif",
+        "previous": "于是我们就有两个横向动态彩虹色的NPC了。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/9f57dd2a3fe805727db0fc0a.gif",
+        "width": 553.33,
+        "height": 378.26,
+        "relationship": "rId28",
+        "wordFile": "Shader简介-image22.gif",
+        "previous": "那么得到图像尺寸以后，每一个像素的坐标值就很明确了，横向就是 1/Width 纵向就是 1/Height。然后我们就可以利用这一点找到周围像素的颜色，然后进行判定了：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/bf33e71d3970342c9cf0c941.png",
+        "width": 553.33,
+        "height": 161.29,
+        "relationship": "rId29",
+        "wordFile": "Shader简介-image23.png",
+        "previous": "但是我们把它丢到编译器里……",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/0e16ed25b94fd8e9f15176c0.jpeg",
+        "width": 217,
+        "height": 183.62,
+        "relationship": "rId30",
+        "wordFile": "Shader简介-image24.jpeg",
+        "previous": "而且对于描边这种“大部分像素只需一次纹理读取、只有边缘少数像素需要多采样”的场景，ps_3_0 的动态分支优势非常明显，内部像素能直接跳过所有邻域采样，不用像ps_2_0 一样被迫绕弯。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/f1ab98ef0292107ce44e286a.png",
+        "width": 403,
+        "height": 84,
+        "relationship": "rId31",
+        "wordFile": "Shader简介-image25.png",
+        "previous": "我们知道，普通的正态分布公式是",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/63bd5d1f8ddc85cf144922ba.png",
+        "width": 398,
+        "height": 90,
+        "relationship": "rId32",
+        "wordFile": "Shader简介-image26.png",
+        "previous": "其中 μ 是均值，σ2 是方差，它的图像大家想必在 随机数生成入门（还没搬运） 已经看过了，但是这里主要还是要它的二维表示形式，设原点为0有二维方程：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/800b773cab7271758d3e4230.jpeg",
+        "width": 412,
+        "height": 294.97,
+        "relationship": "rId33",
+        "wordFile": "Shader简介-image27.jpeg",
+        "previous": "为什么这样的函数能造成模糊的效果呢？因为你的像素都加上了周围像素的值，所以他就会更像它的周围环境，人眼看上去，很多细节就被这种混合操作抹去了，自然就模糊了。但是为什么非要是正态分布比例？可能因为这样效果比较好，你当然可以试试均摊，这里给几张实例图，你们也可以在游戏里面自己体会一下。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/fd3edf994b9a202c5645b7fc.png",
+        "width": 418,
+        "height": 299.27,
+        "relationship": "rId34",
+        "wordFile": "Shader简介-image28.png",
+        "previous": "原图",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/a957ad4d75ba9e9c158f0819.png",
+        "width": 426,
+        "height": 304.99,
+        "relationship": "rId35",
+        "wordFile": "Shader简介-image29.png",
+        "previous": "均摊模糊效果",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/56b2f16af9f1f124d7a26056.png",
+        "width": 553.33,
+        "height": 331.04,
+        "relationship": "rId36",
+        "wordFile": "Shader简介-image30.png",
+        "previous": "然后编译加载进入游戏即可看到效果？并不可以，你一定会得到NullReference异常，因为泰拉瑞亚自带的ScreenShaderData给脚本传递了很多参数，如果你没有把这些参数填在脚本里面就会出错。我们可以通过源码看一下都有哪些参数要填：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/a463a39c1fb4e144cd6dbecb.gif",
+        "width": 463,
+        "height": 292.03,
+        "relationship": "rId37",
+        "wordFile": "Shader简介-image31.gif",
+        "previous": "正常效果：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/436547f36c5d82f1ef5f8336.gif",
+        "width": 462,
+        "height": 340,
+        "relationship": "rId38",
+        "wordFile": "Shader简介-image32.gif",
+        "previous": "开启shader效果：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/f0f9471f16c682e15e9e7ebe.png",
+        "width": 553.33,
+        "height": 230.81,
+        "relationship": "rId39",
+        "wordFile": "Shader简介-image33.png",
+        "previous": "听起来有点绕，我们上个图：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/f7dd86cd073ba9c568713992.png",
+        "width": 553.33,
+        "height": 292.81,
+        "relationship": "rId40",
+        "wordFile": "Shader简介-image34.png",
+        "previous": "正常无shader",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/07f363a5f3457c5e360354cb.png",
+        "width": 553.33,
+        "height": 292.81,
+        "relationship": "rId41",
+        "wordFile": "Shader简介-image35.png",
+        "previous": "开启shader",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/fa9a723e4c388d77abf6eaa3.png",
+        "width": 553.33,
+        "height": 292.81,
+        "relationship": "rId42",
+        "wordFile": "Shader简介-image36.png",
+        "previous": "比如我们让这个向量里中心越近变化越大，做一个线性插值，会有一个很诡异的效果：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/11bab50d8a8af62b6c3d7f2b.png",
+        "width": 553.33,
+        "height": 291.08,
+        "relationship": "rId43",
+        "wordFile": "Shader简介-image37.png",
+        "previous": "或者限制放大的上限，让滤镜变得柔和一点",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/090245921458136302d8874e.png",
+        "width": 283,
+        "height": 102,
+        "relationship": "rId44",
+        "wordFile": "Shader简介-image38.png",
+        "previous": "如果你完全理解了之前的缩放算法，那么扭曲就变得极为简单了，只要你把之前的缩放向量变成旋转向量即可。要旋转一个二维向量有一个很好用的方法就是利用二维旋转矩阵：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/a170a8c632540f8beb7df74a.png",
+        "width": 553.33,
+        "height": 294.25,
+        "relationship": "rId45",
+        "wordFile": "Shader简介-image39.png",
+        "previous": "让我们来测试一下，先将屏幕旋转90度",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/983e7a30c15ee22f747e88e6.png",
+        "width": 553.33,
+        "height": 295.98,
+        "relationship": "rId46",
+        "wordFile": "Shader简介-image40.png",
+        "previous": "然后我们把旋转的角度改一改，就有扭曲效果了：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/6155a56fff58c420bf10c220.png",
+        "width": 122,
+        "height": 122,
+        "relationship": "rId47",
+        "wordFile": "Shader简介-image41.png",
+        "previous": "",
+        "text": ""
+      }
+    ]
   },
   {
     "title": "Visual Studio安装与配置",
-    "expected": 3,
-    "word": 5,
-    "status": "导入"
+    "count": 3,
+    "mapping": [
+      {
+        "url": "images/tutorials/253facce8c45ec891837c295.png",
+        "width": 553.33,
+        "height": 273.21,
+        "relationship": "rId5",
+        "wordFile": "Visual Studio安装与配置-image1.png",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/2bb564fda0d3343eee9e5334.png",
+        "width": 553.33,
+        "height": 333.65,
+        "relationship": "rId6",
+        "wordFile": "Visual Studio安装与配置-image2.png",
+        "previous": "打开官网以后，我们会看到这个页面，不要点击那个免费下载，点击免费下载下面那个浏览所有版本的按钮。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/8f161b254dfa34abb56b0f15.png",
+        "width": 553.33,
+        "height": 301.11,
+        "relationship": "rId7",
+        "wordFile": "Visual Studio安装与配置-image3.png",
+        "previous": "",
+        "text": ""
+      }
+    ]
   },
   {
     "title": "主页",
-    "expected": 0,
-    "word": 0,
-    "status": "导入"
+    "count": 0,
+    "mapping": []
   },
   {
     "title": "使用绘制来实现影子拖尾",
-    "expected": 10,
-    "word": 10,
-    "status": "导入"
+    "count": 10,
+    "mapping": [
+      {
+        "url": "images/tutorials/047c388eec30a198fda560a7.gif",
+        "width": 553.33,
+        "height": 328.63,
+        "relationship": "rId5",
+        "wordFile": "使用绘制来实现影子拖尾-image1.gif",
+        "previous": "其次是效果图：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/7ffcd09caf9e0a6dba67fe5f.jpeg",
+        "width": 181,
+        "height": 179.39,
+        "relationship": "rId6",
+        "wordFile": "使用绘制来实现影子拖尾-image2.jpeg",
+        "previous": " 好的，教程结束了 ",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/dee82bb550e2dfeb4324005b.png",
+        "width": 553.33,
+        "height": 250.32,
+        "relationship": "rId7",
+        "wordFile": "使用绘制来实现影子拖尾-image3.png",
+        "previous": "如果把它们放到一个坐标系中，它们大概长这样：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/9a9559741e604d6583f5e581.png",
+        "width": 314,
+        "height": 171,
+        "relationship": "rId8",
+        "wordFile": "使用绘制来实现影子拖尾-image4.png",
+        "previous": "接下来，我们遍历记录下来的位置列表，把弹幕的图像绘制到每一个记录点上，并让它的方向指向下一个记录点。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/163c8a6b2ad5e87c03a332c2.png",
+        "width": 516,
+        "height": 299.8,
+        "relationship": "rId9",
+        "wordFile": "使用绘制来实现影子拖尾-image5.png",
+        "previous": "我怎么知道是我还在写这篇文章的时候裙子告诉我的我又没开发过大型项目问裙子去（不是）",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/e4b4816065f930793ca61d17.png",
+        "width": 541,
+        "height": 293.39,
+        "relationship": "rId10",
+        "wordFile": "使用绘制来实现影子拖尾-image6.png",
+        "previous": "最经典灾难：菱形继承",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/a3b9c7b064c0d15885f85554.png",
+        "width": 85.31,
+        "height": 511.87,
+        "relationship": "rId11",
+        "wordFile": "使用绘制来实现影子拖尾-image7.png",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/e808273357c9f4c5a327c1a4.png",
+        "width": 180.66,
+        "height": 511.87,
+        "relationship": "rId12",
+        "wordFile": "使用绘制来实现影子拖尾-image8.png",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/5a0713050e39cbd0e799089b.png",
+        "width": 147.66,
+        "height": 511.87,
+        "relationship": "rId13",
+        "wordFile": "使用绘制来实现影子拖尾-image9.png",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/086b4a64bdba7e8ad67626ea.png",
+        "width": 110.91,
+        "height": 511.87,
+        "relationship": "rId14",
+        "wordFile": "使用绘制来实现影子拖尾-image10.png",
+        "previous": "",
+        "text": ""
+      }
+    ]
   },
   {
     "title": "修改神秘模板剑",
-    "expected": 17,
-    "word": 19,
-    "status": "导入"
+    "count": 17,
+    "mapping": [
+      {
+        "url": "images/tutorials/424ec7e66965f288d958d068.png",
+        "width": 553.33,
+        "height": 176.63,
+        "relationship": "rId5",
+        "wordFile": "修改神秘模板剑-image1.png",
+        "previous": "首先，打开我们Mod的源码文件夹，然后在里面找到Mod.csproj （你的模组名字.csproj）忘记源码文件夹怎么打开，或是不知道自己模组的Mod.csproj 文件在哪的同学，可以返回  HYPERLINK \"https://www.kdocs.cn/l/chZ6nHrjGRxQ\" 模组文件夹结构与基本信息>>教程重新学习",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/138e7f888a9e2b6f8e5f1fe9.png",
+        "width": 553.33,
+        "height": 296.26,
+        "relationship": "rId6",
+        "wordFile": "修改神秘模板剑-image2.png",
+        "previous": "然后我们选择Mod.csproj > 右键 > 打开方式 > Visual Studio",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/25945fddce09efdfc19daa30.png",
+        "width": 342,
+        "height": 237,
+        "relationship": "rId7",
+        "wordFile": "修改神秘模板剑-image3.png",
+        "previous": "现在我们看向解决方案资源管理器",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/d93b4381efc6e7d5b3b30fd5.png",
+        "width": 553.33,
+        "height": 296.84,
+        "relationship": "rId8",
+        "wordFile": "修改神秘模板剑-image4.png",
+        "previous": "解决方案资源管理器上有一个Content文件夹，双击它或者点击 > 它就会展开自身，然后我们对展开后出现的Items文件夹进行以上的操作，就能够看到我们模板剑的代码文件",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/b83dccaeb48c787dbd67c90f.png",
+        "width": 553.33,
+        "height": 118.91,
+        "relationship": "rId9",
+        "wordFile": "修改神秘模板剑-image5.png",
+        "previous": "将其双击打开，你会看到原本 空空荡荡 的代码编辑区瞬间充满了内容。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/4ec752d09bf672732cd06253.png",
+        "width": 142,
+        "height": 61,
+        "relationship": "rId10",
+        "wordFile": "修改神秘模板剑-image6.png",
+        "previous": "1单行注释",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/4921b304f2430fefad0918b8.png",
+        "width": 196,
+        "height": 236,
+        "relationship": "rId11",
+        "wordFile": "修改神秘模板剑-image7.png",
+        "previous": "2多行注释  ",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/dc58a80f14ee1e6413bab9a3.png",
+        "width": 546,
+        "height": 454,
+        "relationship": "rId12",
+        "wordFile": "修改神秘模板剑-image8.png",
+        "previous": "可以对一段代码做说明，或者临时注释掉一大块代码用于调试",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/483eeaf6f457f736ad9c32be.png",
+        "width": 344,
+        "height": 90,
+        "relationship": "rId13",
+        "wordFile": "修改神秘模板剑-image9.png",
+        "previous": "我这里有段加好了注释的代码，试着把它粘贴到游戏里吧。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/26b538a0745a516d119dd333.png",
+        "width": 245,
+        "height": 87,
+        "relationship": "rId14",
+        "wordFile": "修改神秘模板剑-image10.png",
+        "previous": "粘贴完成之后，我们开始尝试对物品属性进行修改，先吧damage 后面的50删掉，然后换成自己喜欢的数字（喜）",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/6cc8339df3818535257976d8.png",
+        "width": 216,
+        "height": 93,
+        "relationship": "rId15",
+        "wordFile": "修改神秘模板剑-image11.png",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/3c595c0f8c0ea03b1e3476ea.png",
+        "width": 553.33,
+        "height": 114.25,
+        "relationship": "rId16",
+        "wordFile": "修改神秘模板剑-image12.png",
+        "previous": "然后，点击保存或者全部保存，第1次保存的时候会编译器让你创建一个sln或者是slnx，直接点确定就行。这个是我们的解决方案文件，双击它可以快速打开vs，不用像之前一样右键选择打开方式。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/7074911a3e349c9199f45fe4.png",
+        "width": 323,
+        "height": 326.92,
+        "relationship": "rId17",
+        "wordFile": "修改神秘模板剑-image13.png",
+        "previous": "然后回到游戏内，模组源码这里，点击构建并重新加载",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/98927f1b86b705624b3e7608.gif",
+        "width": 553.33,
+        "height": 414.35,
+        "relationship": "rId18",
+        "wordFile": "修改神秘模板剑-image14.gif",
+        "previous": "光有 shoot 还不够，你还要告诉游戏弹幕飞多快，这就要用到 shootSpeed 它代表的意思是发射的弹幕速度。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/72d58de7772eb7298f624879.png",
+        "width": 553.33,
+        "height": 395.67,
+        "relationship": "rId19",
+        "wordFile": "修改神秘模板剑-image15.png",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/17d81b4c030037c8ed094131.gif",
+        "width": 553.33,
+        "height": 294.19,
+        "relationship": "rId20",
+        "wordFile": "修改神秘模板剑-image16.gif",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/0d5dfa166d4cf56ff1353533.png",
+        "width": 415,
+        "height": 153,
+        "relationship": "rId21",
+        "wordFile": "修改神秘模板剑-image17.png",
+        "previous": "你可以多试几种弹幕，部分弹幕无法被简单发射。（非常好玩）",
+        "text": ""
+      }
+    ]
   },
   {
     "title": "双用途武器1.4.5再版",
-    "expected": 9,
-    "word": 9,
-    "status": "导入"
+    "count": 9,
+    "mapping": [
+      {
+        "url": "images/tutorials/47c0835d71b33d37b6fc3233.gif",
+        "width": 553.33,
+        "height": 355.94,
+        "relationship": "rId5",
+        "wordFile": "双用途武器1.4.5再版-image1.gif",
+        "previous": "效果展示：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/1e529a1be0488419c7938c5e.gif",
+        "width": 552,
+        "height": 350,
+        "relationship": "rId6",
+        "wordFile": "双用途武器1.4.5再版-image2.gif",
+        "previous": "甚至双用途药水：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/effe8c6b1a262471ea5f4b00.png",
+        "width": 553.33,
+        "height": 130.96,
+        "relationship": "rId7",
+        "wordFile": "双用途武器1.4.5再版-image3.png",
+        "previous": "双用途武器的一个核心函数是：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/b5a8480d6b04682bcc318f00.png",
+        "width": 474,
+        "height": 286.27,
+        "relationship": "rId8",
+        "wordFile": "双用途武器1.4.5再版-image4.png",
+        "previous": "这里改把手枪实验一下：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/c22e41a0893a207e09234ac6.gif",
+        "width": 549,
+        "height": 329,
+        "relationship": "rId9",
+        "wordFile": "双用途武器1.4.5再版-image5.gif",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/d1be53da69141509e9bc6522.png",
+        "width": 553.33,
+        "height": 111.25,
+        "relationship": "rId10",
+        "wordFile": "双用途武器1.4.5再版-image6.png",
+        "previous": "Item物品的右键默认无法连续使用，想要让武器右键也能连续使用，需要将ItemID.Sets.ItemsThatAllowRepeatedRightClick[Type] 设置为 true",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/22b8238f022af7d6dd0a2a7f.gif",
+        "width": 553.33,
+        "height": 385.82,
+        "relationship": "rId11",
+        "wordFile": "双用途武器1.4.5再版-image7.gif",
+        "previous": "在SetStaticDefaults函数里给整个物品全局设置",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/45c5a53cb1311142255bbcd5.png",
+        "width": 553.33,
+        "height": 148.13,
+        "relationship": "rId12",
+        "wordFile": "双用途武器1.4.5再版-image8.png",
+        "previous": "为了做到更多不同的效果（调整物品大小，修改消耗魔力值，使用不同类型的子弹等），我们可能会对Item物品本身进行修改。这里我推荐在CanUseItem重写函数里面修改物品数值。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/05b1a79ea443f327e5b6891b.gif",
+        "width": 552,
+        "height": 350,
+        "relationship": "rId13",
+        "wordFile": "双用途武器1.4.5再版-image9.gif",
+        "previous": "那么所有关于双用途武器的要点我们就讲完了，很简单吧？不过我们不一定要在右键功能上只修改属性，事实上右键判定本身就很有价值了，结合一下前面所学的内容....",
+        "text": ""
+      }
+    ]
   },
   {
     "title": "基础数学知识——三角函数",
-    "expected": 23,
-    "word": 23,
-    "status": "导入"
+    "count": 23,
+    "mapping": [
+      {
+        "url": "images/tutorials/2e215e53a1907d07323ed4da.png",
+        "width": 412,
+        "height": 303,
+        "relationship": "rId5",
+        "wordFile": "基础数学知识——三角函数-image1.png",
+        "previous": "上一讲中，我们提到，向量是具有大小和方向的量，并且学会了向量之间的运算。但是这些运算都是基于向量X，Y分量的，如果我们只知道向量的长度和与X轴正方向的夹角，那我们怎么求出向量的两个分量(X,Y)呢？",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/0be60d6f61d343534ec87472.png",
+        "width": 25,
+        "height": 61,
+        "relationship": "rId6",
+        "wordFile": "基础数学知识——三角函数-image2.png",
+        "previous": "答案：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/0be60d6f61d343534ec87472.png",
+        "width": 25,
+        "height": 61,
+        "relationship": "rId6",
+        "wordFile": "基础数学知识——三角函数-image2.png",
+        "previous": "那么我们说，360度（整圆）的弧度为2π，180度（半圆）的弧度为π，90度角（四分之一扇形）的弧度为",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/26f1a49df222473cee8b5f57.gif",
+        "width": 553.33,
+        "height": 315.15,
+        "relationship": "rId7",
+        "wordFile": "基础数学知识——三角函数-image3.gif",
+        "previous": "所以什么是弧度呢？其实就是在圆的半径为1的时候，在这个角度的情况下，所构成的圆弧的长度。可能不太好理解，那就用动画来解释：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/15ad00c0041612276389514c.png",
+        "width": 386,
+        "height": 262,
+        "relationship": "rId8",
+        "wordFile": "基础数学知识——三角函数-image4.png",
+        "previous": "接下来我们先看一下三角函数中最先学的sin函数，假设我们有一个直角三角形OAD：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/95d8fa563c3b23083045b985.png",
+        "width": 145,
+        "height": 78,
+        "relationship": "rId9",
+        "wordFile": "基础数学知识——三角函数-image5.png",
+        "previous": "那么我们把∠AOD叫做θ，把θ所对应的边AD叫做对边，把AO这条与直角∠ADO相对的边叫做斜边，然后把OD这条第三边叫做邻边。那么sin这个函数的作用就是根据输入进来的弧度θ，我返回以这个角为直角三角形的对边长度除以斜边长度的值。可以写为：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/9e06c82efed88000da6d168f.png",
+        "width": 149,
+        "height": 78,
+        "relationship": "rId10",
+        "wordFile": "基础数学知识——三角函数-image6.png",
+        "previous": "同理，cos这个三角函数也可以表示为：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/a290c1d9e90670c8f3dbb46d.png",
+        "width": 147,
+        "height": 78,
+        "relationship": "rId11",
+        "wordFile": "基础数学知识——三角函数-image7.png",
+        "previous": "最后一个基本三角函数是tan，它的表示是：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/d82e10885c37b4bb03c494c3.png",
+        "width": 521,
+        "height": 65,
+        "relationship": "rId12",
+        "wordFile": "基础数学知识——三角函数-image8.png",
+        "previous": "比如说30度角的斜边长度是100，那么对边的长度就是：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/15ad00c0041612276389514c.png",
+        "width": 386,
+        "height": 262,
+        "relationship": "rId8",
+        "wordFile": "基础数学知识——三角函数-image4.png",
+        "previous": "那么聪明的你或许已经想到了怎么求开头的问题了，我们重新来看这幅图",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/ede11dee05d6258003d2f29f.png",
+        "width": 238,
+        "height": 37,
+        "relationship": "rId13",
+        "wordFile": "基础数学知识——三角函数-image9.png",
+        "previous": "对了，就是cos，然后在看AD的长度怎么求呢？答案是sin函数。那么根据刚才学的知识，OA这个向量的数对表示可以这么写：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/436d50ca19067625ad7a859a.png",
+        "width": 553.33,
+        "height": 9.83,
+        "relationship": "rId14",
+        "wordFile": "基础数学知识——三角函数-image10.png",
+        "previous": "反三角函数",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/26e279e75c034d0921f931f6.png",
+        "width": 84,
+        "height": 114,
+        "relationship": "rId15",
+        "wordFile": "基础数学知识——三角函数-image11.png",
+        "previous": "当然有，这就是反三角函数，比如sin的反函数就是给定对边与斜边的比值，返回这个角的弧度。反三角函数的写法为：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/b5d0a2d0c0cfed3907beb7b5.png",
+        "width": 96,
+        "height": 102,
+        "relationship": "rId16",
+        "wordFile": "基础数学知识——三角函数-image12.png",
+        "previous": "或者",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/fda961f76f0a78fcc8ff02d1.png",
+        "width": 163,
+        "height": 73,
+        "relationship": "rId17",
+        "wordFile": "基础数学知识——三角函数-image13.png",
+        "previous": "所以为了求出θ的角度，只需要",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/436d50ca19067625ad7a859a.png",
+        "width": 553.33,
+        "height": 9.83,
+        "relationship": "rId18",
+        "wordFile": "基础数学知识——三角函数-image14.png",
+        "previous": "挑战：寻找发射向量",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/beed04d158b10692c6764a4b.png",
+        "width": 553.33,
+        "height": 438.24,
+        "relationship": "rId19",
+        "wordFile": "基础数学知识——三角函数-image15.png",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/4c62d639527aa8756cf84d7a.png",
+        "width": 553.33,
+        "height": 386.64,
+        "relationship": "rId20",
+        "wordFile": "基础数学知识——三角函数-image16.png",
+        "previous": "我们要求PM向量（从P到M）的坐标表示形式，我们已知的是两个点的坐标。我们回想一下上一章我们讲过向量是可以用坐标表示的，那么坐标可不可以用向量表示呢？当然可以。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/bed6a5069c9c1544797d9ee2.png",
+        "width": 428,
+        "height": 344,
+        "relationship": "rId21",
+        "wordFile": "基础数学知识——三角函数-image17.png",
+        "previous": "怎么求角度呢，我们就需要用到反三角函数了，tan的反函数似乎就很好用，因为我们只知道PM向量的X，Y分量的大小，我们把它记做(Xpm, Ypm)吧。我们知道，向量的X轴分量就是这个三角形的邻边，向量的Y轴分量就是这个三角形的对边，如图：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/b69dfe79f89a276f4b2bba5a.png",
+        "width": 141,
+        "height": 61,
+        "relationship": "rId22",
+        "wordFile": "基础数学知识——三角函数-image18.png",
+        "previous": "所以为了求出向量的角度，我们只需要",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/ede11dee05d6258003d2f29f.png",
+        "width": 238,
+        "height": 37,
+        "relationship": "rId13",
+        "wordFile": "基础数学知识——三角函数-image9.png",
+        "previous": "然后加上一个角度α，得到最终角度β。现在轮到下一个难题了，怎么通过角度重建向量？我们前面才学到了公式：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/0384eea2f1391051b9693f89.png",
+        "width": 259,
+        "height": 37,
+        "relationship": "rId23",
+        "wordFile": "基础数学知识——三角函数-image19.png",
+        "previous": "所以答案很明显了，最终的结果向量就是",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/436d50ca19067625ad7a859a.png",
+        "width": 553.33,
+        "height": 9.83,
+        "relationship": "rId24",
+        "wordFile": "基础数学知识——三角函数-image20.png",
+        "previous": "实现散弹",
+        "text": ""
+      }
+    ]
   },
   {
     "title": "基础数学知识——向量",
-    "expected": 22,
-    "word": 22,
-    "status": "导入"
+    "count": 22,
+    "mapping": [
+      {
+        "url": "images/tutorials/e84f8c5592f6ff062092d96d.png",
+        "width": 367,
+        "height": 272,
+        "relationship": "rId7",
+        "wordFile": "基础数学知识——向量-image1.png",
+        "previous": "我们知道，TR是一个二维游戏，所有的物体的运动情况都是需要在一个二维平面内表示的，或者说，一个平面直角坐标系来表示。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/05feac06396e821bed00b39e.png",
+        "width": 237,
+        "height": 255,
+        "relationship": "rId8",
+        "wordFile": "基础数学知识——向量-image2.png",
+        "previous": "我们把向量OA这条线段的长度叫做向量的大小，现在我们要确认的就是OA方向，一般来说，我们描述这个方向就是用OA与X轴的夹角来描述。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/86335ea4ec8ac2e0959d5db4.png",
+        "width": 412,
+        "height": 306,
+        "relationship": "rId9",
+        "wordFile": "基础数学知识——向量-image3.png",
+        "previous": "还有一种描述向量的方式就是用数对，比如图中的OA向量就可以用(2,1)来表示。如果向量方向相反（AO），那么就需要用(-2,-1)表示了，因为这时候该以A作为原点了。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/7f11bfb68bbdb5813c76a029.png",
+        "width": 522,
+        "height": 422,
+        "relationship": "rId10",
+        "wordFile": "基础数学知识——向量-image4.png",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/c296d59125284576b260b2a3.png",
+        "width": 372,
+        "height": 260,
+        "relationship": "rId11",
+        "wordFile": "基础数学知识——向量-image5.png",
+        "previous": "向量的加减乘除与标量不同，假设有两个向量OA，OB，",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/a5af2529f3482bcd01af7c21.png",
+        "width": 402,
+        "height": 266,
+        "relationship": "rId12",
+        "wordFile": "基础数学知识——向量-image6.png",
+        "previous": "那么OA+OB就应该是这样的：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/a1f4c8b3d8b4170ed8f34935.png",
+        "width": 373,
+        "height": 347,
+        "relationship": "rId13",
+        "wordFile": "基础数学知识——向量-image7.png",
+        "previous": "那么我们怎么理解向量的减法，OA-OB呢？其实我们可以把OA-OB看做OA+BO，也就是OA向量加上OB向量的反方向，也就是如下图的样子：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/09624cd499d4c21e661c8c27.png",
+        "width": 327,
+        "height": 221,
+        "relationship": "rId14",
+        "wordFile": "基础数学知识——向量-image8.png",
+        "previous": "向量的大小（模长），就是向量所在这条线段的长度，如图，我们要求出OA这条向量的长度，其实就是相当于求出直角三角形OPA的第三条边的长度：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/49501aa75a5cbd5b8a69da79.png",
+        "width": 124,
+        "height": 39,
+        "relationship": "rId15",
+        "wordFile": "基础数学知识——向量-image9.png",
+        "previous": "应用勾股定理",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/0e8fb15307598332a4e7b73c.png",
+        "width": 198,
+        "height": 49,
+        "relationship": "rId16",
+        "wordFile": "基础数学知识——向量-image10.png",
+        "previous": "OA向量的数对是(2,1)，所以a和b的值分别为2和1，于是OA的长度就是",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/8224179d122c2b30e1ea5c66.png",
+        "width": 469,
+        "height": 272,
+        "relationship": "rId17",
+        "wordFile": "基础数学知识——向量-image11.png",
+        "previous": "向量的乘法，因为向量乘以向量在TR里面用的少，所以先不考虑向量乘以向量的情况，而是考虑向量乘以标量的情况。所谓向量乘以标量，就是类似OA×5这样的表达式，把一个向量乘以一个数值，其实就是把向量的长度延伸或者缩减一定倍数。比如OA×2其实就是把OA这个向量延长一倍：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/d21df9587683b7e229d44880.png",
+        "width": 66,
+        "height": 69,
+        "relationship": "rId18",
+        "wordFile": "基础数学知识——向量-image12.png",
+        "previous": "为了把向量OA变成单位向量，我们要做的很简单，就是保持方向不变的情况下，把OA长度缩减到1。当然把长度缩减为1其实就是把OA向量除以它的长度就行了。所以说，一个向量的单位向量的公式为： ",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/a4a5cf168c33f7a4d2abf66d.png",
+        "width": 305,
+        "height": 78,
+        "relationship": "rId19",
+        "wordFile": "基础数学知识——向量-image13.png",
+        "previous": "那么我们来计算一下这个向量OA(2,1)的单位向量吧：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/afaf2fa450763d91bce6d86f.png",
+        "width": 357,
+        "height": 202,
+        "relationship": "rId20",
+        "wordFile": "基础数学知识——向量-image14.png",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/6e6a129a85a6ea59c254b907.png",
+        "width": 343,
+        "height": 249,
+        "relationship": "rId21",
+        "wordFile": "基础数学知识——向量-image15.png",
+        "previous": "TR中的坐标系与平面直角坐标系（也称Cartesian coordinates）不同，对于平面直角坐标系来说，以X轴正方向为右边，以Y轴正方向为上",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/c900f455e7655c65a2ed6116.png",
+        "width": 400,
+        "height": 249,
+        "relationship": "rId22",
+        "wordFile": "基础数学知识——向量-image16.png",
+        "previous": "而TR的坐标系是X轴正方向是右边没错，但是Y轴正方向却是下",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/48ca173280f89518d556c653.png",
+        "width": 553.33,
+        "height": 61.07,
+        "relationship": "rId23",
+        "wordFile": "基础数学知识——向量-image17.png",
+        "previous": "这些代码写在哪你们自己决定，能看到结果就好了，不知道写在哪的我推荐你重新看教程。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/7ac789c393458cd5280e40a3.png",
+        "width": 439,
+        "height": 324,
+        "relationship": "rId24",
+        "wordFile": "基础数学知识——向量-image18.png",
+        "previous": "画出以下向量OA+OB的结果：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/048132cdb7b49cd043772f23.png",
+        "width": 339,
+        "height": 303,
+        "relationship": "rId25",
+        "wordFile": "基础数学知识——向量-image19.png",
+        "previous": "画出以下向量OA+AB的结果：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/cd137cf0e0cb95ed0ba094df.png",
+        "width": 488,
+        "height": 339,
+        "relationship": "rId26",
+        "wordFile": "基础数学知识——向量-image20.png",
+        "previous": "画出以下向量AB+CD的结果：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/cd137cf0e0cb95ed0ba094df.png",
+        "width": 488,
+        "height": 339,
+        "relationship": "rId26",
+        "wordFile": "基础数学知识——向量-image20.png",
+        "previous": "画出以下向量AB-CD的结果：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/1cefe026693dbba9e5f993ed.png",
+        "width": 264,
+        "height": 191,
+        "relationship": "rId27",
+        "wordFile": "基础数学知识——向量-image21.png",
+        "previous": "画出向量(OA+AB)* 2：",
+        "text": ""
+      }
+    ]
   },
   {
     "title": "基础缓动——插值渐进",
-    "expected": 5,
-    "word": 7,
-    "status": "导入"
+    "count": 5,
+    "mapping": [
+      {
+        "url": "images/tutorials/f0ea1d432b3a3e1fab665a91.gif",
+        "width": 454,
+        "height": 265.42,
+        "relationship": "rId5",
+        "wordFile": "基础缓动——插值渐进-image1.gif",
+        "previous": "引例：仅一行代码实现平滑的追击运动",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/73d589cc3553358e76de5be8.png",
+        "width": 384,
+        "height": 87.24,
+        "relationship": "rId6",
+        "wordFile": "基础缓动——插值渐进-image2.png",
+        "previous": "插值渐进，指每帧让某个变量向着目标变化一固定比例，以实现平滑运动的方法。在tmod中非常好用，可以简单地让运动、旋转不再僵硬，广泛运用于BossAI，弹幕AI，手持武器等方面。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/9dccd0251826f6898f0815de.gif",
+        "width": 468,
+        "height": 273.61,
+        "relationship": "rId7",
+        "wordFile": "基础缓动——插值渐进-image3.gif",
+        "previous": "使用时最好将velocity归0，避免干扰。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/5ea1c3051698a061434bd0fb.gif",
+        "width": 445,
+        "height": 282.31,
+        "relationship": "rId8",
+        "wordFile": "基础缓动——插值渐进-image4.gif",
+        "previous": "}",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/9d461712128118f345bcccd6.png",
+        "width": 553.33,
+        "height": 69.17,
+        "relationship": "rId12",
+        "wordFile": "基础缓动——插值渐进-image7.png",
+        "previous": "例如：当一个变量x初值为x0时，每帧执行x=lerp(x,target,0.5)时",
+        "text": ""
+      }
+    ]
   },
   {
     "title": "帧图绘制与用绘制整出的花活",
-    "expected": 17,
-    "word": 17,
-    "status": "导入"
+    "count": 17,
+    "mapping": [
+      {
+        "url": "images/tutorials/8451d275e3866f9835dd5aca.png",
+        "width": 553.33,
+        "height": 124.1,
+        "relationship": "rId5",
+        "wordFile": "帧图绘制与用绘制整出的花活-image1.png",
+        "previous": "（我会逐步介绍每个方法多出来的参数，接下来几个重载如果没有特别说明那就都是这个意思）",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/05cec319db9ae6fda00e9b9f.png",
+        "width": 553.33,
+        "height": 338.62,
+        "relationship": "rId6",
+        "wordFile": "帧图绘制与用绘制整出的花活-image2.png",
+        "previous": "这个PreDrawInInventory是物品在背包里的绘制方法，我们只需要把物品放到前面几个物品栏或者打开背包就能看到:",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/993ae5053b30d7399ea5e53b.png",
+        "width": 330,
+        "height": 301.79,
+        "relationship": "rId7",
+        "wordFile": "帧图绘制与用绘制整出的花活-image3.png",
+        "previous": "如果没理解什么意思的话 ，我截了张图（",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/203166081bf73291c07078bc.png",
+        "width": 368,
+        "height": 333.42,
+        "relationship": "rId8",
+        "wordFile": "帧图绘制与用绘制整出的花活-image4.png",
+        "previous": "这里填的  new Rectangle(1, 1, 44, 36) ，意思是：只绘制这张图片中从 (1, 1) 开始、宽 44、高 36 的那一部分矩形区域。对应到我们图片里就是：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/6c4e1464ed0d1c7f2d624e4e.png",
+        "width": 553.33,
+        "height": 386.05,
+        "relationship": "rId9",
+        "wordFile": "帧图绘制与用绘制整出的花活-image5.png",
+        "previous": "实际效果：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/ad7674bf5a25020b555227e3.jpeg",
+        "width": 553.33,
+        "height": 326.06,
+        "relationship": "rId10",
+        "wordFile": "帧图绘制与用绘制整出的花活-image6.jpeg",
+        "previous": "width和height则是贴图被拉伸之后的长宽。 比如这个截图 (",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/ef14c3c17588d7671c7e1444.png",
+        "width": 426,
+        "height": 408.45,
+        "relationship": "rId11",
+        "wordFile": "帧图绘制与用绘制整出的花活-image7.png",
+        "previous": "这里的x 、y就类似于sourceRectangle的x 、y(这描述对吗www，我还是放张截图吧",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/efa219d60cbd4baa5afb00d6.jpeg",
+        "width": 553.33,
+        "height": 447.32,
+        "relationship": "rId12",
+        "wordFile": "帧图绘制与用绘制整出的花活-image8.jpeg",
+        "previous": "嗯，感觉参数填的怪怪的，所以绘制出了这么个诡异的图像：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/efa219d60cbd4baa5afb00d6.jpeg",
+        "width": 553.33,
+        "height": 447.32,
+        "relationship": "rId12",
+        "wordFile": "帧图绘制与用绘制整出的花活-image8.jpeg",
+        "previous": "spriteBatch.Draw(Main.magicPixel, (start + end) * .5f, new Rectangle(0, 0, 1, 1),color, (end - start).ToRotation(), new Vector2(.5f, .5f), new Vector2((start - end).Length(), 1), 0, 0);",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/6c955f5a55bd6d5640183c20.png",
+        "width": 553.33,
+        "height": 105.05,
+        "relationship": "rId13",
+        "wordFile": "帧图绘制与用绘制整出的花活-image9.png",
+        "previous": "如果横向和纵向都想有怎么办？那就横纵分别设置一个Frame控制就是了( projectile.frame的取值范围应该是[0,总帧数-1].",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/a3b9c7b064c0d15885f85554.png",
+        "width": 28,
+        "height": 168,
+        "relationship": "rId14",
+        "wordFile": "帧图绘制与用绘制整出的花活-image10.png",
+        "previous": "它是Texture2D类型的拓展函数， 四个int参数分别是总共的横向帧数 、总共的纵向帧数 、当前处于横向第几帧 、 当前处于纵向第几帧",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/04face8034f4e671bf044c41.gif",
+        "width": 174,
+        "height": 143.35,
+        "relationship": "rId15",
+        "wordFile": "帧图绘制与用绘制整出的花活-image11.gif",
+        "previous": "这个是帧图绘制出来具体效果：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/9712629a0f76b3203d40ad0b.gif",
+        "width": 166,
+        "height": 136.76,
+        "relationship": "rId16",
+        "wordFile": "帧图绘制与用绘制整出的花活-image12.gif",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/5a0713050e39cbd0e799089b.png",
+        "width": 178.76,
+        "height": 619.69,
+        "relationship": "rId17",
+        "wordFile": "帧图绘制与用绘制整出的花活-image13.png",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/e808273357c9f4c5a327c1a4.png",
+        "width": 218.71,
+        "height": 619.69,
+        "relationship": "rId18",
+        "wordFile": "帧图绘制与用绘制整出的花活-image14.png",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/086b4a64bdba7e8ad67626ea.png",
+        "width": 134.27,
+        "height": 619.69,
+        "relationship": "rId19",
+        "wordFile": "帧图绘制与用绘制整出的花活-image15.png",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/2cdffbda93d06fee2da76e7e.png",
+        "width": 553.33,
+        "height": 1.61,
+        "relationship": "rId20",
+        "wordFile": "帧图绘制与用绘制整出的花活-image16.png",
+        "previous": ");",
+        "text": ""
+      }
+    ]
   },
   {
     "title": "弹幕向量与运动",
-    "expected": 7,
-    "word": 7,
-    "status": "导入"
+    "count": 7,
+    "mapping": [
+      {
+        "url": "images/tutorials/38d2e9f5e947d406bff7fd37.gif",
+        "width": 553.33,
+        "height": 282.46,
+        "relationship": "rId5",
+        "wordFile": "弹幕向量与运动-image1.gif",
+        "previous": "泰拉所有的物体的运动情况都是用向量表示的，比如说：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/3a7c5a2ed8076e4225251cf6.gif",
+        "width": 553.33,
+        "height": 341.43,
+        "relationship": "rId6",
+        "wordFile": "弹幕向量与运动-image2.gif",
+        "previous": "1匀速直线运动",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/d0913e7db6c91be494908371.gif",
+        "width": 553.33,
+        "height": 418.24,
+        "relationship": "rId7",
+        "wordFile": "弹幕向量与运动-image3.gif",
+        "previous": "2重力加速运动（抛物线）",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/3811e8d30fb45db187bf242b.gif",
+        "width": 553.33,
+        "height": 312.79,
+        "relationship": "rId8",
+        "wordFile": "弹幕向量与运动-image4.gif",
+        "previous": "3阻滞直线运动",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/b6b5815b9bae68ea5760fcff.gif",
+        "width": 553.33,
+        "height": 458.78,
+        "relationship": "rId9",
+        "wordFile": "弹幕向量与运动-image5.gif",
+        "previous": "4分段式运动",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/9b92edea0e944fda2ed86329.gif",
+        "width": 553.33,
+        "height": 385,
+        "relationship": "rId10",
+        "wordFile": "弹幕向量与运动-image6.gif",
+        "previous": "和分段式运动类似，当弹幕飞行一定距离或到达一定时间后，掉头返回玩家。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/88e6130fa1c4498ace7cdac1.gif",
+        "width": 60,
+        "height": 60,
+        "relationship": "rId11",
+        "wordFile": "弹幕向量与运动-image7.gif",
+        "previous": "下期教程我们介绍更多弹幕字段与方法。",
+        "text": ""
+      }
+    ]
   },
   {
     "title": "摸彩袋与NPC掉落",
-    "expected": 4,
-    "word": 4,
-    "status": "导入"
+    "count": 4,
+    "mapping": [
+      {
+        "url": "images/tutorials/358df6cab9fe78fea4120276.png",
+        "width": 553.33,
+        "height": 353.22,
+        "relationship": "rId5",
+        "wordFile": "摸彩袋与NPC掉落-image1.png",
+        "previous": "这里可以画出一个简单的流程图：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/ab7df47f8e0713d15dfb0b7e.png",
+        "width": 553.33,
+        "height": 241.97,
+        "relationship": "rId6",
+        "wordFile": "摸彩袋与NPC掉落-image2.png",
+        "previous": "在键位中绑定一个快捷键",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/aa2bbc1b3784fd4472c3cb4e.png",
+        "width": 553.33,
+        "height": 274.73,
+        "relationship": "rId7",
+        "wordFile": "摸彩袋与NPC掉落-image3.png",
+        "previous": "随后，在游戏中将鼠标指针移动到摸彩袋物品上，点击快捷键即可查看掉落明细，展示方式和图鉴一致",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/cd1fecb0886a78943fe46923.png",
+        "width": 553.33,
+        "height": 300.88,
+        "relationship": "rId8",
+        "wordFile": "摸彩袋与NPC掉落-image4.png",
+        "previous": "这是创意工坊上的一个前置库类型的模组，提供了很多简便的修改&移除掉落方法，功能可以说十分强大，这里是 HYPERLINK \"https://github.com/Garnet-Yeates/LootLib/wiki\" 它的Wiki",
+        "text": ""
+      }
+    ]
   },
   {
     "title": "教程前言",
-    "expected": 1,
-    "word": 2,
-    "status": "导入"
+    "count": 1,
+    "mapping": [
+      {
+        "url": "images/tutorials/ce9897415b18b6781e95c9cc.jpeg",
+        "width": 247,
+        "height": 274.44,
+        "relationship": "rId5",
+        "wordFile": "教程前言-image1.jpeg",
+        "previous": "",
+        "text": ""
+      }
+    ]
   },
   {
     "title": "更多Item字段与方法",
-    "expected": 33,
-    "word": 33,
-    "status": "导入"
+    "count": 33,
+    "mapping": [
+      {
+        "url": "images/tutorials/d871315b97cc4c5d5ea75916.gif",
+        "width": 538,
+        "height": 393.66,
+        "relationship": "rId5",
+        "wordFile": "更多Item字段与方法-image1.gif",
+        "previous": "我们在之前的模板剑里设置个Item.scale = 2; 看看：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/d69e55dabef871c1b0c193ed.gif",
+        "width": 553.33,
+        "height": 392.25,
+        "relationship": "rId6",
+        "wordFile": "更多Item字段与方法-image2.gif",
+        "previous": "我们试着在之前的模板剑里设置个Item.channel = true; 看看：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/88687f27b403870ff3d389e9.png",
+        "width": 194.49,
+        "height": 219.7,
+        "relationship": "rId7",
+        "wordFile": "更多Item字段与方法-image3.png",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/39cf872b5f6f022226d51187.png",
+        "width": 344.44,
+        "height": 219.7,
+        "relationship": "rId8",
+        "wordFile": "更多Item字段与方法-image4.png",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/f82e57c45c9ba28fe2540850.png",
+        "width": 417,
+        "height": 215,
+        "relationship": "rId9",
+        "wordFile": "更多Item字段与方法-image5.png",
+        "previous": "在之前的教程中，我们已经使用过Item的SetDefaults()，AddRecipes()和buyPrice()。对Item的方法已经有了一些认知。....什么？你说你不记得用过buyPrice()？请看图",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/51719adb5c107b68316ae664.gif",
+        "width": 160,
+        "height": 160,
+        "relationship": "rId10",
+        "wordFile": "更多Item字段与方法-image6.gif",
+        "previous": "模板剑和模板枪里都出现过",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/a0335528707a72a7d2356802.png",
+        "width": 553.33,
+        "height": 72.75,
+        "relationship": "rId11",
+        "wordFile": "更多Item字段与方法-image7.png",
+        "previous": "这个方法是 Item 里的静态工具方法，专门用于把各种货币单位（铂金、金币、银币、铜币）换算成“铜币总数”。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/adf48102b74defbf0d7ccdf1.png",
+        "width": 553.33,
+        "height": 52.74,
+        "relationship": "rId12",
+        "wordFile": "更多Item字段与方法-image8.png",
+        "previous": "这个方法是 Item 里的无返回值方法，在计算武器（面板上的）最终伤害时被调用，可以允许根据玩家状态动态调整伤害。后面介绍的方法都是实例方法，不再重复叙述。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/eb43f330dad5d1d720113a20.png",
+        "width": 553.33,
+        "height": 321.82,
+        "relationship": "rId13",
+        "wordFile": "更多Item字段与方法-image9.png",
+        "previous": "然后我们进入游戏扣个血。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/8adb782d3372a1f10517688a.png",
+        "width": 553.33,
+        "height": 244.12,
+        "relationship": "rId14",
+        "wordFile": "更多Item字段与方法-image10.png",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/60b432ec36d4a54726234be6.png",
+        "width": 444,
+        "height": 127,
+        "relationship": "rId15",
+        "wordFile": "更多Item字段与方法-image11.png",
+        "previous": "可以看到代码成功运行。我们之前提过StatModifier 直接加算的话会出问题。现在我们试试。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/40f2b3dfcf7bd4925cd75e5e.png",
+        "width": 553.33,
+        "height": 219.4,
+        "relationship": "rId16",
+        "wordFile": "更多Item字段与方法-image12.png",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/0b2562c4abb1bf1356aaa648.png",
+        "width": 266,
+        "height": 121,
+        "relationship": "rId17",
+        "wordFile": "更多Item字段与方法-image13.png",
+        "previous": "看吧，数值完全错位。那么我们想要给武器增加固定数值，该怎么写呢？",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/71ffb98cf584558996cb1e82.png",
+        "width": 523,
+        "height": 61,
+        "relationship": "rId18",
+        "wordFile": "更多Item字段与方法-image14.png",
+        "previous": "这个方法是 Item 里的无返回值的方法，在计算武器（面板上的）最终暴击率时被调用，可以允许根据玩家状态动态调整暴击率。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/5d3883ee048a307de47d4d7d.png",
+        "width": 553.33,
+        "height": 67.61,
+        "relationship": "rId19",
+        "wordFile": "更多Item字段与方法-image15.png",
+        "previous": "这个方法是 Item 里的无返回值方法，在武器弹幕发射前被执行一次，用于调整射击参数。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/8530251d40c3b8441e641aa9.png",
+        "width": 347,
+        "height": 166.85,
+        "relationship": "rId20",
+        "wordFile": "更多Item字段与方法-image16.png",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/a3adc055ee835fa882104248.gif",
+        "width": 553.33,
+        "height": 344.56,
+        "relationship": "rId21",
+        "wordFile": "更多Item字段与方法-image17.gif",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/b2afc9094b2c7d73b344e7c2.png",
+        "width": 553.33,
+        "height": 179.88,
+        "relationship": "rId22",
+        "wordFile": "更多Item字段与方法-image18.png",
+        "previous": "不止简单的修改伤害和速度，我们还能在这里做到更多",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/4d350837893d69d2e4786bc7.gif",
+        "width": 541,
+        "height": 397,
+        "relationship": "rId23",
+        "wordFile": "更多Item字段与方法-image19.gif",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/2009dc6049da9dbe205d2b9f.png",
+        "width": 553.33,
+        "height": 55.67,
+        "relationship": "rId24",
+        "wordFile": "更多Item字段与方法-image20.png",
+        "previous": "5 Shoot （发射逻辑）",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/e24e337254531ad5b16311d0.png",
+        "width": 553.33,
+        "height": 119.5,
+        "relationship": "rId25",
+        "wordFile": "更多Item字段与方法-image21.png",
+        "previous": "EntitySource_ItemUse_WithAmmo（生成源）给我们使用。这是为什么呢？因为在这个方法里我们不直接修改发射前的伤害了。 我们直接来定义发射时的逻辑。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/e3791334f59a39b2db648d88.png",
+        "width": 553.33,
+        "height": 383.2,
+        "relationship": "rId26",
+        "wordFile": "更多Item字段与方法-image22.png",
+        "previous": "先把ModifyShootStats注释了，防止它影响我们的弹幕发射",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/c2cd93a0db4b27221d38db2c.gif",
+        "width": 553.33,
+        "height": 401.66,
+        "relationship": "rId27",
+        "wordFile": "更多Item字段与方法-image23.gif",
+        "previous": "然后我们进入游戏：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/e5b6428d791bdbc433af343e.png",
+        "width": 553.33,
+        "height": 336.43,
+        "relationship": "rId28",
+        "wordFile": "更多Item字段与方法-image24.png",
+        "previous": "这个方法能做的还不止这些，我们还可以把武器变得和星怒一样，让发射的弹幕从天空中落下。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/2d3099fecad67df0307a8a6d.gif",
+        "width": 553.33,
+        "height": 382.8,
+        "relationship": "rId29",
+        "wordFile": "更多Item字段与方法-image25.gif",
+        "previous": "把这段代码塞到我们之前弄的散弹发射弹幕之上，然后我们进入游戏。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/61098e99e5415b621c2bba8d.png",
+        "width": 365,
+        "height": 69.36,
+        "relationship": "rId30",
+        "wordFile": "更多Item字段与方法-image26.png",
+        "previous": "6 HoldoutOffset（物品偏移）",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/1b71d1342717641e0d87e623.png",
+        "width": 181,
+        "height": 135,
+        "relationship": "rId31",
+        "wordFile": "更多Item字段与方法-image27.png",
+        "previous": "我们先看看原本的武器使用位置。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/f14d4f565e4dbc0ea291b07f.png",
+        "width": 354,
+        "height": 137.67,
+        "relationship": "rId32",
+        "wordFile": "更多Item字段与方法-image28.png",
+        "previous": "然后我们在这个方法里返回 return new Vector2(5f,-5f); ",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/4a8c82dd82b88a30e949a497.png",
+        "width": 206,
+        "height": 154.5,
+        "relationship": "rId33",
+        "wordFile": "更多Item字段与方法-image29.png",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/4c58f194e86c5aef77e216c0.png",
+        "width": 553.33,
+        "height": 54.44,
+        "relationship": "rId34",
+        "wordFile": "更多Item字段与方法-image30.png",
+        "previous": "7 OnHitNPC（近战挥砍命中）",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/e9b6a65c31f1cddb9c542714.gif",
+        "width": 526,
+        "height": 405,
+        "relationship": "rId35",
+        "wordFile": "更多Item字段与方法-image31.gif",
+        "previous": "然后我们进入游戏：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/f3a4a3829faf9e14e419b21e.gif",
+        "width": 509,
+        "height": 354,
+        "relationship": "rId36",
+        "wordFile": "更多Item字段与方法-image32.gif",
+        "previous": "别慌，我们把伤害改回50。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/3779d6eac3b7a5a0edf60686.gif",
+        "width": 174,
+        "height": 174,
+        "relationship": "rId37",
+        "wordFile": "更多Item字段与方法-image33.gif",
+        "previous": "",
+        "text": ""
+      }
+    ]
   },
   {
     "title": "更多Projectile字段与方法",
-    "expected": 14,
-    "word": 14,
-    "status": "导入"
+    "count": 14,
+    "mapping": [
+      {
+        "url": "images/tutorials/7a6f68acaa8c870c0596833f.gif",
+        "width": 295,
+        "height": 343.26,
+        "relationship": "rId5",
+        "wordFile": "更多Proj字段与方法-image1.gif",
+        "previous": "我们在之前的测试弹幕里设置个Projectile.scale = 2; 然后进游戏看看：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/3c5f06e5b57f0ae61c84d5f4.gif",
+        "width": 391,
+        "height": 276.31,
+        "relationship": "rId6",
+        "wordFile": "更多Proj字段与方法-image2.gif",
+        "previous": "然后进入游戏：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/d7cc1294fb2c2922af0f5dd7.png",
+        "width": 450,
+        "height": 366.24,
+        "relationship": "rId7",
+        "wordFile": "更多Proj字段与方法-image3.png",
+        "previous": "蜘蛛召唤杖的蜘蛛：它可以超上限，向上取整。本身占用0.6的召唤栏，假设你有 2 个召唤栏，第 1 个直接被一整只蜘蛛占掉了，第 2 个召唤栏占了 1.2 个召唤位。正常情况下是无法召唤的。但蜘蛛是向上取整，1.2 ≈ 1，游戏认为这是正常的，所以你才有了 3 个蜘蛛召唤物",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/e0abed9bfc93d26b0f965fb8.gif",
+        "width": 448,
+        "height": 341.29,
+        "relationship": "rId8",
+        "wordFile": "更多Proj字段与方法-image4.gif",
+        "previous": "然后进入游戏：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/b91b3cd2927916be01f44231.gif",
+        "width": 423,
+        "height": 396,
+        "relationship": "rId9",
+        "wordFile": "更多Proj字段与方法-image5.gif",
+        "previous": "然后进入游戏：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/0abac612a747fb6475547567.png",
+        "width": 553.33,
+        "height": 260.35,
+        "relationship": "rId10",
+        "wordFile": "更多Proj字段与方法-image6.png",
+        "previous": "这是弹幕更新的三段式结构，执行顺序为：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/30b50e94550e108b430eebdd.gif",
+        "width": 292,
+        "height": 242,
+        "relationship": "rId11",
+        "wordFile": "更多Proj字段与方法-image7.gif",
+        "previous": "然后进入游戏：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/1aa639dd9d4538fd4bf5b623.gif",
+        "width": 314,
+        "height": 272,
+        "relationship": "rId12",
+        "wordFile": "更多Proj字段与方法-image8.gif",
+        "previous": "然后进入游戏：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/426ea3267de6ef312f3d89f8.gif",
+        "width": 373,
+        "height": 297.96,
+        "relationship": "rId13",
+        "wordFile": "更多Proj字段与方法-image9.gif",
+        "previous": "然后我们进入游戏：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/4b94427db7673eb571ebb3e8.png",
+        "width": 553.33,
+        "height": 246.68,
+        "relationship": "rId14",
+        "wordFile": "更多Proj字段与方法-image10.png",
+        "previous": "这是弹幕死亡的三段式结构，执行顺序为：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/5f0c11def5967377b43f7d98.gif",
+        "width": 553.33,
+        "height": 305.38,
+        "relationship": "rId15",
+        "wordFile": "更多Proj字段与方法-image11.gif",
+        "previous": "然后我们进入游戏：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/72c1721fcf5c5c01a506f759.png",
+        "width": 553.33,
+        "height": 250.74,
+        "relationship": "rId16",
+        "wordFile": "更多Proj字段与方法-image12.png",
+        "previous": "这是命中 NPC 的三段式结构，执行顺序为：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/c3cde3363fda786c1f2db762.gif",
+        "width": 484,
+        "height": 372.12,
+        "relationship": "rId17",
+        "wordFile": "更多Proj字段与方法-image13.gif",
+        "previous": "然后我们进入游戏：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/5c7d7aec1b944e86d01314f5.png",
+        "width": 183,
+        "height": 138.09,
+        "relationship": "rId18",
+        "wordFile": "更多Proj字段与方法-image14.png",
+        "previous": "后续教程安排可能会写一些更细致的原版弹幕 AI 分析，比如悠悠球、鞭子、长矛的实战例子，克隆，以及内部实现。至于现在嘛……",
+        "text": ""
+      }
+    ]
   },
   {
     "title": "模组文件夹结构与基本信息",
-    "expected": 13,
-    "word": 15,
-    "status": "导入"
+    "count": 13,
+    "mapping": [
+      {
+        "url": "images/tutorials/4fb4388d4696f1ec7a5246f7.png",
+        "width": 553.33,
+        "height": 324.56,
+        "relationship": "rId5",
+        "wordFile": "模组文件夹结构与基本信息-image1.png",
+        "previous": "但是不同的电脑，文件位置可能不同。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/88a276c66a971d4e295c01ce.png",
+        "width": 553.33,
+        "height": 266.03,
+        "relationship": "rId6",
+        "wordFile": "模组文件夹结构与基本信息-image2.png",
+        "previous": "点击右侧的 “打开文件夹” 按钮，系统会自动使用用文件资源管理器将该文件夹打开。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/77a12d6878cfbfb30b47a516.png",
+        "width": 240.53,
+        "height": 31.42,
+        "relationship": "rId7",
+        "wordFile": "模组文件夹结构与基本信息-image3.png",
+        "previous": "打开文件夹后，你会看到类似这样的文件结构。我们在上期教程里，简单认识了一下每个文件代表着什么，这期教程我们会逐一详解这些文件。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/68434de34b126502c88d3f3e.png",
+        "width": 391,
+        "height": 201.25,
+        "relationship": "rId8",
+        "wordFile": "模组文件夹结构与基本信息-image4.png",
+        "previous": "1 Mod.cs（你的模组名字.cs）这个文件是模组最核心的文件，它定义了一个继承自Mod 类的模组主类。每个模组有且只有一个 Mod 类，它是模组与 tModLoader 之间的“桥梁”。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/71874172fb418d211b3fdb0f.png",
+        "width": 173.67,
+        "height": 30.28,
+        "relationship": "rId9",
+        "wordFile": "模组文件夹结构与基本信息-image5.png",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/5542a1195043274effb9a2bb.png",
+        "width": 509,
+        "height": 207,
+        "relationship": "rId10",
+        "wordFile": "模组文件夹结构与基本信息-image6.png",
+        "previous": "2 Mod.csproj （你的模组名字.csproj）这个文件是你模组的项目配置文件。tModLoader 生成的.csproj.非常简洁:",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/79c94b2ab872a8718b311704.png",
+        "width": 155.53,
+        "height": 33.17,
+        "relationship": "rId11",
+        "wordFile": "模组文件夹结构与基本信息-image7.png",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/cf4d5de22a5d3de296035546.png",
+        "width": 385,
+        "height": 159.95,
+        "relationship": "rId12",
+        "wordFile": "模组文件夹结构与基本信息-image8.png",
+        "previous": "3 Build.txt 这个文件是 tModLoader 的编译配置文件，它告诉 TML 在编译你的模组时应该使用什么规则，打开后大概长这样",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/04562ead281f0a402d66c56d.png",
+        "width": 165,
+        "height": 136.95,
+        "relationship": "rId13",
+        "wordFile": "模组文件夹结构与基本信息-image9.png",
+        "previous": "噗！",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/2e94eadebe58d135e596b0b8.png",
+        "width": 240.67,
+        "height": 86.89,
+        "relationship": "rId14",
+        "wordFile": "模组文件夹结构与基本信息-image10.png",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/de537c21f87cb6df0318ab2c.png",
+        "width": 163.8,
+        "height": 51.37,
+        "relationship": "rId15",
+        "wordFile": "模组文件夹结构与基本信息-image11.png",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/912fe5accdb813c692f2a96e.png",
+        "width": 133.13,
+        "height": 76.57,
+        "relationship": "rId16",
+        "wordFile": "模组文件夹结构与基本信息-image12.png",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/fe7267a9cb86fe947e0021ea.gif",
+        "width": 125,
+        "height": 125,
+        "relationship": "rId17",
+        "wordFile": "模组文件夹结构与基本信息-image13.gif",
+        "previous": "",
+        "text": ""
+      }
+    ]
   },
   {
     "title": "模组本地化指南 基础篇",
-    "expected": 30,
-    "word": 30,
-    "status": "导入"
+    "count": 30,
+    "mapping": [
+      {
+        "url": "images/tutorials/6bece619dd5442ddb547b659.png",
+        "width": 438,
+        "height": 320.04,
+        "relationship": "rId5",
+        "wordFile": "模组本地化指南 基础篇-image1.png",
+        "previous": "我们直接用 Visual Studio 打开 .hjson 文件，会看到这样的画面：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/8d40a2fef387d1b4c9892385.png",
+        "width": 553.33,
+        "height": 266,
+        "relationship": "rId6",
+        "wordFile": "模组本地化指南 基础篇-image2.png",
+        "previous": "1下载 VS Code",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/2037ba3c2044e0653768eaa6.png",
+        "width": 475,
+        "height": 383.55,
+        "relationship": "rId7",
+        "wordFile": "模组本地化指南 基础篇-image3.png",
+        "previous": "打开浏览器访问  HYPERLINK \"https://code.visualstudio.com/\" https://code.visualstudio.com，官网会自动识别你的系统，点击下方的下载按钮就能无脑下载。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/2240337d270cd65633e6831f.png",
+        "width": 476,
+        "height": 393.37,
+        "relationship": "rId8",
+        "wordFile": "模组本地化指南 基础篇-image4.png",
+        "previous": "双击下载好的 .exe，同意协议，一路默认选项。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/d837a7785c77772f06105e5b.png",
+        "width": 460,
+        "height": 376.49,
+        "relationship": "rId9",
+        "wordFile": "模组本地化指南 基础篇-image5.png",
+        "previous": "建议在安装过程中勾选 “添加到 PATH”，这样以后在终端里可以直接用 code 命令打开文件。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/84098759d3f802b743e0ce60.png",
+        "width": 407,
+        "height": 328.25,
+        "relationship": "rId10",
+        "wordFile": "模组本地化指南 基础篇-image6.png",
+        "previous": "2安装 Hjson 插件",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/11c6fb1000f1aed0cc24bb44.png",
+        "width": 520,
+        "height": 408.4,
+        "relationship": "rId11",
+        "wordFile": "模组本地化指南 基础篇-image7.png",
+        "previous": "打开 VS Code，点击左侧的扩展图标（或按 Ctrl + Shift + X），在搜索框里输入 “Hjson”，找到作者是 laktak 的那个，点击 安装（Install）就行。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/4d32d5e761c78b0f0e3f1088.png",
+        "width": 426,
+        "height": 145.81,
+        "relationship": "rId12",
+        "wordFile": "模组本地化指南 基础篇-image8.png",
+        "previous": "有些同学不想要下载 VS Code，但同样不想对着全白的文字编写内容，那么怎么办呢？",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/2632a00afeb2ca11f1bfa232.png",
+        "width": 426,
+        "height": 159.62,
+        "relationship": "rId13",
+        "wordFile": "模组本地化指南 基础篇-image9.png",
+        "previous": "其实 Visual Studio 也有一个 Hjson 插件。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/8a97dd738c97cd0e997f2264.png",
+        "width": 477,
+        "height": 383.84,
+        "relationship": "rId14",
+        "wordFile": "模组本地化指南 基础篇-image10.png",
+        "previous": "我们在中文文件 zh-Hans.hjson 里新建一个叫 txtcs 的键，随便填一些内容：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/f9c34dce54011585ae0d4909.png",
+        "width": 477,
+        "height": 364.96,
+        "relationship": "rId15",
+        "wordFile": "模组本地化指南 基础篇-image11.png",
+        "previous": "然后运行游戏，再来看这个中文文件：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/0f05a1f02bff4570f2954192.png",
+        "width": 260.4,
+        "height": 204.28,
+        "relationship": "rId16",
+        "wordFile": "模组本地化指南 基础篇-image12.png",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/45cb06c9c25024ae106c36ba.png",
+        "width": 278.53,
+        "height": 204.28,
+        "relationship": "rId17",
+        "wordFile": "模组本地化指南 基础篇-image13.png",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/7b1a6542bb86abd907eceefe.png",
+        "width": 260.54,
+        "height": 204.39,
+        "relationship": "rId18",
+        "wordFile": "模组本地化指南 基础篇-image14.png",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/4a6d9ffdbd8bc10237aef47b.png",
+        "width": 278.39,
+        "height": 204.39,
+        "relationship": "rId19",
+        "wordFile": "模组本地化指南 基础篇-image15.png",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/3bb32edab29c374041333bec.png",
+        "width": 216,
+        "height": 300,
+        "relationship": "rId20",
+        "wordFile": "模组本地化指南 基础篇-image16.png",
+        "previous": "保存，回到游戏。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/8b792a049bfba1e8b513455b.png",
+        "width": 530,
+        "height": 119,
+        "relationship": "rId21",
+        "wordFile": "模组本地化指南 基础篇-image17.png",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/f53cca86ad4e0a599154dc4e.png",
+        "width": 199,
+        "height": 48.46,
+        "relationship": "rId22",
+        "wordFile": "模组本地化指南 基础篇-image18.png",
+        "previous": "比如 [c/FF0000:此文本是红色的。]。就会输出 此文本是红色的。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/7dd6ae20e4cbab61ae6a7021.webp",
+        "width": 30,
+        "height": 30,
+        "relationship": "rId23",
+        "wordFile": "模组本地化指南 基础篇-image19.webp",
+        "previous": "示例：[g:0] 会输出",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/68d9d03178c31ac690607ce3.webp",
+        "width": 20.88,
+        "height": 20.88,
+        "relationship": "rId24",
+        "wordFile": "模组本地化指南 基础篇-image20.webp",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/68d9d03178c31ac690607ce3.webp",
+        "width": 20.88,
+        "height": 20.88,
+        "relationship": "rId25",
+        "wordFile": "模组本地化指南 基础篇-image21.webp",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/fcbc18fb46ea756642a2b6b5.webp",
+        "width": 20.88,
+        "height": 20.88,
+        "relationship": "rId26",
+        "wordFile": "模组本地化指南 基础篇-image22.webp",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/fcbc18fb46ea756642a2b6b5.webp",
+        "width": 20.88,
+        "height": 20.88,
+        "relationship": "rId26",
+        "wordFile": "模组本地化指南 基础篇-image22.webp",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/109e0515cb27bf76c68747ac.webp",
+        "width": 20.88,
+        "height": 20.88,
+        "relationship": "rId27",
+        "wordFile": "模组本地化指南 基础篇-image23.webp",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/141c9af1d978e25972217d2a.webp",
+        "width": 20.28,
+        "height": 20.28,
+        "relationship": "rId28",
+        "wordFile": "模组本地化指南 基础篇-image24.webp",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/109e0515cb27bf76c68747ac.webp",
+        "width": 20.28,
+        "height": 20.28,
+        "relationship": "rId27",
+        "wordFile": "模组本地化指南 基础篇-image23.webp",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/141c9af1d978e25972217d2a.webp",
+        "width": 20.28,
+        "height": 20.28,
+        "relationship": "rId28",
+        "wordFile": "模组本地化指南 基础篇-image24.webp",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/57bfccf2b248a38b00a0db47.webp",
+        "width": 20.28,
+        "height": 20.28,
+        "relationship": "rId29",
+        "wordFile": "模组本地化指南 基础篇-image25.webp",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/7dd6ae20e4cbab61ae6a7021.webp",
+        "width": 20.28,
+        "height": 20.28,
+        "relationship": "rId30",
+        "wordFile": "模组本地化指南 基础篇-image26.webp",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/425bd8b5f37c0987f4119427.webp",
+        "width": 30,
+        "height": 30,
+        "relationship": "rId31",
+        "wordFile": "模组本地化指南 基础篇-image27.webp",
+        "previous": "",
+        "text": ""
+      }
+    ]
   },
   {
     "title": "法杖类武器",
-    "expected": 3,
-    "word": 4,
-    "status": "导入"
+    "count": 3,
+    "mapping": [
+      {
+        "url": "images/tutorials/939df6b3989f3043c38de93b.png",
+        "width": 44,
+        "height": 42,
+        "relationship": "rId6",
+        "wordFile": "法杖类武器-image2.png",
+        "previous": "想要制做一把法师法杖，第一步自然是搞到一张法杖贴图。泰拉瑞亚大部分法杖贴图都是45度，斜着画的，我们画图的时候记得也按照这个逻辑来画。如果你没有准备贴图也没关系，教程这边给大家提供了一张地狱风格的法杖贴图，大家可以下载使用。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/474a163b898d9221e95d1fa8.gif",
+        "width": 353,
+        "height": 230,
+        "relationship": "rId7",
+        "wordFile": "法杖类武器-image3.gif",
+        "previous": "然后我们进入游戏，就能看到......?",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/61be8db65c7c3ca75e97662f.png",
+        "width": 302,
+        "height": 225,
+        "relationship": "rId8",
+        "wordFile": "法杖类武器-image4.png",
+        "previous": "然后进入游戏：",
+        "text": ""
+      }
+    ]
   },
   {
     "title": "第一个Mod的创建与编译",
-    "expected": 9,
-    "word": 11,
-    "status": "导入"
+    "count": 9,
+    "mapping": [
+      {
+        "url": "images/tutorials/ac24baf4437625987b9f422f.png",
+        "width": 553.33,
+        "height": 442.36,
+        "relationship": "rId5",
+        "wordFile": "第一个Mod的创建与编译-image1.png",
+        "previous": "首先，启动我们的tModLoader，在游戏主菜单中，点击创意工坊按钮，进入创意工坊菜单。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/a01d5ea7a56a2c255e06eb5d.png",
+        "width": 553.33,
+        "height": 620.85,
+        "relationship": "rId6",
+        "wordFile": "第一个Mod的创建与编译-image2.png",
+        "previous": "然后我们在弹出的菜单里，选择右上角的开发模组按钮进入特殊页面。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/2d27ac83d471a4b3a493af0d.png",
+        "width": 553.33,
+        "height": 575.19,
+        "relationship": "rId7",
+        "wordFile": "第一个Mod的创建与编译-image3.png",
+        "previous": "这个页面的列表中存放着的是我们的模组源码，在首次打开这个列表时里面应该是空的，先不用管。我们点击右下角的创建模组按钮。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/5303dee3ccde039c2bbb8232.jpeg",
+        "width": 275,
+        "height": 103.89,
+        "relationship": "rId8",
+        "wordFile": "第一个Mod的创建与编译-image4.jpeg",
+        "previous": "填了它 tModLoader 就会自动为你的Mod生成一把模板剑，部分音乐资源包，翻译Mod 可能会直接跳过这个内容的填写，放弃这把模板武器。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/383f56d04497d6c7cef37303.png",
+        "width": 553.33,
+        "height": 586.53,
+        "relationship": "rId9",
+        "wordFile": "第一个Mod的创建与编译-image5.png",
+        "previous": "在tModLoader 更新到 1.4 版本后就出现了明显的输入法异常，我们在游戏填表时，可能会出现想打中文，输入法却没有反应，或是输入法出现了，但是隐身了，无法看到的情况。如遭遇相关问题，请在其他地方编写完文本，然后将其复制,粘贴到内容框中。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/1299442467156acf63729348.png",
+        "width": 553.33,
+        "height": 307.02,
+        "relationship": "rId10",
+        "wordFile": "第一个Mod的创建与编译-image6.png",
+        "previous": "我这里随便填填，然后我们点击右下角的创建按钮。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/1c2d53bf135c5217ca4a185a.png",
+        "width": 553.33,
+        "height": 243.47,
+        "relationship": "rId11",
+        "wordFile": "第一个Mod的创建与编译-image7.png",
+        "previous": "这是接下来的教程会用到的妙妙工具，在后续的教程里会单独列出，先不讲（",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/f08c182e41a26ece973ad8cb.png",
+        "width": 553.33,
+        "height": 268.08,
+        "relationship": "rId12",
+        "wordFile": "第一个Mod的创建与编译-image8.png",
+        "previous": "我们点击 构建并重新加载按钮。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/a57b5d3117fba10fc58628fc.png",
+        "width": 396,
+        "height": 341,
+        "relationship": "rId13",
+        "wordFile": "第一个Mod的创建与编译-image9.png",
+        "previous": "我们就会发现我们的模组已经加载成功。",
+        "text": ""
+      }
+    ]
   },
   {
     "title": "第一个物品（第一把枪）",
-    "expected": 14,
-    "word": 16,
-    "status": "导入"
+    "count": 14,
+    "mapping": [
+      {
+        "url": "images/tutorials/dc38fb572d2b728728d6800d.png",
+        "width": 553.33,
+        "height": 188.43,
+        "relationship": "rId5",
+        "wordFile": "第一个物品（第一把枪）-image1.png",
+        "previous": "不过教程内容还是要正式一点的，这里演示一下，如何使用 Visual Studio 的“解决方案资源管理器”来新建 cs 文件。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/c9c8f65241e23aa3b52cd901.png",
+        "width": 553.33,
+        "height": 223.04,
+        "relationship": "rId6",
+        "wordFile": "第一个物品（第一把枪）-image2.png",
+        "previous": "然后 右键 → 选择 →“添加” → “新建项”",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/ee721aaa31086abbe7b1947c.png",
+        "width": 512,
+        "height": 337,
+        "relationship": "rId7",
+        "wordFile": "第一个物品（第一把枪）-image3.png",
+        "previous": "在弹出的窗口中，修改文件名称（这里我改成了DemoGun，你们随意），点击添加",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/e6e653af4115178db2104a34.png",
+        "width": 295,
+        "height": 75,
+        "relationship": "rId8",
+        "wordFile": "第一个物品（第一把枪）-image4.png",
+        "previous": "接下来，我们来解释一下每一段代码所代表的含义。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/06929cd5218faf24e2e86048.png",
+        "width": 223.32,
+        "height": 154.61,
+        "relationship": "rId9",
+        "wordFile": "第一个物品（第一把枪）-image5.png",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/3885cfc949d78586683f67d4.png",
+        "width": 315.61,
+        "height": 154.61,
+        "relationship": "rId10",
+        "wordFile": "第一个物品（第一把枪）-image6.png",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/adeebef3fd690712f2d43a50.png",
+        "width": 252,
+        "height": 105.72,
+        "relationship": "rId11",
+        "wordFile": "第一个物品（第一把枪）-image7.png",
+        "previous": "我们使用vs自动生成的cs文件里自带命名空间。直接新建空白文件的同学记得按你自己模组的命名空间填。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/8d07cec768e5bc0802a8db2b.png",
+        "width": 483,
+        "height": 467,
+        "relationship": "rId12",
+        "wordFile": "第一个物品（第一把枪）-image8.png",
+        "previous": "}",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/32e5316700ed4fc01a6ead43.png",
+        "width": 42,
+        "height": 30,
+        "relationship": "rId13",
+        "wordFile": "第一个物品（第一把枪）-image9.png",
+        "previous": "好了，有了文件了怎么能没有图片呢？",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/02280127803d1080772a8725.png",
+        "width": 279,
+        "height": 181,
+        "relationship": "rId14",
+        "wordFile": "第一个物品（第一把枪）-image10.png",
+        "previous": "本教程提供了一张枪械武器贴图，双击点开，选择下载，然后把下载好的图片粘贴到文件所在的文件夹，修改名字。（别忘记调整物品宽度高度）",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/8839d547ace2d4b22e3e3c24.gif",
+        "width": 549,
+        "height": 382,
+        "relationship": "rId15",
+        "wordFile": "第一个物品（第一把枪）-image11.gif",
+        "previous": "就像这样，然后我们进入到游戏内，就能看到我们新建的这把武器啦。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/46384c88bed1413b1bcbc2ec.gif",
+        "width": 553.33,
+        "height": 358.34,
+        "relationship": "rId16",
+        "wordFile": "第一个物品（第一把枪）-image12.gif",
+        "previous": "看着还不赖嘛（",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/40cb08428db57b25293c69f6.png",
+        "width": 410,
+        "height": 112,
+        "relationship": "rId17",
+        "wordFile": "第一个物品（第一把枪）-image13.png",
+        "previous": "啊，原来是我们忘记禁用武器的“近战挥砍”了，item在玩家手持时，按下左键会触发一次“近战挥砍”。对周围的敌怪造成伤害，比如剑、锤子、镐子、雨伞等近战武器。想要将其禁用很简单，只需要在 SetDefaults() 里面加上Item.noMelee = true;就可以了。（如果你的枪上有刺刀啥的，想要保留这个效果，你也可以不改）",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/26a1b27712490ea93b07109d.gif",
+        "width": 553.33,
+        "height": 376.97,
+        "relationship": "rId18",
+        "wordFile": "第一个物品（第一把枪）-image14.gif",
+        "previous": "好，现在让我们再进游戏看看。",
+        "text": ""
+      }
+    ]
   },
   {
     "title": "第一版序",
-    "expected": 0,
-    "word": 0,
-    "status": "导入"
+    "count": 0,
+    "mapping": []
   },
   {
     "title": "简单Buff",
-    "expected": 7,
-    "word": 8,
-    "status": "导入"
+    "count": 7,
+    "mapping": [
+      {
+        "url": "images/tutorials/4526a3fefa27e5bf7d6d09ac.png",
+        "width": 177.24,
+        "height": 177.24,
+        "relationship": "rId5",
+        "wordFile": "简单Buff-image1.png",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/84a66738895aa29b204e6ba1.png",
+        "width": 177.24,
+        "height": 177.24,
+        "relationship": "rId6",
+        "wordFile": "简单Buff-image2.png",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/1c917f489aef797c292d4b7b.png",
+        "width": 177.24,
+        "height": 177.24,
+        "relationship": "rId7",
+        "wordFile": "简单Buff-image3.png",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/220913130d474f87809b0690.png",
+        "width": 299,
+        "height": 145,
+        "relationship": "rId8",
+        "wordFile": "简单Buff-image4.png",
+        "previous": "当然，buff也需要一张贴图来显示游戏里的形象，如果你没有准备贴图也没关系，教程这边给大家提供了一些贴图，大家可以下载使用。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/97ad169863a54c2c931a49fc.gif",
+        "width": 514,
+        "height": 381,
+        "relationship": "rId10",
+        "wordFile": "简单Buff-image6.gif",
+        "previous": "NPC的代码，比起玩家相对来说简单的多。而且npc有自带的死亡检测 npc.checkDead(); 不需要我们来操心。现在我们粘贴代码进入游戏：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/e5e8370db7d1cfcecc6d3165.gif",
+        "width": 443,
+        "height": 294,
+        "relationship": "rId11",
+        "wordFile": "简单Buff-image7.gif",
+        "previous": "现在我们粘贴代码进入游戏：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/f1380be1216b528781c9ea3a.gif",
+        "width": 500,
+        "height": 222.13,
+        "relationship": "rId12",
+        "wordFile": "简单Buff-image8.gif",
+        "previous": "现在我们粘贴代码进入游戏：",
+        "text": ""
+      }
+    ]
   },
   {
     "title": "简单NPC与AI克隆",
-    "expected": 5,
-    "word": 6,
-    "status": "导入"
+    "count": 5,
+    "mapping": [
+      {
+        "url": "images/tutorials/fedaf83057bd1a1598efb83c.png",
+        "width": 161,
+        "height": 102,
+        "relationship": "rId5",
+        "wordFile": "简单NPC与AI克隆-image1.png",
+        "previous": "1创建 NPC 类",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/01bc194d178906a6f0d76386.png",
+        "width": 43,
+        "height": 158.77,
+        "relationship": "rId6",
+        "wordFile": "简单NPC与AI克隆-image2.png",
+        "previous": "在创建NPC之前，我们需要在我们的Content文件夹下新建一个文件夹，并且起名为NPCs，然后在这个文件夹内新建一个cs文件，随便起一个名字（我这里使用DemoNPC你们随意）作为文件名。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/8041333710bd5864aa670fa9.png",
+        "width": 294,
+        "height": 162,
+        "relationship": "rId7",
+        "wordFile": "简单NPC与AI克隆-image3.png",
+        "previous": "当然，NPC也需要一张贴图来显示游戏里的形象，如果你没有准备贴图也没关系，教程这边给大家提供了一张僵尸（也许是）的贴图，大家可以下载使用。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/687bd31a6be302fcbcecf811.gif",
+        "width": 454,
+        "height": 309,
+        "relationship": "rId8",
+        "wordFile": "简单NPC与AI克隆-image4.gif",
+        "previous": "用hero之类的模组生成我们的npc：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/9b426c4418818a30a08cf115.png",
+        "width": 423,
+        "height": 1440.84,
+        "relationship": "rId9",
+        "wordFile": "简单NPC与AI克隆-image5.png",
+        "previous": "当然这些还不够，在Wiki里有一张图：",
+        "text": ""
+      }
+    ]
   },
   {
     "title": "简单弹幕",
-    "expected": 25,
-    "word": 25,
-    "status": "导入"
+    "count": 25,
+    "mapping": [
+      {
+        "url": "images/tutorials/05084687a901d2ad6e41b225.png",
+        "width": 397,
+        "height": 325,
+        "relationship": "rId5",
+        "wordFile": "简单弹幕-image1.png",
+        "previous": "所以简单来说，弹幕就是游戏里“被发射出来、独立存在、有自己行为逻辑的实体”。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/25c8a032f854a65e131ba9f8.png",
+        "width": 18,
+        "height": 41.14,
+        "relationship": "rId6",
+        "wordFile": "简单弹幕-image2.png",
+        "previous": "不过在创建弹幕之前，我们需要在我们的Content文件夹下新建一个文件夹，并且起名为Projectiles，然后在这个文件夹内新建一个cs文件，随便起一个名字（我这里使用DemoProj你们随意）作为文件名。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/c14833c26de093a6681f019a.png",
+        "width": 290,
+        "height": 161,
+        "relationship": "rId7",
+        "wordFile": "简单弹幕-image3.png",
+        "previous": "然后将教程提供的贴图放入其中，并保证图片名，类名，文件名一致。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/a884d4cee8b5213048c307ac.png",
+        "width": 553.33,
+        "height": 350.72,
+        "relationship": "rId8",
+        "wordFile": "简单弹幕-image4.png",
+        "previous": "弹幕的基本属性和物品的属性有很大的不同，但和物品一样，它们都是在SetDefaults()方法里设置的。 将这段代码粘贴进我们的文件。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/e4bbe36be4ef5ea254326d05.png",
+        "width": 337,
+        "height": 61,
+        "relationship": "rId9",
+        "wordFile": "简单弹幕-image5.png",
+        "previous": "我们先来看这两个基本属性：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/602621da780870610b5bc5ef.png",
+        "width": 331.04,
+        "height": 399.49,
+        "relationship": "rId10",
+        "wordFile": "简单弹幕-image6.png",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/614e929c46f4ba08039dcbc3.png",
+        "width": 207.9,
+        "height": 399.49,
+        "relationship": "rId11",
+        "wordFile": "简单弹幕-image7.png",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/bd5d1e162d66fe4c1d2b73c2.png",
+        "width": 262,
+        "height": 123.87,
+        "relationship": "rId12",
+        "wordFile": "简单弹幕-image8.png",
+        "previous": "但如果你把弹幕横着画：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/4c69a95cf2d509a0ed981b06.png",
+        "width": 379,
+        "height": 61,
+        "relationship": "rId13",
+        "wordFile": "简单弹幕-image9.png",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/5615e16262c90bcd1ea64dac.png",
+        "width": 508,
+        "height": 35.08,
+        "relationship": "rId14",
+        "wordFile": "简单弹幕-image10.png",
+        "previous": "两个属性可以共存，对双方都造成伤害！（巨石，毒箭等）",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/9cbe3b0ddb6037cf40ee87e9.png",
+        "width": 498,
+        "height": 40.13,
+        "relationship": "rId15",
+        "wordFile": "简单弹幕-image11.png",
+        "previous": "大部分怪物的弹幕都会造成无类型伤害，不会随着弹幕暴击率改变。但少部分弹幕（机械boss与血肉墙使用的激光）会造成魔法伤害，能够对友方npc造成暴击。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/255255856b8d00c6272ec046.png",
+        "width": 516,
+        "height": 39.35,
+        "relationship": "rId16",
+        "wordFile": "简单弹幕-image12.png",
+        "previous": "penetrate（穿透次数）决定了弹幕打中几个怪物之后才会消失，穿透数量为1的弹幕不受其他弹幕的无敌帧影响，可以立即结算",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/679e6292559c05b0215109ef.png",
+        "width": 356,
+        "height": 34.68,
+        "relationship": "rId17",
+        "wordFile": "简单弹幕-image13.png",
+        "previous": "timeLeft（弹幕的存活时间）如非必要不要将其动态修改，不然弹幕会一直存在，消耗很多内存和CPU资源，造成游戏卡顿",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/45332c7b43cc17002bc121dd.png",
+        "width": 394,
+        "height": 47.66,
+        "relationship": "rId18",
+        "wordFile": "简单弹幕-image14.png",
+        "previous": "light（发光强度）弹幕光照的强度，不过在这里设置只能让弹幕发白光",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/7be974a486b491cc24265236.png",
+        "width": 410,
+        "height": 40.12,
+        "relationship": "rId19",
+        "wordFile": "简单弹幕-image15.png",
+        "previous": "ignoreWater（不受水影响）这个属性可以决定弹幕在水里的时候会不会减速，注意true是不受影响",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/f532b4a2be72c9f2b8d723a7.png",
+        "width": 521,
+        "height": 35.23,
+        "relationship": "rId20",
+        "wordFile": "简单弹幕-image16.png",
+        "previous": "tileCollide（撞墙消失）弹幕会不会和物块碰撞由这个属性控制，为true则弹幕撞到物块后会消失，否则就会穿墙。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/690bc584586313be7a2e2d7e.png",
+        "width": 542,
+        "height": 270,
+        "relationship": "rId21",
+        "wordFile": "简单弹幕-image17.png",
+        "previous": "Item.shoot = ModContent.ProjectileType<DemoProj>();",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/8f1db32970e0d2eb9a9da591.gif",
+        "width": 553.33,
+        "height": 309.37,
+        "relationship": "rId22",
+        "wordFile": "简单弹幕-image18.gif",
+        "previous": "然后我们进入游戏，就能看到....",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/4685ba87a69d236f0793964b.gif",
+        "width": 553.33,
+        "height": 410.33,
+        "relationship": "rId23",
+        "wordFile": "简单弹幕-image19.gif",
+        "previous": "然后我们进入游戏：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/d34a8b3d14603f7e7dee1406.gif",
+        "width": 553.33,
+        "height": 333.96,
+        "relationship": "rId24",
+        "wordFile": "简单弹幕-image20.gif",
+        "previous": "然后我们进入游戏：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/6e66809b7ae0c83d2b5cc405.gif",
+        "width": 553.33,
+        "height": 307.73,
+        "relationship": "rId25",
+        "wordFile": "简单弹幕-image21.gif",
+        "previous": "然后我们进入查看：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/63954ca4f00a004b1db37bc8.gif",
+        "width": 553.33,
+        "height": 334.06,
+        "relationship": "rId26",
+        "wordFile": "简单弹幕-image22.gif",
+        "previous": "最后我们就能看到：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/ff6fb5b806cb211184289727.gif",
+        "width": 553.33,
+        "height": 314.55,
+        "relationship": "rId27",
+        "wordFile": "简单弹幕-image23.gif",
+        "previous": "Projectile.extraUpdates = 0;",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/2e31b230d10aa6077de20b36.gif",
+        "width": 553.33,
+        "height": 314.09,
+        "relationship": "rId28",
+        "wordFile": "简单弹幕-image24.gif",
+        "previous": "Projectile.extraUpdates = 2;",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/3fbcce5db95767b2e9ebb3bd.gif",
+        "width": 74,
+        "height": 74,
+        "relationship": "rId29",
+        "wordFile": "简单弹幕-image25.gif",
+        "previous": "下期教程讲一些简单的向量移动方式，让你的弹幕更加灵活 ",
+        "text": ""
+      }
+    ]
   },
   {
     "title": "简单绘制",
-    "expected": 3,
-    "word": 3,
-    "status": "导入"
+    "count": 3,
+    "mapping": [
+      {
+        "url": "images/tutorials/854cd20e44bfc256a036c962.gif",
+        "width": 553.33,
+        "height": 430.53,
+        "relationship": "rId5",
+        "wordFile": "简单绘制-image1.gif",
+        "previous": "效果展示",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/a28ec0f56ea82653aba6e8f6.png",
+        "width": 553.33,
+        "height": 340.17,
+        "relationship": "rId6",
+        "wordFile": "简单绘制-image2.png",
+        "previous": "甚至可以：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/ce636081a9fe607f6ba9f05f.png",
+        "width": 553.33,
+        "height": 340.91,
+        "relationship": "rId7",
+        "wordFile": "简单绘制-image3.png",
+        "previous": "它们描述的是同一个东西，但参照物不同。我们先来看一张图，尝试理解一下它们的区别。",
+        "text": ""
+      }
+    ]
   },
   {
     "title": "自定义药水",
-    "expected": 6,
-    "word": 7,
-    "status": "导入"
+    "count": 6,
+    "mapping": [
+      {
+        "url": "images/tutorials/104fa16748da001bbb405459.png",
+        "width": 20,
+        "height": 26,
+        "relationship": "rId7",
+        "wordFile": "自定义药水-image1.png",
+        "previous": "然后随便起个名字（我这里使用 DemoPotion 你们随意）作为文件名。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/03a0504787359c981686a132.png",
+        "width": 300,
+        "height": 163,
+        "relationship": "rId8",
+        "wordFile": "自定义药水-image2.png",
+        "previous": "当然，药水也需要一张贴图来显示游戏里的形象，如果你没有准备贴图也没关系，教程这边给大家提供了一张紫色药水贴图，大家可以下载使用。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/d607e99ea7184c09af70a647.gif",
+        "width": 458,
+        "height": 174.85,
+        "relationship": "rId9",
+        "wordFile": "自定义药水-image3.gif",
+        "previous": "useTurn是一个很好玩的字段，为什么这么说呢，给你们看两张动图：",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/66d05f1b320412b87160c81f.gif",
+        "width": 474,
+        "height": 180.96,
+        "relationship": "rId10",
+        "wordFile": "自定义药水-image4.gif",
+        "previous": "useTurn为false",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/b91cf5e9a42ceadbbcf99562.gif",
+        "width": 553.33,
+        "height": 342.37,
+        "relationship": "rId12",
+        "wordFile": "自定义药水-image6.gif",
+        "previous": "现在我们进入游戏，拿药水喝一口....",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/078a2d2d0fb53ea50421cab2.gif",
+        "width": 192,
+        "height": 192,
+        "relationship": "rId13",
+        "wordFile": "自定义药水-image7.gif",
+        "previous": "",
+        "text": ""
+      }
+    ]
   },
   {
     "title": "高尔夫球杆（冷门这一块）",
-    "expected": 10,
-    "word": 10,
-    "status": "导入"
+    "count": 10,
+    "mapping": [
+      {
+        "url": "images/tutorials/db243c2db2e8966d1f7c2acd.png",
+        "width": 128.23,
+        "height": 115.94,
+        "relationship": "rId5",
+        "wordFile": "高尔夫球杆（冷门这一块）-image1.png",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/1a648125e91e8b1f3c06f8e8.png",
+        "width": 139.83,
+        "height": 115.94,
+        "relationship": "rId6",
+        "wordFile": "高尔夫球杆（冷门这一块）-image2.png",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/89f19f15c41878b58688f091.png",
+        "width": 128.23,
+        "height": 115.94,
+        "relationship": "rId7",
+        "wordFile": "高尔夫球杆（冷门这一块）-image3.png",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/1f11d989030a9ccd8c5f251a.png",
+        "width": 128.23,
+        "height": 115.94,
+        "relationship": "rId8",
+        "wordFile": "高尔夫球杆（冷门这一块）-image4.png",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/1c19b4872a98be25224b33af.png",
+        "width": 486,
+        "height": 300,
+        "relationship": "rId9",
+        "wordFile": "高尔夫球杆（冷门这一块）-image5.png",
+        "previous": "然后接下来是物品属性，在原版中添加了一些比较好用的方法，这为我们写一些同质化物品的时候节省一些时间，然后有利于管理。比如这里我们要用的高尔夫球杆。其实还有好多其他的。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/a2931496c42e8c00375c9c77.png",
+        "width": 333.6,
+        "height": 81.66,
+        "relationship": "rId10",
+        "wordFile": "高尔夫球杆（冷门这一块）-image6.png",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/3456db6a75e11bf668b1b454.png",
+        "width": 205.34,
+        "height": 81.66,
+        "relationship": "rId11",
+        "wordFile": "高尔夫球杆（冷门这一块）-image7.png",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/1bc425cb35b28679602f0430.png",
+        "width": 553.33,
+        "height": 113.75,
+        "relationship": "rId12",
+        "wordFile": "高尔夫球杆（冷门这一块）-image8.png",
+        "previous": "",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/abf2a5621f5cca143509831e.png",
+        "width": 525,
+        "height": 253,
+        "relationship": "rId13",
+        "wordFile": "高尔夫球杆（冷门这一块）-image9.png",
+        "previous": "当然你也看见原版有很多高尔夫球杆，这些球杆只是品质之间的不同，实际上参数没有区别。",
+        "text": ""
+      },
+      {
+        "url": "images/tutorials/f844983e4c50112371c62a6b.png",
+        "width": 94,
+        "height": 94,
+        "relationship": "rId14",
+        "wordFile": "高尔夫球杆（冷门这一块）-image10.png",
+        "previous": "这样你的高尔夫球杆就被装进对应的NPC商店里面了。（虽然好像没这个教程呢，催更叶子！！！）",
+        "text": ""
+      }
+    ]
   }
 ]

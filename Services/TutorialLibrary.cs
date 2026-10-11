@@ -1,4 +1,6 @@
 using System.Net;
+using System.Text.Json;
+using System.Globalization;
 using System.Text.RegularExpressions;
 using Markdig;
 using Markdig.Syntax;
@@ -6,6 +8,7 @@ using Markdig.Syntax.Inlines;
 
 namespace 叶子的TModLoader教程.Services;
 
+public sealed record ImageLayout(double width, double height);
 public sealed record TocEntry(string Id, string Title, int Level);
 public sealed class Tutorial
 {
@@ -31,6 +34,8 @@ public sealed class TutorialLibrary
     public TutorialLibrary()
     {
         var assembly = typeof(TutorialLibrary).Assembly;
+        using var layoutStream = assembly.GetManifestResourceStream(assembly.GetName().Name + ".Services.image-layout.json")!;
+        var layouts = JsonSerializer.Deserialize<Dictionary<string, List<ImageLayout>>>(layoutStream)!;
         var prefix = assembly.GetName().Name + ".Pages.MD.";
         foreach (var name in assembly.GetManifestResourceNames().Where(n => n.StartsWith(prefix) && n.EndsWith(".md")))
         {
@@ -76,7 +81,10 @@ public sealed class TutorialLibrary
                     if (local is not null) link.Url = local.Url;
                 }
             }
-            article.Html = document.ToHtml(pipeline);
+            var html = document.ToHtml(pipeline);
+            var imageIndex = 0;
+            if(layouts.TryGetValue(article.Title, out var imageLayouts)) html = Regex.Replace(html, @"<img\b[^>]*>", match => { if(imageIndex >= imageLayouts.Count) return match.Value; var size = imageLayouts[imageIndex++]; return match.Value.Insert(4, " style=\"width:" + size.width.ToString(CultureInfo.InvariantCulture) + "px;max-width:100%;height:auto\""); });
+            article.Html = html;
             foreach (Match heading in Regex.Matches(article.Html, "<h([1-6]) id=\"([^\"]+)\"[^>]*>(.*?)</h[1-6]>", RegexOptions.Singleline))
                 article.Toc.Add(new TocEntry(WebUtility.HtmlDecode(heading.Groups[2].Value), Plain(heading.Groups[3].Value), int.Parse(heading.Groups[1].Value)));
             article.Render = null;

@@ -1,13 +1,33 @@
 @using 叶子的TModLoader教程.Services
 @inject TutorialLibrary Library
-<nav class='directory-panel' aria-label='教程目录'>
-<div class='directory-tabs'><button class='@(points ? "" : "selected")' @onclick='() => points = false'>目录</button><button class='@(points ? "selected" : "")' @onclick='() => points = true'>要点</button></div>
-@if(points) {
- if(Current is not null) { var html = Current.Html; if(Current.Toc.Count == 0) { <p class='directory-empty'>本篇没有标题目录。</p> } foreach(var item in Current.Toc) { <a class='directory-point level-@item.Level' href='@(Current.Url + "#" + Uri.EscapeDataString(item.Id))'>@item.Title</a> } } else { <p class='directory-empty'>打开一篇教程即可查看要点。</p> }
+<nav class='directory-panel' aria-label='当前页面目录'>
+<div class='directory-tabs'><strong>@(Current is null ? "教程导航" : "本页目录")</strong></div>
+@if(Current is not null) {
+    <div class='directory-current'>@Current.Title</div>
+    if(nodes.Count == 0) { <p class='directory-empty'>本篇尚未设置标题。使用 Markdown 标题即可自动生成目录。</p> }
+    <叶子的TModLoader教程.Components.HeadingTree Nodes='nodes' ArticleUrl='Current.Url' OnNavigate='OnNavigate' />
 } else {
-<a class='directory-home' href='.'>教程首页</a>
-@foreach(var group in Library.Groups) { <details class='directory-section' open><summary>@group.Key</summary>@foreach(var article in group) { <a class='@(Current == article ? "active" : "")' href='@article.Url' @onclick='OnNavigate'>@article.Title</a> }</details> }
-<a class='directory-home' href='?article=主页'>资料、资源与友站</a>
+    <a class='directory-home' href='.'>教程首页</a>
+    @foreach(var group in Library.Groups) { <details class='directory-section' open><summary>@group.Key</summary>@foreach(var article in group) { <a href='@article.Url' @onclick='OnNavigate'>@article.Title</a> }</details> }
+    <a class='directory-home' href='?article=主页'>资料、资源与友站</a>
 }
 </nav>
-@code { [Parameter] public Tutorial? Current { get; set; } [Parameter] public EventCallback OnNavigate { get; set; } private bool points; }
+@code {
+    [Parameter] public Tutorial? Current { get; set; }
+    [Parameter] public EventCallback OnNavigate { get; set; }
+    private List<HeadingNode> nodes = [];
+    private Tutorial? previous;
+    protected override void OnParametersSet() {
+        if(previous == Current) return;
+        previous = Current; nodes = [];
+        if(Current is null) return;
+        _ = Current.Html;
+        var stack = new Stack<HeadingNode>();
+        foreach(var heading in Current.Toc) {
+            var node = new HeadingNode(heading);
+            while(stack.Count > 0 && stack.Peek().Entry.Level >= heading.Level) stack.Pop();
+            if(stack.Count == 0) nodes.Add(node); else stack.Peek().Children.Add(node);
+            stack.Push(node);
+        }
+    }
+}
