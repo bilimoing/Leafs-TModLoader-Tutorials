@@ -13,7 +13,9 @@ public sealed class Tutorial
     public required string Source { get; init; }
     public string Group { get; set; } = "补充教程";
     public int Order { get; set; } = 999;
-    public string Html { get; set; } = "";
+    private string? html;
+    public Action? Render { get; set; }
+    public string Html { get { if(html is null) Render?.Invoke(); return html ?? string.Empty; } set { html = value; } }
     public string SearchText { get; set; } = "";
     public List<TocEntry> Toc { get; set; } = [];
     public string Url => "?article=" + Uri.EscapeDataString(Title);
@@ -59,6 +61,9 @@ public sealed class TutorialLibrary
         Articles.Sort((a, b) => a.Order != b.Order ? a.Order.CompareTo(b.Order) : StringComparer.Ordinal.Compare(a.Title, b.Title));
         foreach (var article in Articles)
         {
+            article.SearchText = article.Source;
+            article.Render = () =>
+            {
             var document = Markdown.Parse(CleanLegacyNavigation(article.Source), pipeline);
             foreach (var link in document.Descendants<LinkInline>())
             {
@@ -74,7 +79,8 @@ public sealed class TutorialLibrary
             article.Html = document.ToHtml(pipeline);
             foreach (Match heading in Regex.Matches(article.Html, "<h([1-6]) id=\"([^\"]+)\"[^>]*>(.*?)</h[1-6]>", RegexOptions.Singleline))
                 article.Toc.Add(new TocEntry(WebUtility.HtmlDecode(heading.Groups[2].Value), Plain(heading.Groups[3].Value), int.Parse(heading.Groups[1].Value)));
-            article.SearchText = Plain(Regex.Replace(article.Html, @"<img\b[^>]*>", ""));
+            article.Render = null;
+            };
         }
     }
 

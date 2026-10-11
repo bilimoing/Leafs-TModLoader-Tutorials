@@ -119,12 +119,3 @@ A：本教程基于 TML 1.4.5 + .NET 10 编写，部分新语法和 API 在旧�
 
 
 ©*2026 冬天的叶 \| 仅供个人学习，禁止商用及二次分发*
-
-|上一篇<br>|下一篇<br>|
-|---|---|
-
-
-|[Visual Studio安装与配置.otl](https://www.kdocs.cn/l/cadYvejSWNKK?kso_type=file&kso_extra=eyJ0eXBlIjoiZmlsZSIsImZpbGVfaWQiOiI1NjM2NDg3MTkyMDAiLCJmaWxlX3NpemUiOjAsImZpbGVfdHlwZSI6Im90bCIsImZpbGVfbGluayI6Imh0dHBzOi8vd3d3Lmtkb2NzLmNuL2wvY2FkWXZlalNXTktLIiwidmlld190eXBlIjoidGl0bGUiLCJvd25lciI6IjU2MzcwODQyNDg2MiJ9)<br>|[第一个Mod的创建与编译.otl](https://www.kdocs.cn/l/ceMeCdrzMPvr?kso_type=file&kso_extra=eyJ0eXBlIjoiZmlsZSIsImZpbGVfaWQiOiI1NjM3MTc4OTA4NTIiLCJmaWxlX3NpemUiOjAsImZpbGVfdHlwZSI6Im90bCIsImZpbGVfbGluayI6Imh0dHBzOi8vd3d3Lmtkb2NzLmNuL2wvY2VNZUNkcnpNUHZyIiwidmlld190eXBlIjoidGl0bGUiLCJvd25lciI6IjU2MzcwODQyNDg2MiJ9)<br>|
-|---|---|
-
-

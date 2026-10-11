@@ -59,12 +59,3 @@ Visual Studio主要有三个版本：**Community（社区版）、Professional�
 
 
 ©*2026 冬天的叶 \| 仅供个人学习，禁止商用及二次分发*
-
-|上一篇<br>|下一篇<br>|
-|---|---|
-
-
-|[教程前言.otl](https://www.kdocs.cn/l/cf6PWpmbVsNF?kso_type=file&kso_extra=eyJ0eXBlIjoiZmlsZSIsImZpbGVfaWQiOiI1NjM2MzQwODEwMjQiLCJmaWxlX3NpemUiOjAsImZpbGVfdHlwZSI6Im90bCIsImZpbGVfbGluayI6Imh0dHBzOi8vd3d3Lmtkb2NzLmNuL2wvY2Y2UFdwbWJWc05GIiwidmlld190eXBlIjoidGl0bGUiLCJvd25lciI6IjU2MzY0ODcxOTIwMCJ9)<br>|[NET SDK安装与配置.otl](https://www.kdocs.cn/l/cgXPxhNvkMhZ?kso_type=file&kso_extra=eyJ0eXBlIjoiZmlsZSIsImZpbGVfaWQiOiI1NjM3MDg0MjQ4NjIiLCJmaWxlX3NpemUiOjAsImZpbGVfdHlwZSI6Im90bCIsImZpbGVfbGluayI6Imh0dHBzOi8vd3d3Lmtkb2NzLmNuL2wvY2dYUHhoTnZrTWhaIiwidmlld190eXBlIjoidGl0bGUiLCJvd25lciI6IjU2MzY0ODcxOTIwMCJ9)<br>|
-|---|---|
-
-
