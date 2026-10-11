@@ -1,0 +1,2 @@
+namespace 叶子的TModLoader教程.Services;
+public sealed class SearchState { private string query = string.Empty; public event Action? Changed; public string Query { get { return query; } set { if(query == value) return; query = value; Changed?.Invoke(); } } }
