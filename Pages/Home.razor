@@ -3,6 +3,7 @@
 @inject TutorialLibrary Library
 @inject IJSRuntime JS
 @inject SearchState Search
+@inject NavigationManager Navigation
 @implements IDisposable
 <PageTitle>@(Current?.Title ?? "叶子的 tModLoader 教程")</PageTitle>
 <div class='reader-shell @(directoryOpen ? "directory-open" : "directory-closed")'>
@@ -23,16 +24,19 @@ else {
 [SupplyParameterFromQuery(Name = "article")] public string? Article { get; set; }
 private Tutorial? Current => Library.Find(Article);
 private string query { get { return Search.Query; } set { Search.Query = value; } }
-protected override void OnInitialized() { Search.Changed += SearchChanged; }
+private IDisposable? navigationSubscription;
+private bool enterPending = true;
+protected override void OnInitialized() { Search.Changed += SearchChanged; navigationSubscription = Navigation.RegisterLocationChangingHandler(BeforeNavigation); }
+private async ValueTask BeforeNavigation(LocationChangingContext context) { var next = new Uri(context.TargetLocation); var current = new Uri(Navigation.Uri); if(next.AbsolutePath != current.AbsolutePath || next.Query == current.Query) return; try { await JS.InvokeVoidAsync("tutorialPage.leave"); } finally { if(context.CancellationToken.IsCancellationRequested) await JS.InvokeVoidAsync("tutorialPage.reset"); } }
 private void SearchChanged() { _ = InvokeAsync(StateHasChanged); }
-public void Dispose() { Search.Changed -= SearchChanged; }
+public void Dispose() { Search.Changed -= SearchChanged; navigationSubscription?.Dispose(); }
 
 private bool directoryOpen = true;
 private async Task CloseMobileDirectory() { if(await JS.InvokeAsync<bool>("tutorialSite.isMobile")) directoryOpen = false; }
 private string? lastArticle;
 private bool enhancePending = true;
 private Tutorial? Neighbor(int offset) { var list = Library.Articles.Where(a => a.Title != "主页").ToList(); var index = Current is null ? -1 : list.IndexOf(Current); return index >= 0 && index + offset >= 0 && index + offset < list.Count ? list[index + offset] : null; }
-protected override void OnParametersSet() { if(lastArticle != Article) { query = ""; lastArticle = Article; } enhancePending = true; }
-protected override async Task OnAfterRenderAsync(bool firstRender) { if(enhancePending || firstRender) { enhancePending = false; await JS.InvokeVoidAsync("tutorialSite.enhance"); } }
+protected override void OnParametersSet() { if(lastArticle != Article) { query = ""; lastArticle = Article; enterPending = true; } enhancePending = true; }
+protected override async Task OnAfterRenderAsync(bool firstRender) { if(enhancePending || firstRender) { enhancePending = false; await JS.InvokeVoidAsync("tutorialSite.enhance"); if(enterPending) { enterPending = false; await JS.InvokeVoidAsync("tutorialPage.enter"); } } }
 private string Snippet(Tutorial article) { var word = query.Split(' ', StringSplitOptions.RemoveEmptyEntries).FirstOrDefault() ?? ""; var index = article.SearchText.IndexOf(word, StringComparison.OrdinalIgnoreCase); var start = Math.Max(0, index - 35); return (start > 0 ? "…" : "") + article.SearchText.Substring(start, Math.Min(160, article.SearchText.Length - start)) + "…"; }
 }
