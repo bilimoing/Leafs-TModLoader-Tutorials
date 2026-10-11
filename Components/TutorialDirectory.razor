@@ -1,0 +1,13 @@
+@using 叶子的TModLoader教程.Services
+@inject TutorialLibrary Library
+<nav class='directory-panel' aria-label='教程目录'>
+<div class='directory-tabs'><button class='@(points ? "" : "selected")' @onclick='() => points = false'>目录</button><button class='@(points ? "selected" : "")' @onclick='() => points = true'>要点</button></div>
+@if(points) {
+ if(Current is not null) { var html = Current.Html; if(Current.Toc.Count == 0) { <p class='directory-empty'>本篇没有标题目录。</p> } foreach(var item in Current.Toc) { <a class='directory-point level-@item.Level' href='@(Current.Url + "#" + Uri.EscapeDataString(item.Id))'>@item.Title</a> } } else { <p class='directory-empty'>打开一篇教程即可查看要点。</p> }
+} else {
+<a class='directory-home' href='.'>教程首页</a>
+@foreach(var group in Library.Groups) { <details class='directory-section' open><summary>@group.Key</summary>@foreach(var article in group) { <a class='@(Current == article ? "active" : "")' href='@article.Url' @onclick='OnNavigate'>@article.Title</a> }</details> }
+<a class='directory-home' href='?article=主页'>资料、资源与友站</a>
+}
+</nav>
+@code { [Parameter] public Tutorial? Current { get; set; } [Parameter] public EventCallback OnNavigate { get; set; } private bool points; }

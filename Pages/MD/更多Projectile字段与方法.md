@@ -36,7 +36,7 @@
 
 我们在之前的测试弹幕里设置个`Projectile.scale = 2;` 然后进游戏看看：
 
-![图片](http://www.kdocs.cn/api/v3/office/copy/RzRHdVVrSitUK2RSWHhsbHNuekhpMkN0QVpUT2NDeVRsZytsWW04MXI2enBSRHJHMmo2RUJPUStadjlJSmNET3FmUy9hc25BK0dkOTlqZVFnN3dkTkJBUjMwMjIwc2VYdmhlcWtuN3FjQXNJbXRCWE1USGVTUDg5ZzFFV2UrQkZtNXB2eWIrNXdGaFdCRFRJRFE0RFU5aXptd1FHUnloN0RPZzdhTUgzTXpYUVBGSlhRVDA4a1NJRVovaVhDOHRzY3ZVVW9Ed2Q0dGV0NlpWYmNNV091N0VpNzRtUHJzcDN4R0pTdlI0ZHhTSWhSVk40VGZjeHRQVnZnRzJSQWJMOUdQbTRob04yVlo0PQ==/attach/object/S5FQWJZKACAEK?&kso_type=image&kso_extra=eyJ0eXBlIjoiaW1hZ2UiLCJpZCI6IlM1RlFXSlpLQUNBRUsiLCJvd25lciI6IjU2NzkyNjY4NjcwNyIsInJvdGF0ZSI6MCwic3RvcmFnZSI6ImJhc2UiLCJ3aWR0aCI6NDM0LCJoZWlnaHQiOjUwNX0)
+![图片](images/tutorials/7a6f68acaa8c870c0596833f.gif)
 
 ~~*哇奥，变大了*~~
 
@@ -69,7 +69,7 @@ public override void AI()
 
 然后进入游戏：
 
-![图片](http://www.kdocs.cn/api/v3/office/copy/RzRHdVVrSitUK2RSWHhsbHNuekhpMkN0QVpUT2NDeVRsZytsWW04MXI2enBSRHJHMmo2RUJPUStadjlJSmNET3FmUy9hc25BK0dkOTlqZVFnN3dkTkJBUjMwMjIwc2VYdmhlcWtuN3FjQXNJbXRCWE1USGVTUDg5ZzFFV2UrQkZtNXB2eWIrNXdGaFdCRFRJRFE0RFU5aXptd1FHUnloN0RPZzdhTUgzTXpYUVBGSlhRVDA4a1NJRVovaVhDOHRzY3ZVVW9Ed2Q0dGV0NlpWYmNNV091N0VpNzRtUHJzcDN4R0pTdlI0ZHhTSWhSVk40VGZjeHRQVnZnRzJSQWJMOUdQbTRob04yVlo0PQ==/attach/object/5SJSUKZKAAAG2?&kso_type=image&kso_extra=eyJ0eXBlIjoiaW1hZ2UiLCJpZCI6IjVTSlNVS1pLQUFBRzIiLCJvd25lciI6IjU2NzkyNjY4NjcwNyIsInJvdGF0ZSI6MCwic3RvcmFnZSI6ImJhc2UiLCJ3aWR0aCI6NDUwLCJoZWlnaHQiOjMxOH0)
+![图片](images/tutorials/3c5f06e5b57f0ae61c84d5f4.gif)
 
 看着还行，或许可以和**`Projectile.stopsDealingDamageAfterPenetrateHits`** 配合。
 
@@ -178,7 +178,7 @@ Projectile.hostile = false;// 对玩家造成伤害
 
 - **蜘蛛召唤杖的蜘蛛**：它可以超上限，向上取整。本身占用0.6的召唤栏，假设你有 2 个召唤栏，第 1 个直接被一整只蜘蛛占掉了，第 2 个召唤栏占了 1.2 个召唤位。正常情况下是无法召唤的。但蜘蛛是向上取整，1.2 ≈ 1，游戏认为这是正常的，所以你才有了 3 个蜘蛛召唤物
 
-  ![图片](http://www.kdocs.cn/api/v3/office/copy/RzRHdVVrSitUK2RSWHhsbHNuekhpMkN0QVpUT2NDeVRsZytsWW04MXI2enBSRHJHMmo2RUJPUStadjlJSmNET3FmUy9hc25BK0dkOTlqZVFnN3dkTkJBUjMwMjIwc2VYdmhlcWtuN3FjQXNJbXRCWE1USGVTUDg5ZzFFV2UrQkZtNXB2eWIrNXdGaFdCRFRJRFE0RFU5aXptd1FHUnloN0RPZzdhTUgzTXpYUVBGSlhRVDA4a1NJRVovaVhDOHRzY3ZVVW9Ed2Q0dGV0NlpWYmNNV091N0VpNzRtUHJzcDN4R0pTdlI0ZHhTSWhSVk40VGZjeHRQVnZnRzJSQWJMOUdQbTRob04yVlo0PQ==/attach/object/NA6AKKBKAAQFO?&kso_type=image&kso_extra=eyJ0eXBlIjoiaW1hZ2UiLCJpZCI6Ik5BNkFLS0JLQUFRRk8iLCJvd25lciI6IjU2NzkyNjY4NjcwNyIsInJvdGF0ZSI6MCwic3RvcmFnZSI6ImJhc2UiLCJ3aWR0aCI6NTQ4LCJoZWlnaHQiOjQ0Nn0)
+  ![图片](images/tutorials/d7cc1294fb2c2922af0f5dd7.png)
 
   ~~*这两个弹幕的代码给我看吐了。*~~
 
@@ -229,7 +229,7 @@ Projectile.hostile = false;// 对玩家造成伤害
 
   然后进入游戏：
 
-  ![图片](http://www.kdocs.cn/api/v3/office/copy/RzRHdVVrSitUK2RSWHhsbHNuekhpMkN0QVpUT2NDeVRsZytsWW04MXI2enBSRHJHMmo2RUJPUStadjlJSmNET3FmUy9hc25BK0dkOTlqZVFnN3dkTkJBUjMwMjIwc2VYdmhlcWtuN3FjQXNJbXRCWE1USGVTUDg5ZzFFV2UrQkZtNXB2eWIrNXdGaFdCRFRJRFE0RFU5aXptd1FHUnloN0RPZzdhTUgzTXpYUVBGSlhRVDA4a1NJRVovaVhDOHRzY3ZVVW9Ed2Q0dGV0NlpWYmNNV091N0VpNzRtUHJzcDN4R0pTdlI0ZHhTSWhSVk40VGZjeHRQVnZnRzJSQWJMOUdQbTRob04yVlo0PQ==/attach/object/Y2RGMKBKAAQHE?&kso_type=image&kso_extra=eyJ0eXBlIjoiaW1hZ2UiLCJpZCI6IlkyUkdNS0JLQUFRSEUiLCJvd25lciI6IjU2NzkyNjY4NjcwNyIsInJvdGF0ZSI6MCwic3RvcmFnZSI6ImJhc2UiLCJ3aWR0aCI6NTUwLCJoZWlnaHQiOjQxOX0)
+  ![图片](images/tutorials/e0abed9bfc93d26b0f965fb8.gif)
 
   你会发现随着弹幕数量越增越多，造成的伤害频率也越来越快，没有骗伤
 
@@ -268,7 +268,7 @@ Projectile.hostile = false;// 对玩家造成伤害
 
   然后进入游戏：
 
-  ![图片](http://www.kdocs.cn/api/v3/office/copy/RzRHdVVrSitUK2RSWHhsbHNuekhpMkN0QVpUT2NDeVRsZytsWW04MXI2enBSRHJHMmo2RUJPUStadjlJSmNET3FmUy9hc25BK0dkOTlqZVFnN3dkTkJBUjMwMjIwc2VYdmhlcWtuN3FjQXNJbXRCWE1USGVTUDg5ZzFFV2UrQkZtNXB2eWIrNXdGaFdCRFRJRFE0RFU5aXptd1FHUnloN0RPZzdhTUgzTXpYUVBGSlhRVDA4a1NJRVovaVhDOHRzY3ZVVW9Ed2Q0dGV0NlpWYmNNV091N0VpNzRtUHJzcDN4R0pTdlI0ZHhTSWhSVk40VGZjeHRQVnZnRzJSQWJMOUdQbTRob04yVlo0PQ==/attach/object/Q2PG4KBKAAQHW?&kso_type=image&kso_extra=eyJ0eXBlIjoiaW1hZ2UiLCJpZCI6IlEyUEc0S0JLQUFRSFciLCJvd25lciI6IjU2NzkyNjY4NjcwNyIsInJvdGF0ZSI6MCwic3RvcmFnZSI6ImJhc2UiLCJ3aWR0aCI6NDIzLCJoZWlnaHQiOjM5Nn0)
+  ![图片](images/tutorials/b91b3cd2927916be01f44231.gif)
 
   你会发现随着弹幕数量越增越多，但造成的伤害频率却没有越来越快，共享无敌帧
 
@@ -371,7 +371,7 @@ public override void SetStaticDefaults()
 
 这是**弹幕更新**的三段式结构，执行顺序为：
 
-![图片](http://www.kdocs.cn/api/v3/office/copy/RzRHdVVrSitUK2RSWHhsbHNuekhpMkN0QVpUT2NDeVRsZytsWW04MXI2enBSRHJHMmo2RUJPUStadjlJSmNET3FmUy9hc25BK0dkOTlqZVFnN3dkTkJBUjMwMjIwc2VYdmhlcWtuN3FjQXNJbXRCWE1USGVTUDg5ZzFFV2UrQkZtNXB2eWIrNXdGaFdCRFRJRFE0RFU5aXptd1FHUnloN0RPZzdhTUgzTXpYUVBGSlhRVDA4a1NJRVovaVhDOHRzY3ZVVW9Ed2Q0dGV0NlpWYmNNV091N0VpNzRtUHJzcDN4R0pTdlI0ZHhTSWhSVk40VGZjeHRQVnZnRzJSQWJMOUdQbTRob04yVlo0PQ==/attach/object/F7Y2WLJKACQEO?&kso_type=image&kso_extra=eyJ0eXBlIjoiaW1hZ2UiLCJpZCI6IkY3WTJXTEpLQUNRRU8iLCJvd25lciI6IjU2NzkyNjY4NjcwNyIsInJvdGF0ZSI6MCwic3RvcmFnZSI6ImJhc2UiLCJ3aWR0aCI6Mjg0OCwiaGVpZ2h0IjoxMzQwfQ)
+![图片](images/tutorials/0abac612a747fb6475547567.png)
 
 - **PreAI**：是`Projectile`内的**有返回值**方法，返回值为 `bool`。返回 `false` 会跳过 AI 和原版 AI。通常用来做前置检查、状态切换。
 
@@ -428,7 +428,7 @@ public override void SetStaticDefaults()
 
   然后进入游戏：
 
-  ![图片](http://www.kdocs.cn/api/v3/office/copy/RzRHdVVrSitUK2RSWHhsbHNuekhpMkN0QVpUT2NDeVRsZytsWW04MXI2enBSRHJHMmo2RUJPUStadjlJSmNET3FmUy9hc25BK0dkOTlqZVFnN3dkTkJBUjMwMjIwc2VYdmhlcWtuN3FjQXNJbXRCWE1USGVTUDg5ZzFFV2UrQkZtNXB2eWIrNXdGaFdCRFRJRFE0RFU5aXptd1FHUnloN0RPZzdhTUgzTXpYUVBGSlhRVDA4a1NJRVovaVhDOHRzY3ZVVW9Ed2Q0dGV0NlpWYmNNV091N0VpNzRtUHJzcDN4R0pTdlI0ZHhTSWhSVk40VGZjeHRQVnZnRzJSQWJMOUdQbTRob04yVlo0PQ==/attach/object/DM2QALRKADAGM?&kso_type=image&kso_extra=eyJ0eXBlIjoiaW1hZ2UiLCJpZCI6IkRNMlFBTFJLQURBR00iLCJvd25lciI6IjU2NzkyNjY4NjcwNyIsInJvdGF0ZSI6MCwic3RvcmFnZSI6ImJhc2UiLCJ3aWR0aCI6MjkyLCJoZWlnaHQiOjI0Mn0)
+  ![图片](images/tutorials/30b50e94550e108b430eebdd.gif)
 
 ### 5 OnTileCollide（物块交互）
 
@@ -451,7 +451,7 @@ public override bool OnTileCollide(Vector2 oldVelocity)
 
 然后进入游戏：
 
-![图片](http://www.kdocs.cn/api/v3/office/copy/RzRHdVVrSitUK2RSWHhsbHNuekhpMkN0QVpUT2NDeVRsZytsWW04MXI2enBSRHJHMmo2RUJPUStadjlJSmNET3FmUy9hc25BK0dkOTlqZVFnN3dkTkJBUjMwMjIwc2VYdmhlcWtuN3FjQXNJbXRCWE1USGVTUDg5ZzFFV2UrQkZtNXB2eWIrNXdGaFdCRFRJRFE0RFU5aXptd1FHUnloN0RPZzdhTUgzTXpYUVBGSlhRVDA4a1NJRVovaVhDOHRzY3ZVVW9Ed2Q0dGV0NlpWYmNNV091N0VpNzRtUHJzcDN4R0pTdlI0ZHhTSWhSVk40VGZjeHRQVnZnRzJSQWJMOUdQbTRob04yVlo0PQ==/attach/object/F77BMLRKAAQB2?&kso_type=image&kso_extra=eyJ0eXBlIjoiaW1hZ2UiLCJpZCI6IkY3N0JNTFJLQUFRQjIiLCJvd25lciI6IjU2NzkyNjY4NjcwNyIsInJvdGF0ZSI6MCwic3RvcmFnZSI6ImJhc2UiLCJ3aWR0aCI6MzE0LCJoZWlnaHQiOjI3Mn0)
+![图片](images/tutorials/1aa639dd9d4538fd4bf5b623.gif)
 
 ~~*有点诡异（）*~~
 
@@ -481,7 +481,7 @@ public override bool OnTileCollide(Vector2 oldVelocity)
 
 然后我们进入游戏：
 
-![图片](http://www.kdocs.cn/api/v3/office/copy/RzRHdVVrSitUK2RSWHhsbHNuekhpMkN0QVpUT2NDeVRsZytsWW04MXI2enBSRHJHMmo2RUJPUStadjlJSmNET3FmUy9hc25BK0dkOTlqZVFnN3dkTkJBUjMwMjIwc2VYdmhlcWtuN3FjQXNJbXRCWE1USGVTUDg5ZzFFV2UrQkZtNXB2eWIrNXdGaFdCRFRJRFE0RFU5aXptd1FHUnloN0RPZzdhTUgzTXpYUVBGSlhRVDA4a1NJRVovaVhDOHRzY3ZVVW9Ed2Q0dGV0NlpWYmNNV091N0VpNzRtUHJzcDN4R0pTdlI0ZHhTSWhSVk40VGZjeHRQVnZnRzJSQWJMOUdQbTRob04yVlo0PQ==/attach/object/S56RYLRKAAQB2?&kso_type=image&kso_extra=eyJ0eXBlIjoiaW1hZ2UiLCJpZCI6IlM1NlJZTFJLQUFRQjIiLCJvd25lciI6IjU2NzkyNjY4NjcwNyIsInJvdGF0ZSI6MCwic3RvcmFnZSI6ImJhc2UiLCJ3aWR0aCI6NTA3LCJoZWlnaHQiOjQwNX0)
+![图片](images/tutorials/426ea3267de6ef312f3d89f8.gif)
 
 不赖
 
@@ -489,7 +489,7 @@ public override bool OnTileCollide(Vector2 oldVelocity)
 
 这是**弹幕死亡**的三段式结构，执行顺序为：
 
-![图片](http://www.kdocs.cn/api/v3/office/copy/RzRHdVVrSitUK2RSWHhsbHNuekhpMkN0QVpUT2NDeVRsZytsWW04MXI2enBSRHJHMmo2RUJPUStadjlJSmNET3FmUy9hc25BK0dkOTlqZVFnN3dkTkJBUjMwMjIwc2VYdmhlcWtuN3FjQXNJbXRCWE1USGVTUDg5ZzFFV2UrQkZtNXB2eWIrNXdGaFdCRFRJRFE0RFU5aXptd1FHUnloN0RPZzdhTUgzTXpYUVBGSlhRVDA4a1NJRVovaVhDOHRzY3ZVVW9Ed2Q0dGV0NlpWYmNNV091N0VpNzRtUHJzcDN4R0pTdlI0ZHhTSWhSVk40VGZjeHRQVnZnRzJSQWJMOUdQbTRob04yVlo0PQ==/attach/object/N4KDMLRKAAACQ?&kso_type=image&kso_extra=eyJ0eXBlIjoiaW1hZ2UiLCJpZCI6Ik40S0RNTFJLQUFBQ1EiLCJvd25lciI6IjU2NzkyNjY4NjcwNyIsInJvdGF0ZSI6MCwic3RvcmFnZSI6ImJhc2UiLCJ3aWR0aCI6MjA0OCwiaGVpZ2h0Ijo5MTN9)
+![图片](images/tutorials/4b94427db7673eb571ebb3e8.png)
 
 - **PreKill**：`Projectile` 的**有返回值**方法，返回值为 `bool`。
 
@@ -522,7 +522,7 @@ public override bool OnTileCollide(Vector2 oldVelocity)
 
   然后我们进入游戏：
 
-  ![图片](http://www.kdocs.cn/api/v3/office/copy/RzRHdVVrSitUK2RSWHhsbHNuekhpMkN0QVpUT2NDeVRsZytsWW04MXI2enBSRHJHMmo2RUJPUStadjlJSmNET3FmUy9hc25BK0dkOTlqZVFnN3dkTkJBUjMwMjIwc2VYdmhlcWtuN3FjQXNJbXRCWE1USGVTUDg5ZzFFV2UrQkZtNXB2eWIrNXdGaFdCRFRJRFE0RFU5aXptd1FHUnloN0RPZzdhTUgzTXpYUVBGSlhRVDA4a1NJRVovaVhDOHRzY3ZVVW9Ed2Q0dGV0NlpWYmNNV091N0VpNzRtUHJzcDN4R0pTdlI0ZHhTSWhSVk40VGZjeHRQVnZnRzJSQWJMOUdQbTRob04yVlo0PQ==/attach/object/KLKC2LRKAAQDC?&kso_type=image&kso_extra=eyJ0eXBlIjoiaW1hZ2UiLCJpZCI6IktMS0MyTFJLQUFRREMiLCJvd25lciI6IjU2NzkyNjY4NjcwNyIsInJvdGF0ZSI6MCwic3RvcmFnZSI6ImJhc2UiLCJ3aWR0aCI6NjA3LCJoZWlnaHQiOjMzNX0)
+  ![图片](images/tutorials/5f0c11def5967377b43f7d98.gif)
 
   非常好玩
 
@@ -530,7 +530,7 @@ public override bool OnTileCollide(Vector2 oldVelocity)
 
 这是**命中 NPC** 的三段式结构，执行顺序为：
 
-![图片](http://www.kdocs.cn/api/v3/office/copy/RzRHdVVrSitUK2RSWHhsbHNuekhpMkN0QVpUT2NDeVRsZytsWW04MXI2enBSRHJHMmo2RUJPUStadjlJSmNET3FmUy9hc25BK0dkOTlqZVFnN3dkTkJBUjMwMjIwc2VYdmhlcWtuN3FjQXNJbXRCWE1USGVTUDg5ZzFFV2UrQkZtNXB2eWIrNXdGaFdCRFRJRFE0RFU5aXptd1FHUnloN0RPZzdhTUgzTXpYUVBGSlhRVDA4a1NJRVovaVhDOHRzY3ZVVW9Ed2Q0dGV0NlpWYmNNV091N0VpNzRtUHJzcDN4R0pTdlI0ZHhTSWhSVk40VGZjeHRQVnZnRzJSQWJMOUdQbTRob04yVlo0PQ==/attach/object/NN7VQLRKAAADI?&kso_type=image&kso_extra=eyJ0eXBlIjoiaW1hZ2UiLCJpZCI6Ik5ON1ZRTFJLQUFBREkiLCJvd25lciI6IjU2NzkyNjY4NjcwNyIsInJvdGF0ZSI6MCwic3RvcmFnZSI6ImJhc2UiLCJ3aWR0aCI6MTgxNCwiaGVpZ2h0Ijo4MjJ9)
+![图片](images/tutorials/72c1721fcf5c5c01a506f759.png)
 
 - **CanHitNPC**：`Projectile` 内的**有返回值**方法 ，返回值为 `bool?` 。参数为 `NPC target`。这个方法返回 `false` 阻止命中，返回 `true` 强制允许，`null` 则正常使用原版判定。
 
@@ -568,7 +568,7 @@ public override bool OnTileCollide(Vector2 oldVelocity)
 
   然后我们进入游戏：
 
-  ![图片](http://www.kdocs.cn/api/v3/office/copy/RzRHdVVrSitUK2RSWHhsbHNuekhpMkN0QVpUT2NDeVRsZytsWW04MXI2enBSRHJHMmo2RUJPUStadjlJSmNET3FmUy9hc25BK0dkOTlqZVFnN3dkTkJBUjMwMjIwc2VYdmhlcWtuN3FjQXNJbXRCWE1USGVTUDg5ZzFFV2UrQkZtNXB2eWIrNXdGaFdCRFRJRFE0RFU5aXptd1FHUnloN0RPZzdhTUgzTXpYUVBGSlhRVDA4a1NJRVovaVhDOHRzY3ZVVW9Ed2Q0dGV0NlpWYmNNV091N0VpNzRtUHJzcDN4R0pTdlI0ZHhTSWhSVk40VGZjeHRQVnZnRzJSQWJMOUdQbTRob04yVlo0PQ==/attach/object/HRSEYLRKAAQC4?&kso_type=image&kso_extra=eyJ0eXBlIjoiaW1hZ2UiLCJpZCI6IkhSU0VZTFJLQUFRQzQiLCJvd25lciI6IjU2NzkyNjY4NjcwNyIsInJvdGF0ZSI6MCwic3RvcmFnZSI6ImJhc2UiLCJ3aWR0aCI6NTg0LCJoZWlnaHQiOjQ0OX0)
+  ![图片](images/tutorials/c3cde3363fda786c1f2db762.gif)
 
   我说小吸血书&gt;大吸血书，有没有懂的（）
 
@@ -592,7 +592,7 @@ public override bool OnTileCollide(Vector2 oldVelocity)
 
 后续教程安排可能会写一些更细致的原版弹幕 AI 分析，比如悠悠球、鞭子、长矛的实战例子，克隆，以及内部实现。至于现在嘛……
 
-![图片](http://www.kdocs.cn/api/v3/office/copy/RzRHdVVrSitUK2RSWHhsbHNuekhpMkN0QVpUT2NDeVRsZytsWW04MXI2enBSRHJHMmo2RUJPUStadjlJSmNET3FmUy9hc25BK0dkOTlqZVFnN3dkTkJBUjMwMjIwc2VYdmhlcWtuN3FjQXNJbXRCWE1USGVTUDg5ZzFFV2UrQkZtNXB2eWIrNXdGaFdCRFRJRFE0RFU5aXptd1FHUnloN0RPZzdhTUgzTXpYUVBGSlhRVDA4a1NJRVovaVhDOHRzY3ZVVW9Ed2Q0dGV0NlpWYmNNV091N0VpNzRtUHJzcDN4R0pTdlI0ZHhTSWhSVk40VGZjeHRQVnZnRzJSQWJMOUdQbTRob04yVlo0PQ==/attach/object/VZRF6LRKADACQ?&kso_type=image&kso_extra=eyJ0eXBlIjoiaW1hZ2UiLCJpZCI6IlZaUkY2TFJLQURBQ1EiLCJvd25lciI6IjU2NzkyNjY4NjcwNyIsInJvdGF0ZSI6MCwic3RvcmFnZSI6ImJhc2UiLCJ3aWR0aCI6ODcyLCJoZWlnaHQiOjY1OH0)
+![图片](images/tutorials/5c7d7aec1b944e86d01314f5.png)
 
 ~~*摸了，摸了。*~~
 

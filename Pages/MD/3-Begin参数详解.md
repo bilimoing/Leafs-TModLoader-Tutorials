@@ -66,7 +66,7 @@ $A=({{B}_{{{A}_{s}}}}\cdot {{A}_{s}}){{\odot }_{A}}({{B}_{Ad}}\cdot {{A}_{d}})$
 
 可选的值如下(金山文档这边公式不是很好用所以主播直接截图了)
 
-![图片](http://www.kdocs.cn/api/v3/office/copy/TnRnYTdPazZ2V3dXYjF0ZjJEN05sQXczanNaKzRPaWlabitRb1R0QjhJS3czRVcwcmswcnlaUkFJL2xRSXhGS29MZkNMYmRWQ3hmVDJqQUtlM3dPektyQk1YUmJEdGtMQnc3QzlVZ3RoSFM3Szk2THhOb3pHeGh5K25IZk1EOGxycHBMRmRKUFBUemd1Tm0xZ2NUL0VGdnQybXBldXkzN0FpS1ZVbU1keG1QWnRmQTB6bDh1WUNlSVFzbDZSb1VSeURhalI4Nzc0N0JoMU5CTkhWenA5MFRPQzZpM2N5dmVpRlAwQVZ5K3ZOQlpCS1FMcm0wVHp1M2RMRU9KOGZKRWxZMjF5aGxMVjRrPQ==/attach/object/CTXG4TZKABABO?&kso_type=image&kso_extra=eyJ0eXBlIjoiaW1hZ2UiLCJpZCI6IkNUWEc0VFpLQUJBQk8iLCJvd25lciI6IjU2OTk1ODM4NzkwMCIsInJvdGF0ZSI6MCwic3RvcmFnZSI6ImJhc2UiLCJ3aWR0aCI6MTE1NCwiaGVpZ2h0Ijo3MDV9)
+![图片](images/tutorials/d2c5fe4bdade575f9506d0f2.png)
 
 ## 混合函数 BlendFunction
 
@@ -632,7 +632,7 @@ FNA中是行向量约定，因此是transform \* ortho
 
   于是矩阵如下
 
-  ![图片](http://www.kdocs.cn/api/v3/office/copy/TnRnYTdPazZ2V3dXYjF0ZjJEN05sQXczanNaKzRPaWlabitRb1R0QjhJS3czRVcwcmswcnlaUkFJL2xRSXhGS29MZkNMYmRWQ3hmVDJqQUtlM3dPektyQk1YUmJEdGtMQnc3QzlVZ3RoSFM3Szk2THhOb3pHeGh5K25IZk1EOGxycHBMRmRKUFBUemd1Tm0xZ2NUL0VGdnQybXBldXkzN0FpS1ZVbU1keG1QWnRmQTB6bDh1WUNlSVFzbDZSb1VSeURhalI4Nzc0N0JoMU5CTkhWenA5MFRPQzZpM2N5dmVpRlAwQVZ5K3ZOQlpCS1FMcm0wVHp1M2RMRU9KOGZKRWxZMjF5aGxMVjRrPQ==/attach/object/OIYHOTZKABQGI?&kso_type=image&kso_extra=eyJ0eXBlIjoiaW1hZ2UiLCJpZCI6Ik9JWUhPVFpLQUJRR0kiLCJvd25lciI6IjU2OTk1ODM4NzkwMCIsInJvdGF0ZSI6MCwic3RvcmFnZSI6ImJhc2UiLCJ3aWR0aCI6MjkwLCJoZWlnaHQiOjE3Mn0)
+  ![图片](images/tutorials/6c96300dd6dc2d3b3f394d89.png)
 
   这里利用齐次坐标实现了平移和缩放
 

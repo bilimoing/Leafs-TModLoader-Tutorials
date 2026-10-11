@@ -32,7 +32,7 @@
 
 
 
-![图片](http://www.kdocs.cn/api/v3/office/copy/Ri91aEJpdmtBSzFneVNTNXBSTFUwRnRKS04vK1d0My9ZRkk1ZGc3VUpBOGNOWm5lUm5HYzZTdnl5QzN6K3RVT3ZrdVdSQVFtdkhYcjA4cDIxTXlwNS9WeWFtQlZxc200V3E3TmdkNVg0MU5BT3ZwcVU0WHNMc1JzRlBoZENYRGNTQzhlbllCSUhXbzJNYkpaVlZHL3pXQXMyWkFMTThtU2RwSTRsempJNnk1R29FelVweVdIMzBWMmtRUXZGRDNTNHlOSXJLdjRTZk9IQy9mZTUzbHY1NmdRcnRZRmVUTVdiekxBUHRjZGhhSXpMSjlYS2JmT21oMUlpbmdTMktjeDRxcTI4bUh0VmFZPQ==/attach/object/GWHMT2BJABABU?&kso_type=image&kso_extra=eyJ0eXBlIjoiaW1hZ2UiLCJpZCI6IkdXSE1UMkJKQUJBQlUiLCJvd25lciI6IjU2MzcwODQyNDg2MiIsInJvdGF0ZSI6MCwic3RvcmFnZSI6ImJhc2UiLCJ3aWR0aCI6ODU4LCJoZWlnaHQiOjUxNn0)
+![图片](images/tutorials/edf14ac5c4524253e5563c56.png)
 
 你可能会好奇，为什么 **.NET SDK** 有一堆不同后缀的安装包。很多新手看到这些就懵了，不知道自己的电脑该下哪个。这里简单解释一下：
 
@@ -46,7 +46,7 @@
 
 大部分 **Windows 10 / Windows 11** 无脑选择**x64**即可
 
-![图片](http://www.kdocs.cn/api/v3/office/copy/Ri91aEJpdmtBSzFneVNTNXBSTFUwRnRKS04vK1d0My9ZRkk1ZGc3VUpBOGNOWm5lUm5HYzZTdnl5QzN6K3RVT3ZrdVdSQVFtdkhYcjA4cDIxTXlwNS9WeWFtQlZxc200V3E3TmdkNVg0MU5BT3ZwcVU0WHNMc1JzRlBoZENYRGNTQzhlbllCSUhXbzJNYkpaVlZHL3pXQXMyWkFMTThtU2RwSTRsempJNnk1R29FelVweVdIMzBWMmtRUXZGRDNTNHlOSXJLdjRTZk9IQy9mZTUzbHY1NmdRcnRZRmVUTVdiekxBUHRjZGhhSXpMSjlYS2JmT21oMUlpbmdTMktjeDRxcTI4bUh0VmFZPQ==/attach/object/FGHMT2BJAAQEG?&kso_type=image&kso_extra=eyJ0eXBlIjoiaW1hZ2UiLCJpZCI6IkZHSE1UMkJKQUFRRUciLCJvd25lciI6IjU2MzcwODQyNDg2MiIsInJvdGF0ZSI6MCwic3RvcmFnZSI6ImJhc2UiLCJ3aWR0aCI6ODE1LCJoZWlnaHQiOjYxMn0)
+![图片](images/tutorials/1d6844d9c77e74f6f7fcf270.png)
 
 下载完成以后，我们点击安装，还是一样的，允许修改，同意协议。
 
@@ -66,7 +66,7 @@ dotnet --list-sdks
 
 [https://dotnet.microsoft.com/zh-cn/download/dotnet/10.0](https://dotnet.microsoft.com/zh-cn/download/dotnet/10.0)
 
-![图片](http://www.kdocs.cn/api/v3/office/copy/Ri91aEJpdmtBSzFneVNTNXBSTFUwRnRKS04vK1d0My9ZRkk1ZGc3VUpBOGNOWm5lUm5HYzZTdnl5QzN6K3RVT3ZrdVdSQVFtdkhYcjA4cDIxTXlwNS9WeWFtQlZxc200V3E3TmdkNVg0MU5BT3ZwcVU0WHNMc1JzRlBoZENYRGNTQzhlbllCSUhXbzJNYkpaVlZHL3pXQXMyWkFMTThtU2RwSTRsempJNnk1R29FelVweVdIMzBWMmtRUXZGRDNTNHlOSXJLdjRTZk9IQy9mZTUzbHY1NmdRcnRZRmVUTVdiekxBUHRjZGhhSXpMSjlYS2JmT21oMUlpbmdTMktjeDRxcTI4bUh0VmFZPQ==/attach/object/YGHMT2BJACAA4?&kso_type=image&kso_extra=eyJ0eXBlIjoiaW1hZ2UiLCJpZCI6IllHSE1UMkJKQUNBQTQiLCJvd25lciI6IjU2MzcwODQyNDg2MiIsInJvdGF0ZSI6MCwic3RvcmFnZSI6ImJhc2UiLCJ3aWR0aCI6ODc4LCJoZWlnaHQiOjUyMH0)
+![图片](images/tutorials/df72b6dfae05ac97703ee34a.png)
 
 
 
@@ -82,7 +82,7 @@ dotnet --list-sdks
 dotnet --list-sdks
 ```
 
-![图片](http://www.kdocs.cn/api/v3/office/copy/Ri91aEJpdmtBSzFneVNTNXBSTFUwRnRKS04vK1d0My9ZRkk1ZGc3VUpBOGNOWm5lUm5HYzZTdnl5QzN6K3RVT3ZrdVdSQVFtdkhYcjA4cDIxTXlwNS9WeWFtQlZxc200V3E3TmdkNVg0MU5BT3ZwcVU0WHNMc1JzRlBoZENYRGNTQzhlbllCSUhXbzJNYkpaVlZHL3pXQXMyWkFMTThtU2RwSTRsempJNnk1R29FelVweVdIMzBWMmtRUXZGRDNTNHlOSXJLdjRTZk9IQy9mZTUzbHY1NmdRcnRZRmVUTVdiekxBUHRjZGhhSXpMSjlYS2JmT21oMUlpbmdTMktjeDRxcTI4bUh0VmFZPQ==/attach/object/5KHMT2BJADAGY?&kso_type=image&kso_extra=eyJ0eXBlIjoiaW1hZ2UiLCJpZCI6IjVLSE1UMkJKQURBR1kiLCJvd25lciI6IjU2MzcwODQyNDg2MiIsInJvdGF0ZSI6MCwic3RvcmFnZSI6ImJhc2UiLCJ3aWR0aCI6ODI3LCJoZWlnaHQiOjYzM30)
+![图片](images/tutorials/af563135f3a01e2a3f89af74.png)
 
 
 

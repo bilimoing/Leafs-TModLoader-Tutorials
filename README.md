@@ -37,3 +37,15 @@ ALLOWED_ORIGIN 已限制为 https://bilimoing.github.io，更换域名时需同�
 将下载的文件放到项目 import/images 文件夹，然后从项目根目录运行 node scripts/image-migration/import.mjs。导入器检查图片类型，复制到 wwwroot/images/tutorials 并把 Markdown 地址改为站内图片，保留未成功下载的外链。提交文档与图片一起发布。
 
 全站背景树由公共布局加载，落叶随机从树冠内生成并持续沿弯曲轨迹飘落。浏览器后台或开启减少动态效果时停止生成。自动发布会为脚本与样式附加提交版本参数，减少旧缓存影响，version.json 可查看实际部署版本。
+
+### 旧图片接口全部下载失败时
+
+如果下载记录显示图片无数据或无权限，不要继续重复抓取。登录并不保证旧的 office/copy 图片接口可用。请在金山中打开原文，使用带图片的 Markdown 导出方式；若没有这种导出选项，可导出 HTML 或 Word 文件取得图片，不能仅下载只有外链的 Markdown。
+
+将带图片的 Markdown 包解压到 import/export，保持导出文件名与 Pages/MD 教程文件名一致。执行 node scripts/image-migration/import-export.mjs。工具只处理同名、图片引用数量一致、所有图片在导出包内且类型有效的文档，保留当前正文，只按图片出现顺序替换地址。因此应导出与当前文档相同版本，避免顺序变化；请先提交当前工作并在导入后检查图片是否对应。失败或数量不一致的文章会跳过并给出提示。
+
+左侧目录已恢复，支持整体展开收起、章节展开收起及目录/要点切换。
+
+### 本次 Word 图片迁移结果
+
+已从用户提供的 34 份 Word 导出文件提取图片，将现有 Markdown 中全部 352 个图片引用改为 images/tutorials 下的本地文件，去重后 335 张图片，保留 GIF 和 WebP 原格式。匹配使用正文图片顺序和图片尺寸，跳过导出中的文档图标；迁移记录保存在 scripts/image-migration/docx-import-report.json。源 Word 和解压中间文件未加入仓库。提交 wwwroot/images/tutorials 与修改后的 Pages/MD 后，访客无需金山登录即可加载图片。
