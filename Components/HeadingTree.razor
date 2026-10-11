@@ -4,9 +4,9 @@
 @foreach(var node in Nodes) {
 <li>
 @if(node.Children.Count > 0) {
-<details open><summary><a href='@(ArticleUrl + "#" + Uri.EscapeDataString(node.Entry.Id))' @onclick:preventDefault='true' @onclick:stopPropagation='true' @onclick='() => ScrollTo(node.Entry.Id)'>@node.Entry.Title</a></summary><HeadingTree Nodes='node.Children' ArticleUrl='ArticleUrl' OnNavigate='OnNavigate' /></details>
+<details open><summary><button type='button' class='heading-jump' @onclick:stopPropagation='true' @onclick='() => ScrollTo(node.Entry.Id)'>@node.Entry.Title</button></summary><HeadingTree Nodes='node.Children' ArticleUrl='ArticleUrl' OnNavigate='OnNavigate' /></details>
 } else {
-<a href='@(ArticleUrl + "#" + Uri.EscapeDataString(node.Entry.Id))' @onclick:preventDefault='true' @onclick='() => ScrollTo(node.Entry.Id)'>@node.Entry.Title</a>
+<button type='button' class='heading-jump' @onclick='() => ScrollTo(node.Entry.Id)'>@node.Entry.Title</button>
 }
 </li>
 }
