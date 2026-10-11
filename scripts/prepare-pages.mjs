@@ -1,0 +1,15 @@
+import fs from 'node:fs';
+import path from 'node:path';
+const output = process.argv[2] || 'release/wwwroot';
+const repository = process.env.GITHUB_REPOSITORY?.split('/')[1] || '';
+const base = process.env.PAGES_BASE_PATH || (!repository || repository.toLowerCase().endsWith('.github.io') ? '/' : '/' + repository + '/');
+if (!base.startsWith('/') || !base.endsWith('/')) throw new Error('站点路径必须以斜杠开头和结尾');
+const entry = path.join(output, 'index.html');
+const original = fs.readFileSync(entry, 'utf8');
+const start = original.indexOf('<base ');
+const end = original.indexOf('>', start);
+if(start === -1 || end === -1) throw new Error('发布首页缺少基础路径标签');
+const html = original.slice(0,start) + '<base href=' + String.fromCharCode(34) + base + String.fromCharCode(34) + ' />' + original.slice(end+1);
+fs.writeFileSync(entry, html);
+fs.writeFileSync(path.join(output, '.nojekyll'), '');
+console.log('已配置 GitHub Pages 路径：' + base);

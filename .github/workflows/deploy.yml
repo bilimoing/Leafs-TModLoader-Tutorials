@@ -1,0 +1,36 @@
+name: 部署教程网站
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+      - name: 安装 .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - name: 配置 Pages
+        uses: actions/configure-pages@v5
+      - name: 构建静态网站
+        run: dotnet publish 叶子的TModLoader教程.csproj -c Release -o release
+      - name: 适配仓库路径
+        run: node scripts/prepare-pages.mjs release/wwwroot
+      - name: 上传网站
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: release/wwwroot
+      - name: 发布网站
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,148 @@
+作者：冬天的叶 2026/8/29 \| 🔖 入门 
+
+[叶子的TModLoader教程](https://www.kdocs.cn/l/crP1DDFrTik8)
+
+不知道第几个TModLoader教程说是....
+
+---
+
+想要制作一个泰拉瑞亚Mod，首先需要建立Mod的项目结构，
+
+有两种实现途径：
+
+1 自动创建（强烈推荐）：使用 tModLoader 自带的模组项目模板进行创建。tModLoader 将自动生成完整的文件夹结构、无需手动编写繁琐的配置，开箱即用，几乎零差错。
+
+2 手动创建（仅作了解）：完全依靠文本编辑器或命令行，自行建立嵌套文件夹，手写 .csproj 文件并正确引用 TML 程序集。该方式步骤繁琐，任何路径或引用错误都会导致编译失败，不推荐新手尝试。
+
+---
+
+## 第一个Mod的创建与编译
+
+首先，启动我们的**tModLoader**，在游戏主菜单中，点击创意工坊按钮，进入创意工坊菜单。
+
+![图片](http://www.kdocs.cn/api/v3/office/copy/ZDlBZEMwZldISElpMDU3cjVjclBhWDRGdlFUSW01Tnc4OE5yOHpacVpnMEU2T2ZocU9lbHdTUmpKcWtqa2c2SFNYcWxJL2pDcFVKMmliQlUrQ016Q0xQaEM5VC9veVBDeUIzbGZPU2NKRXdncFRzblNmQUcwTkRZNlBhOFZuTVpZQ3diTitkSFBTVVoyTmI4VnNHd3N1QUF1bXlQOUdJVWY1a1FkTVJlcG1ISFRBTzgxejVHV3dCSHZpR29lY1luRStPbE42WGhKdXkyVGVaSURodTF1alhqbVBPdk1mcVFFb1VJY3JiS0VDR21NTzg0WGtwbENIdCt4QWhXN1VFbVNjY0Q0dHlvL3gwPQ==/attach/object/KU2NH2BJADQBS?&kso_type=image&kso_extra=eyJ0eXBlIjoiaW1hZ2UiLCJpZCI6IktVMk5IMkJKQURRQlMiLCJvd25lciI6IjU2MzcxNzg5MDg1MiIsInJvdGF0ZSI6MCwic3RvcmFnZSI6ImJhc2UiLCJ3aWR0aCI6NzI4LCJoZWlnaHQiOjU4Mn0)
+
+然后我们在弹出的菜单里，选择右上角的开发模组按钮进入特殊页面。
+
+![图片](http://www.kdocs.cn/api/v3/office/copy/ZDlBZEMwZldISElpMDU3cjVjclBhWDRGdlFUSW01Tnc4OE5yOHpacVpnMEU2T2ZocU9lbHdTUmpKcWtqa2c2SFNYcWxJL2pDcFVKMmliQlUrQ016Q0xQaEM5VC9veVBDeUIzbGZPU2NKRXdncFRzblNmQUcwTkRZNlBhOFZuTVpZQ3diTitkSFBTVVoyTmI4VnNHd3N1QUF1bXlQOUdJVWY1a1FkTVJlcG1ISFRBTzgxejVHV3dCSHZpR29lY1luRStPbE42WGhKdXkyVGVaSURodTF1alhqbVBPdk1mcVFFb1VJY3JiS0VDR21NTzg0WGtwbENIdCt4QWhXN1VFbVNjY0Q0dHlvL3gwPQ==/attach/object/HM2NH2BJABQGE?&kso_type=image&kso_extra=eyJ0eXBlIjoiaW1hZ2UiLCJpZCI6IkhNMk5IMkJKQUJRR0UiLCJvd25lciI6IjU2MzcxNzg5MDg1MiIsInJvdGF0ZSI6MCwic3RvcmFnZSI6ImJhc2UiLCJ3aWR0aCI6NzEzLCJoZWlnaHQiOjgwMH0)
+
+这个页面的列表中存放着的是我们的模组源码，在首次打开这个列表时里面应该是空的，先不用管。我们点击右下角的创建模组按钮。
+
+![图片](http://www.kdocs.cn/api/v3/office/copy/ZDlBZEMwZldISElpMDU3cjVjclBhWDRGdlFUSW01Tnc4OE5yOHpacVpnMEU2T2ZocU9lbHdTUmpKcWtqa2c2SFNYcWxJL2pDcFVKMmliQlUrQ016Q0xQaEM5VC9veVBDeUIzbGZPU2NKRXdncFRzblNmQUcwTkRZNlBhOFZuTVpZQ3diTitkSFBTVVoyTmI4VnNHd3N1QUF1bXlQOUdJVWY1a1FkTVJlcG1ISFRBTzgxejVHV3dCSHZpR29lY1luRStPbE42WGhKdXkyVGVaSURodTF1alhqbVBPdk1mcVFFb1VJY3JiS0VDR21NTzg0WGtwbENIdCt4QWhXN1VFbVNjY0Q0dHlvL3gwPQ==/attach/object/HQ2NH2BJACQEI?&kso_type=image&kso_extra=eyJ0eXBlIjoiaW1hZ2UiLCJpZCI6IkhRMk5IMkJKQUNRRUkiLCJvd25lciI6IjU2MzcxNzg5MDg1MiIsInJvdGF0ZSI6MCwic3RvcmFnZSI6ImJhc2UiLCJ3aWR0aCI6NzA5LCJoZWlnaHQiOjczN30)
+
+点击创建模组按钮后，会弹出一个表单，有一些内容需要我们填写
+
+
+
+**1 模组内部名称** 
+
+这个是你的**Mod**主名字/命名空间名称，这个名称一定要是英文，不能有空格与特殊字符。
+
+因为它不但关联着命名空间以及全局的**Mod**名称，还是文件夹的名字，更是代码里面的主类名。修改起来十分复杂。
+
+现在的你可能不知道这意味着什么，但是在后续的模组制作中你会经常使用它，如果这个名字填的不好将极大地影响你的代码体验。
+
+
+
+**2 模组显示名称** 
+
+这个需要填写的内容就比较随意了，它是你的**Mod**显示名字，可以填中文、空格和特殊字符，填错了也没关系，这个可以随时更改。
+
+
+
+**3 模组作者** 
+
+顾名思义，就是模组作者的名字，和 **模组显示名称 **一样可以填中文、空格和特殊字符。
+
+
+
+**4** **模板剑内部名称** 
+
+这个是你的**Mod**第一把武器的 内部名/类名 ，和 **模组内部名称 一样**一定要是英文，不能有空格与特殊字符。
+
+填了它 **tModLoader** 就会自动为你的**Mod**生成一把模板剑，部分音乐资源包，翻译**Mod** 可能会直接跳过这个内容的填写，放弃这把模板武器。
+
+![图片](http://www.kdocs.cn/api/v3/office/copy/ZDlBZEMwZldISElpMDU3cjVjclBhWDRGdlFUSW01Tnc4OE5yOHpacVpnMEU2T2ZocU9lbHdTUmpKcWtqa2c2SFNYcWxJL2pDcFVKMmliQlUrQ016Q0xQaEM5VC9veVBDeUIzbGZPU2NKRXdncFRzblNmQUcwTkRZNlBhOFZuTVpZQ3diTitkSFBTVVoyTmI4VnNHd3N1QUF1bXlQOUdJVWY1a1FkTVJlcG1ISFRBTzgxejVHV3dCSHZpR29lY1luRStPbE42WGhKdXkyVGVaSURodTF1alhqbVBPdk1mcVFFb1VJY3JiS0VDR21NTzg0WGtwbENIdCt4QWhXN1VFbVNjY0Q0dHlvL3gwPQ==/attach/object/HE2NH2BJACAGU?&kso_type=image&kso_extra=eyJ0eXBlIjoiaW1hZ2UiLCJpZCI6IkhFMk5IMkJKQUNBR1UiLCJvd25lciI6IjU2MzcxNzg5MDg1MiIsInJvdGF0ZSI6MCwic3RvcmFnZSI6ImJhc2UiLCJ3aWR0aCI6NjMwLCJoZWlnaHQiOjIzOH0)
+
+**5** **多提一嘴** 
+
+在**tModLoader** 更新到 1.4 版本后就出现了明显的输入法异常，我们在游戏填表时，可能会出现想打中文，输入法却没有反应，或是输入法出现了，但是隐身了，无法看到的情况。如遭遇相关问题，请在其他地方编写完文本，然后将其复制,粘贴到内容框中。
+
+![图片](http://www.kdocs.cn/api/v3/office/copy/ZDlBZEMwZldISElpMDU3cjVjclBhWDRGdlFUSW01Tnc4OE5yOHpacVpnMEU2T2ZocU9lbHdTUmpKcWtqa2c2SFNYcWxJL2pDcFVKMmliQlUrQ016Q0xQaEM5VC9veVBDeUIzbGZPU2NKRXdncFRzblNmQUcwTkRZNlBhOFZuTVpZQ3diTitkSFBTVVoyTmI4VnNHd3N1QUF1bXlQOUdJVWY1a1FkTVJlcG1ISFRBTzgxejVHV3dCSHZpR29lY1luRStPbE42WGhKdXkyVGVaSURodTF1alhqbVBPdk1mcVFFb1VJY3JiS0VDR21NTzg0WGtwbENIdCt4QWhXN1VFbVNjY0Q0dHlvL3gwPQ==/attach/object/II2NH2BJADABA?&kso_type=image&kso_extra=eyJ0eXBlIjoiaW1hZ2UiLCJpZCI6IklJMk5IMkJKQURBQkEiLCJvd25lciI6IjU2MzcxNzg5MDg1MiIsInJvdGF0ZSI6MCwic3RvcmFnZSI6ImJhc2UiLCJ3aWR0aCI6NzAwLCJoZWlnaHQiOjc0Mn0)
+
+我这里随便填填，然后我们点击右下角的创建按钮。
+
+![图片](http://www.kdocs.cn/api/v3/office/copy/ZDlBZEMwZldISElpMDU3cjVjclBhWDRGdlFUSW01Tnc4OE5yOHpacVpnMEU2T2ZocU9lbHdTUmpKcWtqa2c2SFNYcWxJL2pDcFVKMmliQlUrQ016Q0xQaEM5VC9veVBDeUIzbGZPU2NKRXdncFRzblNmQUcwTkRZNlBhOFZuTVpZQ3diTitkSFBTVVoyTmI4VnNHd3N1QUF1bXlQOUdJVWY1a1FkTVJlcG1ISFRBTzgxejVHV3dCSHZpR29lY1luRStPbE42WGhKdXkyVGVaSURodTF1alhqbVBPdk1mcVFFb1VJY3JiS0VDR21NTzg0WGtwbENIdCt4QWhXN1VFbVNjY0Q0dHlvL3gwPQ==/attach/object/B42NH2BJAAAGW?&kso_type=image&kso_extra=eyJ0eXBlIjoiaW1hZ2UiLCJpZCI6IkI0Mk5IMkJKQUFBR1ciLCJvd25lciI6IjU2MzcxNzg5MDg1MiIsInJvdGF0ZSI6MCwic3RvcmFnZSI6ImJhc2UiLCJ3aWR0aCI6NzkzLCJoZWlnaHQiOjQ0MH0)
+
+等待一会，电脑就会自动打开我们的模组文件夹，这个文件夹内存放着我们模组所有的所有资源，不论是音乐，图片，还是代码都放于其中。
+
+
+
+刚创建的模组文件夹，里面一般会有以下文件：
+
+
+
+**1 Mod的名字.cs** 
+
+模组的主入口文件 所有模组自带的的默认初始文件
+
+
+
+**2 Build.txt** 
+
+编译配置文件 里面写了模组名、作者、版本号等信息，还有一些复杂内容，在后续的教程里会单独列出。
+
+
+
+**3 Description.txt  以及 Description\_XXX.txt**
+
+模组的简介文本在模组列表与**Steam**创意工坊介绍里显示的描述文字
+
+
+
+**4 icon及 icon\_small** 
+
+这是模组的封面图与模组的缩略图，具体比例为80\*80 和30\*30 在模组列表与图鉴中会作为封面出现的图片
+
+
+
+**5 三个文件夹** 
+
+这是接下来的教程会用到的~~妙妙工具~~，在后续的教程里会单独列出，先不讲（
+
+![图片](http://www.kdocs.cn/api/v3/office/copy/ZDlBZEMwZldISElpMDU3cjVjclBhWDRGdlFUSW01Tnc4OE5yOHpacVpnMEU2T2ZocU9lbHdTUmpKcWtqa2c2SFNYcWxJL2pDcFVKMmliQlUrQ016Q0xQaEM5VC9veVBDeUIzbGZPU2NKRXdncFRzblNmQUcwTkRZNlBhOFZuTVpZQ3diTitkSFBTVVoyTmI4VnNHd3N1QUF1bXlQOUdJVWY1a1FkTVJlcG1ISFRBTzgxejVHV3dCSHZpR29lY1luRStPbE42WGhKdXkyVGVaSURodTF1alhqbVBPdk1mcVFFb1VJY3JiS0VDR21NTzg0WGtwbENIdCt4QWhXN1VFbVNjY0Q0dHlvL3gwPQ==/attach/object/2M2NH2BJABQHU?&kso_type=image&kso_extra=eyJ0eXBlIjoiaW1hZ2UiLCJpZCI6IjJNMk5IMkJKQUJRSFUiLCJvd25lciI6IjU2MzcxNzg5MDg1MiIsInJvdGF0ZSI6MCwic3RvcmFnZSI6ImJhc2UiLCJ3aWR0aCI6Njc1LCJoZWlnaHQiOjI5N30)
+
+回到游戏界面。
+
+我们会发现模组源码列表处已经多了一个建好的项目。
+
+我们点击 构建并重新加载按钮。
+
+![图片](http://www.kdocs.cn/api/v3/office/copy/ZDlBZEMwZldISElpMDU3cjVjclBhWDRGdlFUSW01Tnc4OE5yOHpacVpnMEU2T2ZocU9lbHdTUmpKcWtqa2c2SFNYcWxJL2pDcFVKMmliQlUrQ016Q0xQaEM5VC9veVBDeUIzbGZPU2NKRXdncFRzblNmQUcwTkRZNlBhOFZuTVpZQ3diTitkSFBTVVoyTmI4VnNHd3N1QUF1bXlQOUdJVWY1a1FkTVJlcG1ISFRBTzgxejVHV3dCSHZpR29lY1luRStPbE42WGhKdXkyVGVaSURodTF1alhqbVBPdk1mcVFFb1VJY3JiS0VDR21NTzg0WGtwbENIdCt4QWhXN1VFbVNjY0Q0dHlvL3gwPQ==/attach/object/3A2NH2BJACADO?&kso_type=image&kso_extra=eyJ0eXBlIjoiaW1hZ2UiLCJpZCI6IjNBMk5IMkJKQUNBRE8iLCJvd25lciI6IjU2MzcxNzg5MDg1MiIsInJvdGF0ZSI6MCwic3RvcmFnZSI6ImJhc2UiLCJ3aWR0aCI6Njc3LCJoZWlnaHQiOjMyOH0)
+
+这个时候游戏会重新加载所有Mod，等待Mod加载完成，点开模组列表
+
+我们就会发现我们的模组已经加载成功。
+
+![图片](http://www.kdocs.cn/api/v3/office/copy/ZDlBZEMwZldISElpMDU3cjVjclBhWDRGdlFUSW01Tnc4OE5yOHpacVpnMEU2T2ZocU9lbHdTUmpKcWtqa2c2SFNYcWxJL2pDcFVKMmliQlUrQ016Q0xQaEM5VC9veVBDeUIzbGZPU2NKRXdncFRzblNmQUcwTkRZNlBhOFZuTVpZQ3diTitkSFBTVVoyTmI4VnNHd3N1QUF1bXlQOUdJVWY1a1FkTVJlcG1ISFRBTzgxejVHV3dCSHZpR29lY1luRStPbE42WGhKdXkyVGVaSURodTF1alhqbVBPdk1mcVFFb1VJY3JiS0VDR21NTzg0WGtwbENIdCt4QWhXN1VFbVNjY0Q0dHlvL3gwPQ==/attach/object/6E2NH2BJADAG4?&kso_type=image&kso_extra=eyJ0eXBlIjoiaW1hZ2UiLCJpZCI6IjZFMk5IMkJKQURBRzQiLCJvd25lciI6IjU2MzcxNzg5MDg1MiIsInJvdGF0ZSI6MCwic3RvcmFnZSI6ImJhc2UiLCJ3aWR0aCI6Mzk2LCJoZWlnaHQiOjM0MX0)
+
+进到游戏里面挖10个泥土，找到工作台，如果发现有一把造价10泥土的石头剑（这家伙在说什么呢）
+
+这就是我们的模板剑了。
+
+
+
+~~真是可喜可贺，可喜可贺（遗憾下播）~~
+
+
+
+©*2026 冬天的叶 \| 仅供个人学习，禁止商用及二次分发*
+
+|上一篇<br>|下一篇<br>|
+|---|---|
+
+
+|[NET SDK安装与配置.otl](https://www.kdocs.cn/l/cgXPxhNvkMhZ?kso_type=file&kso_extra=eyJ0eXBlIjoiZmlsZSIsImZpbGVfaWQiOiI1NjM3MDg0MjQ4NjIiLCJmaWxlX3NpemUiOjAsImZpbGVfdHlwZSI6Im90bCIsImZpbGVfbGluayI6Imh0dHBzOi8vd3d3Lmtkb2NzLmNuL2wvY2dYUHhoTnZrTWhaIiwidmlld190eXBlIjoidGl0bGUiLCJvd25lciI6IjU2MzcxNzg5MDg1MiJ9)<br>|[模组文件夹结构与基本信息.otl](https://www.kdocs.cn/l/chZ6nHrjGRxQ?kso_type=file&kso_extra=eyJ0eXBlIjoiZmlsZSIsImZpbGVfaWQiOiI1NjM3NjgwNTk2NTciLCJmaWxlX3NpemUiOjAsImZpbGVfdHlwZSI6Im90bCIsImZpbGVfbGluayI6Imh0dHBzOi8vd3d3Lmtkb2NzLmNuL2wvY2haNm5IcmpHUnhRIiwidmlld190eXBlIjoidGl0bGUiLCJvd25lciI6IjU2MzcxNzg5MDg1MiJ9)<br>|
+|---|---|
+
+
