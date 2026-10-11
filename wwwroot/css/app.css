@@ -23,3 +23,5 @@ body{isolation:isolate}.nature-background{z-index:0}.main-content,.site-footer{p
 .directory-current{padding:14px 16px;color:var(--green);font-size:13px;font-weight:600;border-bottom:1px solid var(--border)}.heading-tree{list-style:none;padding:0 12px;margin:10px 0}.heading-tree .heading-tree{padding-left:14px;margin:3px 0;border-left:1px solid var(--border)}.heading-tree a{display:inline-block;font-size:12px;line-height:1.65;padding:7px 4px;overflow-wrap:anywhere}.heading-tree summary{cursor:pointer}.heading-tree a:hover{color:var(--green)}.directory-tabs strong{font-size:13px;padding:5px 10px;color:var(--green)}
 
 .heading-tree .heading-jump{display:inline-block;background:transparent;border:0;border-radius:4px;text-align:left;color:var(--text);font-size:12px;line-height:1.65;padding:7px 4px;overflow-wrap:anywhere;max-width:100%}.heading-tree .heading-jump:hover{color:var(--green);background:var(--soft)}
+
+.site-header nav .github-link{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;flex-shrink:0;border-radius:6px}.site-header nav .github-link:hover{background:var(--soft);color:var(--green)}
