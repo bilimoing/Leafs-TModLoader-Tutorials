@@ -4,6 +4,15 @@ const output = process.argv[2] || 'release/wwwroot';
 const repository = process.env.GITHUB_REPOSITORY?.split('/')[1] || '';
 const base = process.env.PAGES_BASE_PATH || (!repository || repository.toLowerCase().endsWith('.github.io') ? '/' : '/' + repository + '/');
 if (!base.startsWith('/') || !base.endsWith('/')) throw new Error('站点路径必须以斜杠开头和结尾');
+const statsEndpoint = process.env.STATS_ENDPOINT?.trim();
+if (statsEndpoint) {
+  const url = new URL(statsEndpoint);
+  if (url.protocol !== 'https:' || url.username || url.password) {
+    throw new Error('统计地址必须是 HTTPS 地址，且不能包含账号密码');
+  }
+  fs.writeFileSync(path.join(output, 'stats-config.json'), JSON.stringify({ endpoint: url.href }, null, 2) + '\n');
+  console.log('已配置统计服务地址');
+}
 const entry = path.join(output, 'index.html');
 const original = fs.readFileSync(entry, 'utf8');
 const start = original.indexOf('<base ');

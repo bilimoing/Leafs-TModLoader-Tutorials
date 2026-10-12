@@ -27,6 +27,8 @@ jobs:
       - name: 构建静态网站
         run: dotnet publish 叶子的TModLoader教程.csproj -c Release -o release
       - name: 适配仓库路径
+        env:
+          STATS_ENDPOINT: ${{ vars.STATS_ENDPOINT }}
         run: node scripts/prepare-pages.mjs release/wwwroot
       - name: 上传网站
         uses: actions/upload-pages-artifact@v3
