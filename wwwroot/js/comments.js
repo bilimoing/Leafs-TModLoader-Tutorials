@@ -3,6 +3,7 @@
   const theme = () => document.documentElement.dataset.theme === 'dark' ? 'github-dark' : 'github-light';
   window.tutorialComments = {
     mount(host, article) {
+      if (!host) return;
       this.unmount(host);
       const script = document.createElement('script');
       script.src = 'https://utteranc.es/client.js';
@@ -21,9 +22,10 @@
       host.replaceChildren(script);
     },
     unmount(host) {
+      if (!host) return;
       mounts.get(host)?.disconnect();
       mounts.delete(host);
-      host.replaceChildren();
+      try { host.replaceChildren(); } catch { }
     }
   };
 })();

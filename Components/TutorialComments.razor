@@ -28,5 +28,6 @@
     {
         try { await JS.InvokeVoidAsync("tutorialComments.unmount", host); }
         catch (JSException) { }
+        catch (OperationCanceledException) { }
     }
 }
