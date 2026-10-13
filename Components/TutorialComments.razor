@@ -1,0 +1,94 @@
+@using System.Reflection
+@using System.Text.Json
+
+<section class="comments" aria-labelledby="comments-title">
+    <h2 id="comments-title">评论与提问 <small>（@comments.Count）</small></h2>
+    <p>使用 GitHub 账号投稿，审核并部署后显示在这里。待审核的 Issue 也会公开，请勿填写密码或其他隐私信息。</p>
+    @foreach (var comment in comments)
+    {
+        <article class="comment" @key="comment.IssueNumber">
+            <div class="comment-author">
+                <img src="@($"https://github.com/{comment.AuthorLogin}.png?size=80")" alt="" width="40" height="40" loading="lazy" referrerpolicy="no-referrer" />
+                <div><strong>@comment.DisplayName</strong> <a href="@($"https://github.com/{comment.AuthorLogin}")" target="_blank" rel="noopener noreferrer">@@@comment.AuthorLogin</a><br />
+                <small>@comment.CreatedAt.ToLocalTime().ToString("yyyy-MM-dd HH:mm") · <a href="@($"{RepositoryUrl}/issues/{comment.IssueNumber}")" target="_blank" rel="noopener noreferrer">查看原始投稿 ↗</a></small></div>
+            </div>
+            <p class="comment-content">@comment.Content</p>
+        </article>
+    }
+    @if (comments.Count == 0)
+    {
+        <p>还没有已发布的评论，欢迎留下你的问题或经验。</p>
+    }
+    <form class="comment-form" @onsubmit="PrepareIssue" @onsubmit:preventDefault>
+        <label for="comment-name">显示昵称（可选，留空使用 GitHub 用户名）</label>
+        <input id="comment-name" @bind="nickname" maxlength="40" autocomplete="nickname" />
+        <label for="comment-content">评论内容</label>
+        <textarea id="comment-content" @bind="content" maxlength="2000" rows="6" required placeholder="描述你的问题，或分享这篇教程的使用经验。"></textarea>
+        <small>最多 2000 字。头像使用投稿者的 GitHub 头像，昵称仅用于展示。</small>
+        <button class="primary-button" type="submit">准备 GitHub 投稿 →</button>
+        @if (!string.IsNullOrEmpty(error)) { <p role="alert">@error</p> }
+        @if (issueUrl is not null)
+        {
+            <p role="status">投稿链接已生成。打开后检查内容，并在 GitHub 点击“提交新 Issue”。修改表单后请重新生成链接。</p>
+            <a class="secondary-button" href="@issueUrl" target="_blank" rel="noopener noreferrer">打开 GitHub，提交审核 ↗</a>
+        }
+    </form>
+</section>
+
+@code {
+    [Parameter, EditorRequired] public string Article { get; set; } = "";
+    private const string RepositoryUrl = "https://github.com/bilimoing/Leafs-TModLoader-Tutorials";
+    private static readonly List<PublishedComment> AllComments = LoadComments();
+    private List<PublishedComment> comments = [];
+    private string nickname = "", content = "", error = "";
+    private string? issueUrl;
+
+    protected override void OnParametersSet()
+    {
+        comments = AllComments.Where(c => c.Article == Article).OrderBy(c => c.CreatedAt).ToList();
+    }
+
+    private void PrepareIssue()
+    {
+        error = "";
+        issueUrl = null;
+        var text = content.Trim();
+        if (text.Length == 0 || text.Length > 2000 || nickname.Trim().Length > 40)
+        {
+            error = "请填写 1～2000 字的评论，昵称最多 40 字。";
+            return;
+        }
+        var payload = JsonSerializer.Serialize(new { article = Article, displayName = nickname.Trim(), content = text });
+        var body = "<!-- tutorial-comment:v1 -->\n```json\n" + payload + "\n```\n\n此评论由教程网站生成。发布即表示同意将评论、显示昵称及 GitHub 账号信息公开展示在网站与仓库中。请保留上方数据块；审核以提交时的内容为准。";
+        var url = RepositoryUrl + "/issues/new?template=comment.md&title=" + Uri.EscapeDataString("[评论] " + Article) + "&body=" + Uri.EscapeDataString(body);
+        if (url.Length > 7500)
+        {
+            error = "内容编码后超过投稿链接长度限制，请缩短评论后重试。较长的代码可以在发布 Issue 后另行回复。";
+            return;
+        }
+        issueUrl = url;
+    }
+
+    private static List<PublishedComment> LoadComments()
+    {
+        var assembly = typeof(TutorialComments).Assembly;
+        var result = new List<PublishedComment>();
+        foreach (var name in assembly.GetManifestResourceNames().Where(n => n.StartsWith("TutorialComments.", StringComparison.Ordinal) && n.EndsWith(".json", StringComparison.Ordinal)))
+        {
+            using var stream = assembly.GetManifestResourceStream(name)!;
+            var comment = JsonSerializer.Deserialize<PublishedComment>(stream, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+            if (comment is not null) result.Add(comment);
+        }
+        return result;
+    }
+
+    private sealed class PublishedComment
+    {
+        public string Article { get; set; } = "";
+        public string DisplayName { get; set; } = "";
+        public string AuthorLogin { get; set; } = "";
+        public string Content { get; set; } = "";
+        public int IssueNumber { get; set; }
+        public DateTimeOffset CreatedAt { get; set; }
+    }
+}
