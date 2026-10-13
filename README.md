@@ -6,31 +6,23 @@
 
 教程文字、代码、图片及其他内容的版权归各自原作者所有，使用与转载要求以原作者及原文中的版权声明为准。本项目仅作迁移与展示，不改变原内容的版权归属。
 
-## 评论登录、投稿与审核
+## GitHub 留言
 
-教程底部支持 GitHub 登录和站内提交评论。首次登录通过弹窗完成 GitHub 授权，提交评论由服务端使用读者自己的身份自动创建 Issue，不跳转页面。昵称可自定义，头像取自真实投稿者的 GitHub 账号。待审核 Issue、发布的评论及仓库历史均公开，请勿投稿隐私信息。
+教程底部使用 utterances，无需部署评论 Worker、数据库或自己的授权服务。组件由 utteranc.es 提供，留言保存在 GitHub Issues 中。
 
-GitHub Pages 不运行登录后端，因此需要部署 comments-worker 中的服务并配置 GitHub App。具体步骤见 [登录服务部署说明](comments-worker/README.md)。服务未配置时，页面提示未启用并禁用登录按钮。GitHub 应用密钥和加密密钥仅配置在 Worker Secrets，不能放入网页或仓库。
+上线配置：
 
-仓库设置：
+1. 仓库 bilimoing/Leafs-TModLoader-Tutorials 必须公开并启用 Issues。
+2. 将 https://github.com/apps/utterances 安装到该仓库。
+3. 推送本次网站改动到 main/master，等待 GitHub Pages 部署完成。
+4. 打开教程检查评论组件，点击 Sign in with GitHub 完成授权并返回网站，在组件中输入留言并点击 Comment。
 
-1. Settings → General → Features 启用 Issues。
-2. Settings → Actions → General → Workflow permissions 启用 **Allow GitHub Actions to create and approve pull requests**。组织限制需由组织管理员调整。
-3. 创建名称完全相同的 **评论审核通过** 标签。
-4. 部署登录服务，在 Actions Variables 设置 **COMMENTS_ENDPOINT**，推送并部署网站。
+首次授权默认会离开教程页面并返回。有效登录会话内，后续留言在站内提交。每篇教程使用“教程留言：教程标题”作为独立讨论标识，适配同一路径通过查询参数切换教程的结构；修改教程标题会改变讨论标识。
 
-审核流程：
+首次留言时 utterances-bot 创建对应教程的讨论 Issue，留言以读者本人身份作为 Issue 回复保存。后续回复继续使用同一个 Issue。组件显示账号、头像和时间，使用自身界面，不支持原来的站内自定义昵称。主题随网站明暗模式更新。
 
-1. 读者登录后在网站提交，页面显示待审核的 Issue 编号。
-2. 维护者检查 Issue 数据块中的内容，添加 **评论审核通过** 标签。
-3. 工作流校验维护者权限、教程名称、长度和真实作者，创建保存 `Comments/编号.json` 的 PR。
-4. 维护者检查新增文件并手动合并，现有 main/master 部署流程校验数据后发布，合并关闭原 Issue。
-5. 不通过的投稿直接关闭，不添加审核标签。
+留言提交后直接展示，不需要审核 PR 或重新部署。管理员在对应 GitHub Issue 中管理回复。不要给 utterances 讨论添加“评论审核通过”标签；旧审核工作流仍保留，只用于原有带网站投稿数据块的历史 Issue，不能读取 utterances 回复。Comments 目录历史数据保留，但新的组件不再渲染这些静态评论。
 
-评论以纯文本展示，每条 Issue 最多导入一次。审核保存添加标签时的内容快照，后续编辑 Issue 不会自动替换评论。审核期间内容变化会被拒绝，应重新检查并移除、重新添加标签。重新生成未合并投稿前，先关闭对应 PR、删除 `comments/issue-编号` 分支；已发布评论的修改和删除使用普通 PR。
+utterances.json 允许 https://bilimoing.github.io 来源；自定义域名时需更新该来源列表。原 COMMENTS_ENDPOINT 变量已不再使用，可从仓库变量中删除。评论区无法加载时检查到 utteranc.es 与 GitHub 的网络、App 安装仓库范围和来源配置。浏览器可能需要允许授权相关存储。
 
-Actions 使用默认分支上的可信脚本，不执行投稿内容，不自动合并。自动令牌创建的 PR 通常不会触发其他 PR 工作流；手动合并后的部署仍会运行评论校验和测试。仓库如强制要求 PR 检查，可由维护者在可信分支重新提交变更以触发检查，或为审核工作流另行配置 GitHub App。
-
-撤下网站评论不会清除公开 Issue 和 Git 历史。教程新增后还需更新登录服务中的合法教程清单并部署。
-
-本地验证：`node --test scripts/comments.test.cjs scripts/comment-workflow.test.cjs comments-worker/worker.test.mjs`、`node scripts/comments.cjs`、`dotnet build`。
+所有 Issue 和留言均公开，请勿提交隐私信息。网站的访问统计是独立功能，其配置不受本次评论替换影响。

@@ -4,14 +4,6 @@ const output = process.argv[2] || 'release/wwwroot';
 const repository = process.env.GITHUB_REPOSITORY?.split('/')[1] || '';
 const base = process.env.PAGES_BASE_PATH || (!repository || repository.toLowerCase().endsWith('.github.io') ? '/' : '/' + repository + '/');
 if (!base.startsWith('/') || !base.endsWith('/')) throw new Error('站点路径必须以斜杠开头和结尾');
-const commentsEndpoint = process.env.COMMENTS_ENDPOINT?.trim();
-if (commentsEndpoint) {
-  const url = new URL(commentsEndpoint);
-  if (url.protocol !== 'https:' || url.username || url.password || url.pathname !== '/' || url.search || url.hash) {
-    throw new Error('评论服务必须是 HTTPS 根地址');
-  }
-  fs.writeFileSync(path.join(output, 'comments-config.json'), JSON.stringify({ endpoint: url.origin }, null, 2) + '\n');
-}
 const statsEndpoint = process.env.STATS_ENDPOINT?.trim();
 if (statsEndpoint) {
   const url = new URL(statsEndpoint);

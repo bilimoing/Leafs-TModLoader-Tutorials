@@ -1,151 +1,32 @@
 @inject IJSRuntime JS
-@using System.Text.Json
+@implements IAsyncDisposable
 
 <section class="comments" aria-labelledby="comments-title">
-    <h2 id="comments-title">留言 <small>（@comments.Count）</small></h2>
-    <p>使用 GitHub 账号投稿，审核并部署后显示在这里。待审核的 Issue 也会公开，请勿填写密码或其他隐私信息。</p>
-    @if (login is not null)
-    {
-        <p>已登录：<strong>@@@login</strong> <button type="button" @onclick="Logout" disabled="@busy">退出登录</button></p>
-    }
-    else
-    {
-        <button type="button" class="secondary-button" @onclick="Login" disabled="@(!configured || busy)">GitHub 登录</button>
-    }
-    <form class="comment-form" @onsubmit="Submit" @onsubmit:preventDefault>
-        <label class="visually-hidden" for="comment-content">留言内容</label>
-        <textarea id="comment-content" data-comment-input @bind="content" @bind:event="oninput" maxlength="2000" rows="2" required placeholder="按 Enter 发送，Shift+Enter 换行"></textarea>
-        <details class="comment-profile"><summary>自定义显示昵称</summary><label class="visually-hidden" for="comment-name">显示昵称</label><input id="comment-name" @bind="nickname" maxlength="40" autocomplete="nickname" placeholder="留空使用 GitHub 用户名" /></details>
-        <small>最多 2000 字。头像使用投稿者的 GitHub 头像，昵称仅用于展示。</small>
-        <button class="primary-button" type="submit" disabled="@(login is null || busy)">@(busy ? "处理中…" : "提交评论，等待审核")</button>
-        @if (!string.IsNullOrEmpty(error)) { <p role="alert">@error</p> }
-        @if (submittedIssue is not null)
-        {
-            <p role="status">评论已提交，等待审核和部署后显示。<a href="@($"{RepositoryUrl}/issues/{submittedIssue}")" target="_blank" rel="noopener noreferrer">查看投稿 #@submittedIssue ↗</a></p>
-        }
-    </form>
-    <div class="comment-list">
-        @foreach (var comment in comments)
-        {
-            var localTime = comment.CreatedAt.ToLocalTime();
-            var fullTime = localTime.ToString("yyyy年MM月dd日 HH:mm zzz");
-            <article class="comment" @key="comment.IssueNumber">
-                <img class="comment-avatar" src="@($"https://github.com/{comment.AuthorLogin}.png?size=80")" alt="" width="32" height="32" loading="lazy" referrerpolicy="no-referrer" />
-                <div class="comment-body">
-                    <div class="comment-heading">
-                        <a class="comment-name" href="@($"https://github.com/{comment.AuthorLogin}")" title="@($"GitHub：{comment.AuthorLogin}")" target="_blank" rel="noopener noreferrer">@comment.DisplayName</a>
-                        <a class="comment-date" href="@($"{RepositoryUrl}/issues/{comment.IssueNumber}")" title="@($"投稿于 {fullTime}，点击查看原始投稿")" aria-label="@($"投稿于 {fullTime}，查看原始投稿")" target="_blank" rel="noopener noreferrer"><time datetime="@comment.CreatedAt.ToString("O")">@(localTime.Year == DateTimeOffset.Now.Year ? localTime.ToString("MM月dd日") : localTime.ToString("yyyy年MM月dd日"))</time></a>
-                    </div>
-                    <p class="comment-content">@comment.Content</p>
-                </div>
-            </article>
-        }
-        @if (comments.Count == 0)
-        {
-            <p class="comment-empty">还没有已发布的留言，欢迎留下你的问题或经验。</p>
-        }
-    </div>
+    <h2 id="comments-title">留言</h2>
+    <p class="comment-notice">使用 GitHub 登录后即可留言。留言公开保存到 GitHub，提交后直接显示。</p>
+    <div @ref="host" class="utterances-host"></div>
+    <p class="comment-help">首次登录会前往 GitHub 授权并返回。若评论区未加载，请检查网络或 <a href="@DiscussionUrl" target="_blank" rel="noopener noreferrer">前往 GitHub 查看讨论 ↗</a>。</p>
+    @if (loadError) { <p role="alert">评论组件加载失败，请刷新页面重试。</p> }
 </section>
 
 @code {
     [Parameter, EditorRequired] public string Article { get; set; } = "";
-    private const string RepositoryUrl = "https://github.com/bilimoing/Leafs-TModLoader-Tutorials";
-    private static readonly List<PublishedComment> AllComments = LoadComments();
-    private List<PublishedComment> comments = [];
-    private string nickname = "", content = "", error = "";
-    private string? login;
-    private int? submittedIssue;
-    private bool configured, busy;
-    private string requestId = Guid.NewGuid().ToString();
-
-    protected override void OnParametersSet()
-    {
-        comments = AllComments.Where(c => c.Article == Article).OrderBy(c => c.CreatedAt).ToList();
-    }
+    private ElementReference host;
+    private string? loadedArticle;
+    private bool loadError;
+    private string DiscussionUrl => "https://github.com/bilimoing/Leafs-TModLoader-Tutorials/issues?q=" + Uri.EscapeDataString("is:issue \"教程留言：" + Article + "\"");
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        if (!firstRender) return;
-        var status = await JS.InvokeAsync<AuthStatus>("tutorialComments.status");
-        configured = status.Configured;
-        login = status.Login;
-        error = status.Error ?? "";
-        StateHasChanged();
+        if (loadedArticle == Article) return;
+        loadedArticle = Article;
+        try { await JS.InvokeVoidAsync("tutorialComments.mount", host, Article); }
+        catch (JSException) { loadError = true; await InvokeAsync(StateHasChanged); }
     }
 
-    private async Task Login()
+    public async ValueTask DisposeAsync()
     {
-        busy = true;
-        error = "";
-        try { login = (await JS.InvokeAsync<AuthStatus>("tutorialComments.login")).Login; }
-        catch (JSException) { error = "登录未完成，请允许弹窗后重试，并确认 GitHub 授权服务已配置。"; }
-        finally { busy = false; }
-    }
-
-    private async Task Logout()
-    {
-        busy = true;
-        try { await JS.InvokeVoidAsync("tutorialComments.logout"); }
-        catch (JSException) { error = "服务暂时不可用，本地登录已退出。"; }
-        finally { login = null; busy = false; }
-    }
-
-    private async Task Submit()
-    {
-        if (busy || login is null) return;
-        var text = content.Trim();
-        if (text.Length == 0 || text.Length > 2000 || nickname.Trim().Length > 40)
-        {
-            error = "请填写 1～2000 字的评论，昵称最多 40 字。";
-            return;
-        }
-        busy = true;
-        error = "";
-        submittedIssue = null;
-        try
-        {
-            var result = await JS.InvokeAsync<SubmitResult>("tutorialComments.submit", Article, nickname.Trim(), text, requestId);
-            submittedIssue = result.IssueNumber;
-            content = "";
-            requestId = Guid.NewGuid().ToString();
-        }
-        catch (JSException exception)
-        {
-            error = exception.Message.Split('\n')[0];
-            var status = await JS.InvokeAsync<AuthStatus>("tutorialComments.status");
-            login = status.Login;
-        }
-        finally { busy = false; }
-    }
-
-    private sealed class AuthStatus
-    {
-        public bool Configured { get; set; }
-        public string? Login { get; set; }
-        public string? Error { get; set; }
-    }
-    private sealed class SubmitResult { public int IssueNumber { get; set; } }
-
-    private static List<PublishedComment> LoadComments()
-    {
-        var assembly = typeof(TutorialComments).Assembly;
-        var result = new List<PublishedComment>();
-        foreach (var name in assembly.GetManifestResourceNames().Where(n => n.StartsWith("TutorialComments.", StringComparison.Ordinal) && n.EndsWith(".json", StringComparison.Ordinal)))
-        {
-            using var stream = assembly.GetManifestResourceStream(name)!;
-            var comment = JsonSerializer.Deserialize<PublishedComment>(stream, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
-            if (comment is not null) result.Add(comment);
-        }
-        return result;
-    }
-
-    private sealed class PublishedComment
-    {
-        public string Article { get; set; } = "";
-        public string DisplayName { get; set; } = "";
-        public string AuthorLogin { get; set; } = "";
-        public string Content { get; set; } = "";
-        public int IssueNumber { get; set; }
-        public DateTimeOffset CreatedAt { get; set; }
+        try { await JS.InvokeVoidAsync("tutorialComments.unmount", host); }
+        catch (JSException) { }
     }
 }

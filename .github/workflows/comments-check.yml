@@ -7,7 +7,6 @@ on:
       - 'scripts/comments*'
       - 'scripts/comment-workflow.test.cjs'
       - 'scripts/create-comment-pr.cjs'
-      - 'comments-worker/**'
       - '.github/workflows/comments-check.yml'
 permissions:
   contents: read
@@ -18,5 +17,5 @@ jobs:
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
-      - run: node --test scripts/comments.test.cjs scripts/comment-workflow.test.cjs comments-worker/worker.test.mjs
+      - run: node --test scripts/comments.test.cjs scripts/comment-workflow.test.cjs
       - run: node scripts/comments.cjs

@@ -26,14 +26,13 @@ jobs:
         uses: actions/configure-pages@v5
       - name: 校验评论数据与投稿解析
         run: |
-          node --test scripts/comments.test.cjs scripts/comment-workflow.test.cjs comments-worker/worker.test.mjs
+          node --test scripts/comments.test.cjs scripts/comment-workflow.test.cjs
           node scripts/comments.cjs
       - name: 构建静态网站
         run: dotnet publish 叶子的TModLoader教程.csproj -c Release -o release
       - name: 适配仓库路径
         env:
           STATS_ENDPOINT: ${{ vars.STATS_ENDPOINT }}
-          COMMENTS_ENDPOINT: ${{ vars.COMMENTS_ENDPOINT }}
         run: node scripts/prepare-pages.mjs release/wwwroot
       - name: 上传网站
         uses: actions/upload-pages-artifact@v3
