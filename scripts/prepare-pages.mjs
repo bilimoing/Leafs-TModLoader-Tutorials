@@ -4,6 +4,14 @@ const output = process.argv[2] || 'release/wwwroot';
 const repository = process.env.GITHUB_REPOSITORY?.split('/')[1] || '';
 const base = process.env.PAGES_BASE_PATH || (!repository || repository.toLowerCase().endsWith('.github.io') ? '/' : '/' + repository + '/');
 if (!base.startsWith('/') || !base.endsWith('/')) throw new Error('站点路径必须以斜杠开头和结尾');
+const commentsEndpoint = process.env.COMMENTS_ENDPOINT?.trim();
+if (commentsEndpoint) {
+  const url = new URL(commentsEndpoint);
+  if (url.protocol !== 'https:' || url.username || url.password || url.pathname !== '/' || url.search || url.hash) {
+    throw new Error('评论服务必须是 HTTPS 根地址');
+  }
+  fs.writeFileSync(path.join(output, 'comments-config.json'), JSON.stringify({ endpoint: url.origin }, null, 2) + '\n');
+}
 const statsEndpoint = process.env.STATS_ENDPOINT?.trim();
 if (statsEndpoint) {
   const url = new URL(statsEndpoint);
@@ -25,6 +33,6 @@ console.log('已配置 GitHub Pages 路径：' + base);
 
 const version=process.env.GITHUB_SHA?.slice(0,12)||Date.now().toString();
 let versioned=fs.readFileSync(entry,'utf8');
-for(const asset of ['js/image-viewer.js','js/page-transition.js','css/app.css','js/site.js','js/stats.js','js/highlight.js','js/wind.js','images/tree.svg','images/leaf.svg'])versioned=versioned.split(asset+String.fromCharCode(34)).join(asset+'?v='+version+String.fromCharCode(34));
+for(const asset of ['js/image-viewer.js','js/page-transition.js','css/app.css','js/site.js','js/stats.js','js/comments.js','js/highlight.js','js/wind.js','images/tree.svg','images/leaf.svg'])versioned=versioned.split(asset+String.fromCharCode(34)).join(asset+'?v='+version+String.fromCharCode(34));
 fs.writeFileSync(entry,versioned);
 fs.writeFileSync(path.join(output,'version.json'),JSON.stringify({version,builtAt:new Date().toISOString()}));

@@ -6,30 +6,31 @@
 
 教程文字、代码、图片及其他内容的版权归各自原作者所有，使用与转载要求以原作者及原文中的版权声明为准。本项目仅作迁移与展示，不改变原内容的版权归属。
 
-## 评论投稿与审核
+## 评论登录、投稿与审核
 
-教程底部可以填写评论和可选昵称，生成预填好的 GitHub Issue 链接。读者使用自己的 GitHub 账号在 GitHub 完成提交。头像取自该账号，昵称仅用于显示；网站没有独立注册和登录系统。
+教程底部支持 GitHub 登录和站内提交评论。首次登录通过弹窗完成 GitHub 授权，提交评论由服务端使用读者自己的身份自动创建 Issue，不跳转页面。昵称可自定义，头像取自真实投稿者的 GitHub 账号。待审核 Issue、发布的评论及仓库历史均公开，请勿投稿隐私信息。
 
-上线前，由仓库管理员完成以下设置：
+GitHub Pages 不运行登录后端，因此需要部署 comments-worker 中的服务并配置 GitHub App。具体步骤见 [登录服务部署说明](comments-worker/README.md)。服务未配置时，页面提示未启用并禁用登录按钮。GitHub 应用密钥和加密密钥仅配置在 Worker Secrets，不能放入网页或仓库。
 
-1. 在仓库 Settings → General → Features 中启用 Issues。
-2. 在 Settings → Actions → General → Workflow permissions 中启用 **Allow GitHub Actions to create and approve pull requests**。工作流已声明所需权限；组织策略若禁止此设置，需要由组织管理员调整。
-3. 在 Issues → Labels 创建名称完全相同的 **评论审核通过** 标签。
-4. 将本次改动推送至默认分支，确保现有 Pages 部署成功。无需额外访问令牌或外部评论服务。
+仓库设置：
 
-日常流程：
+1. Settings → General → Features 启用 Issues。
+2. Settings → Actions → General → Workflow permissions 启用 **Allow GitHub Actions to create and approve pull requests**。组织限制需由组织管理员调整。
+3. 创建名称完全相同的 **评论审核通过** 标签。
+4. 部署登录服务，在 Actions Variables 设置 **COMMENTS_ENDPOINT**，推送并部署网站。
 
-1. 阅读投稿 Issue，检查自动生成数据块中的教程、昵称和评论内容。
-2. 维护者添加 **评论审核通过** 标签。工作流验证维护者权限、教程名称、长度和真实 Issue 作者，并生成 `Comments/编号.json` 的 PR。
-3. 查看 PR 中新增的数据文件，手动合并到默认分支。现有部署工作流在 main/master 的推送上构建网站，部署完成后显示评论，并由合并关闭原 Issue。
-4. 不通过的投稿直接关闭，不添加审核标签。
+审核流程：
 
-审核保存的是添加标签时的快照。Issue 被编辑后不会自动更新已生成的评论；如果审核期间数据发生变化，工作流会拒绝导入，需要检查后移除标签并重新添加。要重新生成未合并投稿，先关闭对应 PR、删除 `comments/issue-编号` 分支，再重新添加审核标签。已发布评论的修改或删除使用普通 PR。
+1. 读者登录后在网站提交，页面显示待审核的 Issue 编号。
+2. 维护者检查 Issue 数据块中的内容，添加 **评论审核通过** 标签。
+3. 工作流校验维护者权限、教程名称、长度和真实作者，创建保存 `Comments/编号.json` 的 PR。
+4. 维护者检查新增文件并手动合并，现有 main/master 部署流程校验数据后发布，合并关闭原 Issue。
+5. 不通过的投稿直接关闭，不添加审核标签。
 
-每条 Issue 最多导入一次，不自动合并 PR。Actions 使用默认分支上的可信脚本，不执行投稿内容。网站将评论显示为纯文本。昵称可以自定义，GitHub 账号来源来自真实投稿者；头像由 GitHub 提供，无法访问时可能不显示。
+评论以纯文本展示，每条 Issue 最多导入一次。审核保存添加标签时的内容快照，后续编辑 Issue 不会自动替换评论。审核期间内容变化会被拒绝，应重新检查并移除、重新添加标签。重新生成未合并投稿前，先关闭对应 PR、删除 `comments/issue-编号` 分支；已发布评论的修改和删除使用普通 PR。
 
-GitHub 自动令牌创建的 PR 通常不会触发其他 PR 工作流，因此生成后没有 PR 检查记录是可能的。维护者手动合并后，部署工作流仍会校验评论数据与解析测试再发布；如仓库强制要求 PR 检查，可由维护者在可信分支手动重新提交变更以触发检查，或为此流程单独配置 GitHub App。
+Actions 使用默认分支上的可信脚本，不执行投稿内容，不自动合并。自动令牌创建的 PR 通常不会触发其他 PR 工作流；手动合并后的部署仍会运行评论校验和测试。仓库如强制要求 PR 检查，可由维护者在可信分支重新提交变更以触发检查，或为审核工作流另行配置 GitHub App。
 
-待审核 Issue、评论文件和历史记录都是公开的。不要提交密码、联系方式等隐私信息。撤下网站评论不会清除 Issue 或 Git 历史。投稿链接编码后超过长度限制时，表单会提示缩短内容，可在 Issue 中另行回复补充代码（补充回复不会自动发布为网站评论）。
+撤下网站评论不会清除公开 Issue 和 Git 历史。教程新增后还需更新登录服务中的合法教程清单并部署。
 
-本地校验：`node --test scripts/comments.test.cjs`、`node scripts/comments.cjs`、`dotnet build`。
+本地验证：`node --test scripts/comments.test.cjs scripts/comment-workflow.test.cjs comments-worker/worker.test.mjs`、`node scripts/comments.cjs`、`dotnet build`。

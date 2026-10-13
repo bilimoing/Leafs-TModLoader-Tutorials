@@ -1,4 +1,4 @@
-@using System.Reflection
+@inject IJSRuntime JS
 @using System.Text.Json
 
 <section class="comments" aria-labelledby="comments-title">
@@ -19,18 +19,25 @@
     {
         <p>还没有已发布的评论，欢迎留下你的问题或经验。</p>
     }
-    <form class="comment-form" @onsubmit="PrepareIssue" @onsubmit:preventDefault>
+    @if (login is not null)
+    {
+        <p>已登录：<strong>@@@login</strong> <button type="button" @onclick="Logout" disabled="@busy">退出登录</button></p>
+    }
+    else
+    {
+        <button type="button" class="secondary-button" @onclick="Login" disabled="@(!configured || busy)">GitHub 登录</button>
+    }
+    <form class="comment-form" @onsubmit="Submit" @onsubmit:preventDefault>
         <label for="comment-name">显示昵称（可选，留空使用 GitHub 用户名）</label>
         <input id="comment-name" @bind="nickname" maxlength="40" autocomplete="nickname" />
         <label for="comment-content">评论内容</label>
         <textarea id="comment-content" @bind="content" maxlength="2000" rows="6" required placeholder="描述你的问题，或分享这篇教程的使用经验。"></textarea>
         <small>最多 2000 字。头像使用投稿者的 GitHub 头像，昵称仅用于展示。</small>
-        <button class="primary-button" type="submit">准备 GitHub 投稿 →</button>
+        <button class="primary-button" type="submit" disabled="@(login is null || busy)">@(busy ? "处理中…" : "提交评论，等待审核")</button>
         @if (!string.IsNullOrEmpty(error)) { <p role="alert">@error</p> }
-        @if (issueUrl is not null)
+        @if (submittedIssue is not null)
         {
-            <p role="status">投稿链接已生成。打开后检查内容，并在 GitHub 点击“提交新 Issue”。修改表单后请重新生成链接。</p>
-            <a class="secondary-button" href="@issueUrl" target="_blank" rel="noopener noreferrer">打开 GitHub，提交审核 ↗</a>
+            <p role="status">评论已提交，等待审核和部署后显示。<a href="@($"{RepositoryUrl}/issues/{submittedIssue}")" target="_blank" rel="noopener noreferrer">查看投稿 #@submittedIssue ↗</a></p>
         }
     </form>
 </section>
@@ -41,33 +48,78 @@
     private static readonly List<PublishedComment> AllComments = LoadComments();
     private List<PublishedComment> comments = [];
     private string nickname = "", content = "", error = "";
-    private string? issueUrl;
+    private string? login;
+    private int? submittedIssue;
+    private bool configured, busy;
+    private string requestId = Guid.NewGuid().ToString();
 
     protected override void OnParametersSet()
     {
         comments = AllComments.Where(c => c.Article == Article).OrderBy(c => c.CreatedAt).ToList();
     }
 
-    private void PrepareIssue()
+    protected override async Task OnAfterRenderAsync(bool firstRender)
     {
+        if (!firstRender) return;
+        var status = await JS.InvokeAsync<AuthStatus>("tutorialComments.status");
+        configured = status.Configured;
+        login = status.Login;
+        error = status.Error ?? "";
+        StateHasChanged();
+    }
+
+    private async Task Login()
+    {
+        busy = true;
         error = "";
-        issueUrl = null;
+        try { login = (await JS.InvokeAsync<AuthStatus>("tutorialComments.login")).Login; }
+        catch (JSException) { error = "登录未完成，请允许弹窗后重试，并确认 GitHub 授权服务已配置。"; }
+        finally { busy = false; }
+    }
+
+    private async Task Logout()
+    {
+        busy = true;
+        try { await JS.InvokeVoidAsync("tutorialComments.logout"); }
+        catch (JSException) { error = "服务暂时不可用，本地登录已退出。"; }
+        finally { login = null; busy = false; }
+    }
+
+    private async Task Submit()
+    {
+        if (busy || login is null) return;
         var text = content.Trim();
         if (text.Length == 0 || text.Length > 2000 || nickname.Trim().Length > 40)
         {
             error = "请填写 1～2000 字的评论，昵称最多 40 字。";
             return;
         }
-        var payload = JsonSerializer.Serialize(new { article = Article, displayName = nickname.Trim(), content = text });
-        var body = "<!-- tutorial-comment:v1 -->\n```json\n" + payload + "\n```\n\n此评论由教程网站生成。发布即表示同意将评论、显示昵称及 GitHub 账号信息公开展示在网站与仓库中。请保留上方数据块；审核以提交时的内容为准。";
-        var url = RepositoryUrl + "/issues/new?template=comment.md&title=" + Uri.EscapeDataString("[评论] " + Article) + "&body=" + Uri.EscapeDataString(body);
-        if (url.Length > 7500)
+        busy = true;
+        error = "";
+        submittedIssue = null;
+        try
         {
-            error = "内容编码后超过投稿链接长度限制，请缩短评论后重试。较长的代码可以在发布 Issue 后另行回复。";
-            return;
+            var result = await JS.InvokeAsync<SubmitResult>("tutorialComments.submit", Article, nickname.Trim(), text, requestId);
+            submittedIssue = result.IssueNumber;
+            content = "";
+            requestId = Guid.NewGuid().ToString();
         }
-        issueUrl = url;
+        catch (JSException exception)
+        {
+            error = exception.Message.Split('\n')[0];
+            var status = await JS.InvokeAsync<AuthStatus>("tutorialComments.status");
+            login = status.Login;
+        }
+        finally { busy = false; }
     }
+
+    private sealed class AuthStatus
+    {
+        public bool Configured { get; set; }
+        public string? Login { get; set; }
+        public string? Error { get; set; }
+    }
+    private sealed class SubmitResult { public int IssueNumber { get; set; } }
 
     private static List<PublishedComment> LoadComments()
     {
