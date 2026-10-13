@@ -1,5 +1,14 @@
 (() => {
   let endpoint, session = sessionStorage.getItem('leaf-comment-session') || '';
+  document.addEventListener('keydown', event => {
+    const input = event.target;
+    if (!(input instanceof HTMLTextAreaElement) || !input.hasAttribute('data-comment-input')) return;
+    if (event.key !== 'Enter' || event.shiftKey || event.isComposing || event.keyCode === 229) return;
+    event.preventDefault();
+    const button = input.form?.querySelector('button[type="submit"]');
+    if (event.repeat || !button || button.disabled) return;
+    input.form.requestSubmit(button);
+  });
   async function config() {
     if (!endpoint) {
       const result = await fetch(new URL('comments-config.json', document.baseURI), { cache: 'no-store' });

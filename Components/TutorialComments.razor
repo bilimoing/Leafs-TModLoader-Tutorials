@@ -2,23 +2,8 @@
 @using System.Text.Json
 
 <section class="comments" aria-labelledby="comments-title">
-    <h2 id="comments-title">评论与提问 <small>（@comments.Count）</small></h2>
+    <h2 id="comments-title">留言 <small>（@comments.Count）</small></h2>
     <p>使用 GitHub 账号投稿，审核并部署后显示在这里。待审核的 Issue 也会公开，请勿填写密码或其他隐私信息。</p>
-    @foreach (var comment in comments)
-    {
-        <article class="comment" @key="comment.IssueNumber">
-            <div class="comment-author">
-                <img src="@($"https://github.com/{comment.AuthorLogin}.png?size=80")" alt="" width="40" height="40" loading="lazy" referrerpolicy="no-referrer" />
-                <div><strong>@comment.DisplayName</strong> <a href="@($"https://github.com/{comment.AuthorLogin}")" target="_blank" rel="noopener noreferrer">@@@comment.AuthorLogin</a><br />
-                <small>@comment.CreatedAt.ToLocalTime().ToString("yyyy-MM-dd HH:mm") · <a href="@($"{RepositoryUrl}/issues/{comment.IssueNumber}")" target="_blank" rel="noopener noreferrer">查看原始投稿 ↗</a></small></div>
-            </div>
-            <p class="comment-content">@comment.Content</p>
-        </article>
-    }
-    @if (comments.Count == 0)
-    {
-        <p>还没有已发布的评论，欢迎留下你的问题或经验。</p>
-    }
     @if (login is not null)
     {
         <p>已登录：<strong>@@@login</strong> <button type="button" @onclick="Logout" disabled="@busy">退出登录</button></p>
@@ -28,10 +13,9 @@
         <button type="button" class="secondary-button" @onclick="Login" disabled="@(!configured || busy)">GitHub 登录</button>
     }
     <form class="comment-form" @onsubmit="Submit" @onsubmit:preventDefault>
-        <label for="comment-name">显示昵称（可选，留空使用 GitHub 用户名）</label>
-        <input id="comment-name" @bind="nickname" maxlength="40" autocomplete="nickname" />
-        <label for="comment-content">评论内容</label>
-        <textarea id="comment-content" @bind="content" maxlength="2000" rows="6" required placeholder="描述你的问题，或分享这篇教程的使用经验。"></textarea>
+        <label class="visually-hidden" for="comment-content">留言内容</label>
+        <textarea id="comment-content" data-comment-input @bind="content" @bind:event="oninput" maxlength="2000" rows="2" required placeholder="按 Enter 发送，Shift+Enter 换行"></textarea>
+        <details class="comment-profile"><summary>自定义显示昵称</summary><label class="visually-hidden" for="comment-name">显示昵称</label><input id="comment-name" @bind="nickname" maxlength="40" autocomplete="nickname" placeholder="留空使用 GitHub 用户名" /></details>
         <small>最多 2000 字。头像使用投稿者的 GitHub 头像，昵称仅用于展示。</small>
         <button class="primary-button" type="submit" disabled="@(login is null || busy)">@(busy ? "处理中…" : "提交评论，等待审核")</button>
         @if (!string.IsNullOrEmpty(error)) { <p role="alert">@error</p> }
@@ -40,6 +24,27 @@
             <p role="status">评论已提交，等待审核和部署后显示。<a href="@($"{RepositoryUrl}/issues/{submittedIssue}")" target="_blank" rel="noopener noreferrer">查看投稿 #@submittedIssue ↗</a></p>
         }
     </form>
+    <div class="comment-list">
+        @foreach (var comment in comments)
+        {
+            var localTime = comment.CreatedAt.ToLocalTime();
+            var fullTime = localTime.ToString("yyyy年MM月dd日 HH:mm zzz");
+            <article class="comment" @key="comment.IssueNumber">
+                <img class="comment-avatar" src="@($"https://github.com/{comment.AuthorLogin}.png?size=80")" alt="" width="32" height="32" loading="lazy" referrerpolicy="no-referrer" />
+                <div class="comment-body">
+                    <div class="comment-heading">
+                        <a class="comment-name" href="@($"https://github.com/{comment.AuthorLogin}")" title="@($"GitHub：{comment.AuthorLogin}")" target="_blank" rel="noopener noreferrer">@comment.DisplayName</a>
+                        <a class="comment-date" href="@($"{RepositoryUrl}/issues/{comment.IssueNumber}")" title="@($"投稿于 {fullTime}，点击查看原始投稿")" aria-label="@($"投稿于 {fullTime}，查看原始投稿")" target="_blank" rel="noopener noreferrer"><time datetime="@comment.CreatedAt.ToString("O")">@(localTime.Year == DateTimeOffset.Now.Year ? localTime.ToString("MM月dd日") : localTime.ToString("yyyy年MM月dd日"))</time></a>
+                    </div>
+                    <p class="comment-content">@comment.Content</p>
+                </div>
+            </article>
+        }
+        @if (comments.Count == 0)
+        {
+            <p class="comment-empty">还没有已发布的留言，欢迎留下你的问题或经验。</p>
+        }
+    </div>
 </section>
 
 @code {
