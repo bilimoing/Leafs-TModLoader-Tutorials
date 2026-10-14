@@ -28,7 +28,18 @@
     }
     host.replaceChildren(frame);
   }
-  window.tutorialSite.startOnlineWidget = () => mount(document.getElementById('online-widget'), 'online');
+  const pending = new WeakSet();
+  window.tutorialSite.startOnlineWidget = () => {
+    const host = document.getElementById('online-widget');
+    if (!host || host.querySelector('iframe') || pending.has(host)) return;
+    pending.add(host);
+    const load = () => {
+      pending.delete(host);
+      if (host.isConnected) mount(host, 'online');
+    };
+    if (window.requestIdleCallback) requestIdleCallback(load, { timeout: 1500 });
+    else setTimeout(load, 250);
+  };
   window.tutorialSite.mountVisitorMap = host => mount(host, 'map');
   window.tutorialSite.unmountVisitorMap = host => { maps.get(host)?.disconnect(); maps.delete(host); };
   function refreshOnline() {

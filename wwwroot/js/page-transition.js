@@ -1,1 +1,20 @@
-(()=>{let animation;const reduced=()=>matchMedia('(prefers-reduced-motion: reduce)').matches;function clip(element,scale){const rect=element.getBoundingClientRect();const x=rect.width/2,y=Math.max(0,innerHeight/2-rect.top);const radius=Math.hypot(rect.width,Math.max(rect.height,innerHeight))*scale;const points=[[0,-1],[.45,-.85],[.75,-.45],[.85,0],[.6,.55],[0,1],[-.55,.8],[-.85,.4],[-.85,0],[-.65,-.55],[-.3,-.85]];return 'polygon('+points.map(p=>(x+p[0]*radius)+'px '+(y+p[1]*radius)+'px').join(',')+')';}window.tutorialPage={async leave(){const el=document.querySelector('main.main-content');if(!el||reduced())return;animation?.cancel();animation=el.animate({clipPath:[clip(el,2),clip(el,0)]},{duration:380,easing:'ease-in',fill:'forwards'});try{await animation.finished;}catch{}},async enter(){animation?.cancel();const el=document.querySelector('main.main-content');if(!el||reduced())return;animation=el.animate({clipPath:[clip(el,0),clip(el,2)]},{duration:650,easing:'cubic-bezier(.2,.7,.2,1)'});try{await animation.finished;}catch{}},reset(){animation?.cancel();}};})();
+(() => {
+  let animation;
+  const reduced = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
+  window.tutorialPage = {
+    async leave() {
+      animation?.cancel();
+      const el = document.querySelector('main.main-content');
+      if (!el || reduced()) return;
+      animation = el.animate({ opacity: [1, 0], transform: ['translateY(0)', 'translateY(-4px)'] }, { duration: 100, fill: 'forwards', easing: 'ease-out' });
+      try { await animation.finished; } catch {}
+    },
+    enter() {
+      animation?.cancel();
+      const el = document.querySelector('main.main-content');
+      if (!el || reduced()) return;
+      animation = el.animate({ opacity: [0, 1], transform: ['translateY(4px)', 'translateY(0)'] }, { duration: 160, easing: 'ease-out' });
+    },
+    reset() { animation?.cancel(); }
+  };
+})();

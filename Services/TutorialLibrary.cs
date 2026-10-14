@@ -83,7 +83,21 @@ public sealed class TutorialLibrary
             }
             var html = document.ToHtml(pipeline);
             var imageIndex = 0;
-            if(layouts.TryGetValue(article.Title, out var imageLayouts)) html = Regex.Replace(html, @"<img\b[^>]*>", match => { if(imageIndex >= imageLayouts.Count) return match.Value; var size = imageLayouts[imageIndex++]; return match.Value.Insert(4, " style=\"width:" + size.width.ToString(CultureInfo.InvariantCulture) + "px;max-width:100%;height:auto\""); });
+            layouts.TryGetValue(article.Title, out var imageLayouts);
+            html = Regex.Replace(html, @"<img\b[^>]*>", match =>
+            {
+                var attributes = " loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\"";
+                if (imageLayouts is not null && imageIndex < imageLayouts.Count)
+                {
+                    var size = imageLayouts[imageIndex++];
+                    var width = size.width.ToString(CultureInfo.InvariantCulture);
+                    attributes += " style=\"width:" + width + "px;max-width:100%;height:auto";
+                    if (size.width > 0 && size.height > 0)
+                        attributes += ";aspect-ratio:" + width + "/" + size.height.ToString(CultureInfo.InvariantCulture);
+                    attributes += "\"";
+                }
+                return match.Value.Insert(4, attributes);
+            });
             article.Html = html;
             foreach (Match heading in Regex.Matches(article.Html, "<h([1-6]) id=\"([^\"]+)\"[^>]*>(.*?)</h[1-6]>", RegexOptions.Singleline))
                 article.Toc.Add(new TocEntry(WebUtility.HtmlDecode(heading.Groups[2].Value), Plain(heading.Groups[3].Value), int.Parse(heading.Groups[1].Value)));
@@ -109,7 +123,12 @@ public sealed class TutorialLibrary
         return string.Join((char)10, result);
     }
     public Tutorial? Find(string? title) => Articles.FirstOrDefault(a => a.Title == title);
-    public IEnumerable<Tutorial> Search(string query) => Articles.Where(a => a.Title != "主页" && query.Split(' ', StringSplitOptions.RemoveEmptyEntries).All(word => (a.Title + " " + a.SearchText).Contains(word, StringComparison.OrdinalIgnoreCase)));
+    public IEnumerable<Tutorial> Search(string query)
+    {
+        var words = query.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+        return Articles.Where(a => a.Title != "主页" && words.All(word =>
+            a.Title.Contains(word, StringComparison.OrdinalIgnoreCase) || a.SearchText.Contains(word, StringComparison.OrdinalIgnoreCase)));
+    }
     public static string Plain(string html) => WebUtility.HtmlDecode(Regex.Replace(html, "<[^>]+>", " ")).Trim();
     private static string Canonical(string url) => url.Replace("http://", "https://").Replace("https://kdocs.cn/", "https://www.kdocs.cn/").Split('?')[0].TrimEnd('/');
     private static string Normalize(string value) => WebUtility.HtmlDecode(value).Replace("\\", "").Replace("更多Projectile", "更多Proj").Replace(">", "").Replace(" ", "").Replace("-", "").Trim().ToLowerInvariant();

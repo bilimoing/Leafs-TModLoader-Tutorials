@@ -5,27 +5,38 @@
     mount(host, article) {
       if (!host) return;
       this.unmount(host);
-      const script = document.createElement('script');
-      script.src = 'https://utteranc.es/client.js';
-      script.setAttribute('repo', 'bilimoing/Leafs-TModLoader-Tutorials');
-      // 同一路径上的教程以独立标识关联，避免查询参数页面共用讨论。
-      script.setAttribute('issue-term', '教程留言：' + article);
-      script.setAttribute('theme', theme());
-      script.crossOrigin = 'anonymous';
-      script.async = true;
-      const observer = new MutationObserver(() => {
-        const frame = host.querySelector('iframe');
-        frame?.contentWindow?.postMessage({ type: 'set-theme', theme: theme() }, 'https://utteranc.es');
-      });
-      observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
-      mounts.set(host, observer);
-      host.replaceChildren(script);
+      const state = { visibility: null, theme: null };
+      mounts.set(host, state);
+      const load = () => {
+        state.visibility?.disconnect();
+        if (!host.isConnected || mounts.get(host) !== state) return;
+        const script = document.createElement('script');
+        script.src = 'https://utteranc.es/client.js';
+        script.setAttribute('repo', 'bilimoing/Leafs-TModLoader-Tutorials');
+        script.setAttribute('issue-term', '教程留言：' + article);
+        script.setAttribute('theme', theme());
+        script.crossOrigin = 'anonymous';
+        script.async = true;
+        state.theme = new MutationObserver(() => {
+          host.querySelector('iframe')?.contentWindow?.postMessage({ type: 'set-theme', theme: theme() }, 'https://utteranc.es');
+        });
+        state.theme.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+        host.replaceChildren(script);
+      };
+      if ('IntersectionObserver' in window) {
+        state.visibility = new IntersectionObserver(entries => {
+          if (entries.some(entry => entry.isIntersecting)) load();
+        }, { rootMargin: '400px' });
+        state.visibility.observe(host);
+      } else load();
     },
     unmount(host) {
       if (!host) return;
-      mounts.get(host)?.disconnect();
+      const state = mounts.get(host);
+      state?.visibility?.disconnect();
+      state?.theme?.disconnect();
       mounts.delete(host);
-      try { host.replaceChildren(); } catch { }
+      host.replaceChildren();
     }
   };
 })();

@@ -30,7 +30,7 @@ private IDisposable? navigationSubscription;
 private bool enterPending = true;
 protected override void OnInitialized() { Search.Changed += SearchChanged; navigationSubscription = Navigation.RegisterLocationChangingHandler(BeforeNavigation); }
 private async ValueTask BeforeNavigation(LocationChangingContext context) { var next = new Uri(context.TargetLocation); var current = new Uri(Navigation.Uri); if(next.AbsolutePath != current.AbsolutePath || next.Query == current.Query) return; try { await JS.InvokeVoidAsync("tutorialPage.leave"); } finally { if(context.CancellationToken.IsCancellationRequested) await JS.InvokeVoidAsync("tutorialPage.reset"); } }
-private void SearchChanged() { _ = InvokeAsync(StateHasChanged); }
+private void SearchChanged() { if(string.IsNullOrWhiteSpace(query)) enhancePending = true; _ = InvokeAsync(StateHasChanged); }
 public void Dispose() { Search.Changed -= SearchChanged; navigationSubscription?.Dispose(); }
 
 private bool directoryOpen = true;
@@ -39,7 +39,7 @@ private string? lastArticle;
 private string? lastView;
 private bool enhancePending = true;
 private Tutorial? Neighbor(int offset) { var list = Library.Articles.Where(a => a.Title != "主页").ToList(); var index = Current is null ? -1 : list.IndexOf(Current); return index >= 0 && index + offset >= 0 && index + offset < list.Count ? list[index + offset] : null; }
-protected override void OnParametersSet() { if(lastArticle != Article || lastView != View) { query = ""; lastArticle = Article; lastView = View; enterPending = true; } enhancePending = true; }
+protected override void OnParametersSet() { if(lastArticle != Article || lastView != View) { query = ""; lastArticle = Article; lastView = View; enterPending = true; enhancePending = true; } }
 protected override async Task OnAfterRenderAsync(bool firstRender) { if(enhancePending || firstRender) { enhancePending = false; await JS.InvokeVoidAsync("tutorialSite.enhance"); if(enterPending) { enterPending = false; await JS.InvokeVoidAsync("tutorialPage.enter"); } } }
 private string Snippet(Tutorial article) { var word = query.Split(' ', StringSplitOptions.RemoveEmptyEntries).FirstOrDefault() ?? ""; var index = article.SearchText.IndexOf(word, StringComparison.OrdinalIgnoreCase); var start = Math.Max(0, index - 35); return (start > 0 ? "…" : "") + article.SearchText.Substring(start, Math.Min(160, article.SearchText.Length - start)) + "…"; }
 }

@@ -6,3 +6,5 @@ riderModule.iml
 # 本地编辑器及发布输出
 .idea/
 release/
+perf-baseline/
+perf-check/
