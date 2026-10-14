@@ -1,4 +1,5 @@
 @inject IJSRuntime JS
+@implements IAsyncDisposable
 
 <section class="website-data">
     <div class="eyebrow">网站数据</div>
@@ -15,5 +16,11 @@
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender) await JS.InvokeVoidAsync("tutorialSite.mountVisitorMap", map);
+    }
+    public async ValueTask DisposeAsync()
+    {
+        try { await JS.InvokeVoidAsync("tutorialSite.unmountVisitorMap", map); }
+        catch (JSException) { }
+        catch (OperationCanceledException) { }
     }
 }

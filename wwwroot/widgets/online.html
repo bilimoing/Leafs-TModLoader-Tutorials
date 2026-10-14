@@ -1,5 +1,10 @@
 <!doctype html>
-<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>在线人数</title><style>html,body{margin:0;padding:0;background:transparent}body{display:flex;align-items:center;min-height:24px}img{max-width:100%;border:0}</style></head><body>
-<script id="_wauv8f">var _wau = _wau || []; _wau.push(["small", "7qazfbqutk", "v8f"]);</script><script async src="https://waust.at/s.js" onerror="document.getElementById('error').hidden=false"></script>
-<span id="error" hidden style="font:12px sans-serif;color:#888">暂不可用</span>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>在线人数</title><style>html,body{margin:0;padding:0;background:transparent;overflow:hidden}body{display:flex;align-items:center;min-height:24px}img{max-width:100%;border:0}#error{font:12px sans-serif;color:#888}button{font:inherit;color:inherit;background:transparent;border:0;padding:0;cursor:pointer}</style></head><body>
+<script id="_wauv8f">
+// 只清除该服务该站点的缓存，避免重新加载仍显示旧数字。
+try { localStorage.removeItem('_waucount:7qazfbqutk'); localStorage.removeItem('_wautime:7qazfbqutk'); } catch {}
+var _wau = _wau || []; _wau.push(["small", "7qazfbqutk", "v8f"]); var _wau_opt = {target:"_blank"};
+</script><script async src="https://waust.at/s.js" onerror="document.getElementById('error').hidden=false"></script>
+<span id="error" hidden><button onclick="location.reload()" title="点击重新加载在线统计">加载失败 · 重试</button></span>
+<script>setTimeout(function(){if(!document.querySelector('body>div'))document.getElementById('error').hidden=false;},15000);</script>
 </body></html>
