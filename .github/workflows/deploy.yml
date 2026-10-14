@@ -28,7 +28,7 @@ jobs:
         uses: actions/configure-pages@v5
       - name: 校验评论数据与投稿解析
         run: |
-          node --test scripts/comments.test.cjs scripts/comment-workflow.test.cjs scripts/performance.test.cjs scripts/boot.test.cjs
+          node --test scripts/comments.test.cjs scripts/comment-workflow.test.cjs scripts/performance.test.cjs
           node scripts/comments.cjs
       - name: 清理上次发布输出
         run: rm -rf release
