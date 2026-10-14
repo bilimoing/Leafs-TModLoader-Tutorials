@@ -11,6 +11,6 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
   <ItemGroup>
-    <AndroidAsset Include="../site/**/*" Link="site/%(RecursiveDir)%(Filename)%(Extension)" />
+    <AndroidAsset Include="../android-site/*" Link="site/%(Filename)%(Extension)" />
   </ItemGroup>
 </Project>

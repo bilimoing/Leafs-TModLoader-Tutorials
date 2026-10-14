@@ -3,13 +3,26 @@
   "version": "1.0.0",
   "private": true,
   "main": "main.cjs",
-  "scripts": { "start": "electron .", "package": "electron-builder --win zip --x64" },
+  "scripts": { "start": "electron .", "package": "electron-builder --win nsis --x64" },
   "devDependencies": { "electron": "^42.0.0", "electron-builder": "^26.0.12" },
   "build": {
     "appId": "io.github.bilimoing.leaftutorials",
     "productName": "LeafTutorials",
     "files": ["main.cjs", "package.json"],
     "extraResources": [{ "from": "../site", "to": "site" }],
-    "win": { "target": "zip", "artifactName": "LeafTutorials-Windows-x64.zip" }
+    "win": { "target": "nsis", "artifactName": "LeafTutorials-Windows-x64-Setup.exe" },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "叶子的 tModLoader 教程",
+      "uninstallDisplayName": "叶子的 tModLoader 教程（离线版）",
+      "deleteAppDataOnUninstall": false,
+      "runAfterFinish": false,
+      "installerLanguages": ["zh_CN", "en_US"],
+      "displayLanguageSelector": true
+    }
   }
 }

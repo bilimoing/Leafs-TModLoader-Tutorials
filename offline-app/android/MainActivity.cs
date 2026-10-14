@@ -10,9 +10,12 @@ namespace LeafTutorials;
 public sealed class MainActivity : Activity
 {
     private WebView? browser;
+    private Dictionary<string, string> assetMap = new();
     protected override void OnCreate(Bundle? savedInstanceState)
     {
         base.OnCreate(savedInstanceState);
+        using (var reader = new StreamReader(Assets!.Open("site/asset-map.json")))
+            assetMap = System.Text.Json.JsonSerializer.Deserialize<Dictionary<string, string>>(reader.ReadToEnd())!;
         browser = new WebView(this);
         browser.Settings.JavaScriptEnabled = true;
         browser.Settings.DomStorageEnabled = true;
@@ -64,7 +67,8 @@ public sealed class MainActivity : Activity
                     ".html" => "text/html", ".css" => "text/css", ".svg" => "image/svg+xml", ".png" => "image/png",
                     ".gif" => "image/gif", ".webp" => "image/webp", ".jpg" or ".jpeg" => "image/jpeg", _ => "application/octet-stream"
                 };
-                return new WebResourceResponse(type, "utf-8", activity.Assets!.Open("site/" + name));
+                if (!activity.assetMap.TryGetValue(name, out var mapped)) throw new IOException();
+                return new WebResourceResponse(type, "utf-8", activity.Assets!.Open("site/" + mapped));
             }
             catch (IOException) { return new WebResourceResponse("text/plain", "utf-8", 404, "Not Found", new Dictionary<string, string>(), new MemoryStream()); }
         }

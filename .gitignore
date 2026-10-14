@@ -9,6 +9,9 @@ release/
 perf-baseline/
 perf-check/
 offline-app/site/
+offline-app/android-site/
+offline-app/downloads/
+artifacts/
 offline-app/windows/node_modules/
 offline-app/windows/dist/
 offline-app/android/bin/
