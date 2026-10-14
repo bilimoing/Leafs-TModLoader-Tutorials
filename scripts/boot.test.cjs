@@ -26,6 +26,8 @@ test('404 立即停止，模块入口交给运行时加载', async () => {
   const load = setup(async () => { count++; return { ok: false, status: 404 }; });
   await assert.rejects(load('assembly', 'app.wasm', '/app.wasm', ''), /404/);
   assert.equal(count, 1);
-  assert.equal(await load('dotnetjs', 'dotnet.js', '/dotnet.js', ''), '/dotnet.js');
+  const moduleUrl = load('dotnetjs', 'dotnet.js', '/dotnet.js', '');
+  assert.equal(typeof moduleUrl, 'string');
+  assert.equal(moduleUrl, '/dotnet.js');
   assert.equal(count, 1);
 });

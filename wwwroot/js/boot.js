@@ -1,7 +1,10 @@
 (() => {
-  async function loadResource(type, name, url, integrity) {
-    // 模块脚本仍交给运行时加载，保持浏览器模块与完整性机制。
+  function loadResource(type, name, url, integrity) {
+    // 模块入口必须同步返回 URL，不能返回 Promise<string>。
     if (type === 'dotnetjs') return url;
+    return fetchResource(name, url, integrity);
+  }
+  async function fetchResource(name, url, integrity) {
     let lastError;
     for (let attempt = 0; attempt < 3; attempt++) {
       try {
