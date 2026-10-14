@@ -1,4 +1,5 @@
 <Project Sdk='Microsoft.NET.Sdk.BlazorWebAssembly'>
 <PropertyGroup><TargetFramework>net10.0</TargetFramework><Nullable>enable</Nullable><ImplicitUsings>enable</ImplicitUsings><OverrideHtmlAssetPlaceholders>true</OverrideHtmlAssetPlaceholders></PropertyGroup>
 <ItemGroup><PackageReference Include='Microsoft.AspNetCore.Components.WebAssembly' Version='10.0.12' /><PackageReference Include='Microsoft.AspNetCore.Components.WebAssembly.DevServer' Version='10.0.12' PrivateAssets='all' /><PackageReference Include='Markdig' Version='0.41.3' /><EmbeddedResource Include='Pages/MD/**/*.md' /><EmbeddedResource Include='Services/image-layout.json' /><EmbeddedResource Include='Comments/*.json'><LogicalName>TutorialComments.%(Filename)%(Extension)</LogicalName></EmbeddedResource></ItemGroup>
+<ItemGroup><Compile Remove="offline-app/**/*.cs" /><Content Remove="offline-app/**/*" /><None Remove="offline-app/**/*" /></ItemGroup>
 </Project>

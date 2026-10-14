@@ -5,6 +5,10 @@
     mount(host, article) {
       if (!host) return;
       this.unmount(host);
+      if (window.LEAF_OFFLINE) {
+        host.textContent = '离线版不加载评论。需要留言时请使用在线网站。';
+        return;
+      }
       const state = { visibility: null, theme: null };
       mounts.set(host, state);
       const load = () => {

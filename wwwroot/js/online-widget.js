@@ -2,6 +2,7 @@
   const maps = new WeakMap();
   function mount(host, kind) {
     if (!host || host.querySelector('iframe')) return;
+    if (window.LEAF_OFFLINE) { host.textContent = '离线版'; return; }
     const frame = document.createElement('iframe');
     const url = new URL(`widgets/${kind}.html`, document.baseURI);
     frame.src = url.href;

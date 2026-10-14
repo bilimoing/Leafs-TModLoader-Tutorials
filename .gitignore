@@ -8,3 +8,10 @@ riderModule.iml
 release/
 perf-baseline/
 perf-check/
+offline-app/site/
+offline-app/windows/node_modules/
+offline-app/windows/dist/
+offline-app/android/bin/
+offline-app/android/obj/
+*.keystore
+*.jks
