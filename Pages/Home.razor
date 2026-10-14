@@ -5,14 +5,15 @@
 @inject SearchState Search
 @inject NavigationManager Navigation
 @implements IDisposable
-<PageTitle>@(Current?.Title ?? "叶子的 tModLoader 教程")</PageTitle>
+<PageTitle>@(View == "data" ? "网站数据 · 叶子的 tModLoader 教程" : Current?.Title ?? "叶子的 tModLoader 教程")</PageTitle>
 <div class='reader-shell @(directoryOpen ? "directory-open" : "directory-closed")'>
-@if(Current is not null && string.IsNullOrWhiteSpace(query)) {
+@if(View != "data" && Current is not null && string.IsNullOrWhiteSpace(query)) {
 <button class='directory-toggle' @onclick='() => directoryOpen = !directoryOpen' aria-expanded='@directoryOpen' aria-controls='tutorial-directory'>@(directoryOpen ? "« 收起目录" : "☰ 展开目录")</button>
 <aside id='tutorial-directory' class='reader-directory' inert='@(!directoryOpen)' aria-hidden='@(!directoryOpen)'><叶子的TModLoader教程.Components.TutorialDirectory Current='Current' OnNavigate='CloseMobileDirectory' /></aside>
 }
 <main class='main-content'>
-@if(!string.IsNullOrWhiteSpace(query)) { var results = Library.Search(query).ToList(); <div class='eyebrow'>搜索教程</div><h1>找到 @results.Count 篇相关教程</h1><p>全文搜索「@query」</p><button class='text-button' @onclick='() => query = string.Empty'>清除搜索，返回阅读</button><div class='search-results'>@foreach(var result in results) { <a href='@result.Url' @onclick='() => query = string.Empty'><small>@result.Group</small><h2>@result.Title ↗</h2><p>@Snippet(result)</p></a> }@if(results.Count == 0) { <p>没有找到相关教程，试试“弹幕”或“绘制”。</p> }</div> }
+@if(View == "data") { <叶子的TModLoader教程.Components.WebsiteData /> }
+else if(!string.IsNullOrWhiteSpace(query)) { var results = Library.Search(query).ToList(); <div class='eyebrow'>搜索教程</div><h1>找到 @results.Count 篇相关教程</h1><p>全文搜索「@query」</p><button class='text-button' @onclick='() => query = string.Empty'>清除搜索，返回阅读</button><div class='search-results'>@foreach(var result in results) { <a href='@result.Url' @onclick='() => query = string.Empty'><small>@result.Group</small><h2>@result.Title ↗</h2><p>@Snippet(result)</p></a> }@if(results.Count == 0) { <p>没有找到相关教程，试试“弹幕”或“绘制”。</p> }</div> }
 else if(Current is not null) { <div class='article-layout'><div class='article-column'><div class='breadcrumb'><a href='.'>教程首页</a> / @Current.Group</div><header class='article-header'><div class='eyebrow'>TMODLOADER 开发笔记</div><h1>@Current.Title</h1><div class='article-meta'>约 @Current.Minutes 分钟阅读 · .NET 10 / TML 1.4.5</div></header><article class='markdown' @key='Current.Title'>@((MarkupString)Current.Html)</article><div class='reading-help'>遇到问题？带上报错信息和相关代码，到 QQ 群 921853970 一起讨论。</div><nav class='article-pagination' aria-label='相邻教程'>@if(Neighbor(-1) is Tutorial previous) { <a href='@previous.Url'><small>← 上一篇</small><strong>@previous.Title</strong></a> } @if(Neighbor(1) is Tutorial next) { <a href='@next.Url'><small>下一篇 →</small><strong>@next.Title</strong></a> }</nav><叶子的TModLoader教程.Components.TutorialComments Article='@Current.Title' @key='$"comments-{Current.Title}"' /></div></div> }
 else if(!string.IsNullOrEmpty(Article)) { <h1>这篇教程暂未收录</h1><p>请检查链接，或通过顶部搜索寻找你需要的教程。</p><a href='.'>返回首页</a> }
 else {
@@ -21,6 +22,7 @@ else {
 </main>
 </div>
 @code {
+[SupplyParameterFromQuery(Name = "view")] public string? View { get; set; }
 [SupplyParameterFromQuery(Name = "article")] public string? Article { get; set; }
 private Tutorial? Current => Library.Find(Article);
 private string query { get { return Search.Query; } set { Search.Query = value; } }
@@ -34,9 +36,10 @@ public void Dispose() { Search.Changed -= SearchChanged; navigationSubscription?
 private bool directoryOpen = true;
 private async Task CloseMobileDirectory() { if(await JS.InvokeAsync<bool>("tutorialSite.isMobile")) directoryOpen = false; }
 private string? lastArticle;
+private string? lastView;
 private bool enhancePending = true;
 private Tutorial? Neighbor(int offset) { var list = Library.Articles.Where(a => a.Title != "主页").ToList(); var index = Current is null ? -1 : list.IndexOf(Current); return index >= 0 && index + offset >= 0 && index + offset < list.Count ? list[index + offset] : null; }
-protected override void OnParametersSet() { if(lastArticle != Article) { query = ""; lastArticle = Article; enterPending = true; } enhancePending = true; }
+protected override void OnParametersSet() { if(lastArticle != Article || lastView != View) { query = ""; lastArticle = Article; lastView = View; enterPending = true; } enhancePending = true; }
 protected override async Task OnAfterRenderAsync(bool firstRender) { if(enhancePending || firstRender) { enhancePending = false; await JS.InvokeVoidAsync("tutorialSite.enhance"); if(enterPending) { enterPending = false; await JS.InvokeVoidAsync("tutorialPage.enter"); } } }
 private string Snippet(Tutorial article) { var word = query.Split(' ', StringSplitOptions.RemoveEmptyEntries).FirstOrDefault() ?? ""; var index = article.SearchText.IndexOf(word, StringComparison.OrdinalIgnoreCase); var start = Math.Max(0, index - 35); return (start > 0 ? "…" : "") + article.SearchText.Substring(start, Math.Min(160, article.SearchText.Length - start)) + "…"; }
 }

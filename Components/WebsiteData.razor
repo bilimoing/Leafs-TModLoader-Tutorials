@@ -1,0 +1,19 @@
+@inject IJSRuntime JS
+
+<section class="website-data">
+    <div class="eyebrow">网站数据</div>
+    <h1>看看大家从哪里来</h1>
+    <p>访问地区由 WHO’S AMUNG.US 提供，所有教程共用同一个站点标识。</p>
+    <h2>访问地区</h2>
+    <div class="visitor-map" @ref="map"></div>
+    <p class="data-note">地区根据网络地址估算，可能受代理和网络环境影响。在线人数是服务估算的活跃访客数，并非精确的人头数。</p>
+    <a href="https://whos.amung.us/stats/7qazfbqutk/" target="_blank" rel="noopener noreferrer">查看服务提供的统计详情 ↗</a>
+</section>
+
+@code {
+    private ElementReference map;
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender) await JS.InvokeVoidAsync("tutorialSite.mountVisitorMap", map);
+    }
+}
