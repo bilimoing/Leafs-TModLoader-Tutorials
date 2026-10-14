@@ -17,7 +17,7 @@ app.whenReady().then(() => {
       return new Response(await fs.readFile(file), { headers: { 'Content-Type': types[path.extname(file).toLowerCase()] || 'application/octet-stream' } });
     } catch { return new Response('', { status: 404 }); }
   });
-  window = new BrowserWindow({ width: 1250, height: 850, minWidth: 420, title: '叶子的 tModLoader 教程 · 离线版', webPreferences: { nodeIntegration: false, contextIsolation: true, sandbox: true } });
+  window = new BrowserWindow({ icon: path.join(__dirname, 'icons/leaf.png'), width: 1250, height: 850, minWidth: 420, title: '叶子的 tModLoader 教程 · 离线版', webPreferences: { nodeIntegration: false, contextIsolation: true, sandbox: true } });
   window.webContents.session.setPermissionRequestHandler((_webContents, _permission, callback) => callback(false));
   window.webContents.setWindowOpenHandler(({ url }) => { if (/^https?:\/\//.test(url)) shell.openExternal(url); return { action: 'deny' }; });
   window.webContents.on('will-navigate', (event, url) => {

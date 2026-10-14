@@ -51,11 +51,6 @@ jobs:
         run: |
           dotnet workload install android
           dotnet build offline-app/android/LeafTutorials.Android.csproj -t:InstallAndroidDependencies -p:AndroidSdkDirectory="$ANDROID_HOME" -p:AcceptAndroidSdkLicenses=True
-      - name: 构建完整离线网站
-        run: |
-          dotnet publish 叶子的TModLoader教程.csproj -c Release -o release
-          node scripts/prepare-offline.mjs release/wwwroot
-          node --test scripts/offline.test.cjs
       - name: 准备正式签名
         env:
           KEYSTORE: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
@@ -78,7 +73,7 @@ jobs:
           KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
         run: |
           if [[ -n "$KEYSTORE" ]]; then
-            dotnet publish offline-app/android/LeafTutorials.Android.csproj -c Release -p:AndroidSdkDirectory="$ANDROID_HOME" -p:ApplicationVersion="$GITHUB_RUN_NUMBER" -p:AndroidKeyStore=true -p:AndroidSigningKeyStore="$RUNNER_TEMP/leaf.keystore" -p:AndroidSigningKeyAlias="$KEY_ALIAS" -p:AndroidSigningStorePass=env:STORE_PASSWORD -p:AndroidSigningKeyPass=env:KEY_PASSWORD
+            dotnet publish offline-app/android/LeafTutorials.Android.csproj -c Release -p:AndroidSdkDirectory="$ANDROID_HOME" -p:ApplicationVersion="$((GITHUB_RUN_NUMBER + 100))" -p:AndroidKeyStore=true -p:AndroidSigningKeyStore="$RUNNER_TEMP/leaf.keystore" -p:AndroidSigningKeyAlias="$KEY_ALIAS" -p:AndroidSigningStorePass=env:STORE_PASSWORD -p:AndroidSigningKeyPass=env:KEY_PASSWORD
           else
             dotnet build offline-app/android/LeafTutorials.Android.csproj -c Debug -p:AndroidSdkDirectory="$ANDROID_HOME"
           fi

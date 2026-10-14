@@ -18,3 +18,5 @@ offline-app/android/bin/
 offline-app/android/obj/
 *.keystore
 *.jks
+
+offline-app/signing/

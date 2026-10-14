@@ -1,16 +1,1 @@
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFramework>net10.0-android</TargetFramework>
-    <OutputType>Exe</OutputType>
-    <SupportedOSPlatformVersion>26</SupportedOSPlatformVersion>
-    <ApplicationId>io.github.bilimoing.leaftutorials</ApplicationId>
-    <ApplicationVersion>1</ApplicationVersion>
-    <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
-    <AndroidPackageFormats>apk</AndroidPackageFormats>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-  </PropertyGroup>
-  <ItemGroup>
-    <AndroidAsset Include="../android-site/*" Link="site/%(Filename)%(Extension)" />
-  </ItemGroup>
-</Project>
+<Project Sdk="Microsoft.NET.Sdk"><PropertyGroup><TargetFramework>net10.0-android</TargetFramework><OutputType>Exe</OutputType><RootNamespace>LeafNative</RootNamespace><SupportedOSPlatformVersion>26</SupportedOSPlatformVersion><ApplicationId>io.github.bilimoing.leaftutorials</ApplicationId><ApplicationVersion>2</ApplicationVersion><ApplicationDisplayVersion>2.0</ApplicationDisplayVersion><AndroidPackageFormats>apk</AndroidPackageFormats><JsonSerializerIsReflectionEnabledByDefault>true</JsonSerializerIsReflectionEnabledByDefault><Nullable>enable</Nullable><ImplicitUsings>enable</ImplicitUsings></PropertyGroup><ItemGroup><PackageReference Include="Markdig" Version="0.41.3"/><Compile Include="../../Services/TutorialLibrary.cs" Link="TutorialLibrary.cs"/><EmbeddedResource Include="../../Pages/MD/**/*.md"><LogicalName>LeafTutorials.Android.Pages.MD.%(Filename)%(Extension)</LogicalName></EmbeddedResource><EmbeddedResource Include="../../Services/image-layout.json"><LogicalName>LeafTutorials.Android.Services.image-layout.json</LogicalName></EmbeddedResource><AndroidAsset Include="../../wwwroot/images/tutorials/*" Link="images/tutorials/%(Filename)%(Extension)"/></ItemGroup></Project>

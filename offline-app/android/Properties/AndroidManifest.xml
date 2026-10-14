@@ -1,5 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
-  <uses-permission android:name="android.permission.INTERNET" />
-  <application android:label="叶子的教程" android:usesCleartextTraffic="false" android:allowBackup="false" />
-</manifest>
+<?xml version="1.0" encoding="utf-8"?><manifest xmlns:android="http://schemas.android.com/apk/res/android"><application android:label="叶子的教程" android:icon="@drawable/leaf" android:enableOnBackInvokedCallback="true" android:allowBackup="false"/></manifest>
