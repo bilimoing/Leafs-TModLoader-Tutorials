@@ -2352,10 +2352,10 @@ NPC 的贴图制作复杂且繁琐。好在社区里有一些工具，能帮我�
 
 ### Mornia-Cherry的工具集
 
-![教程配图 30](images/tutorials/8bb68dcef68ae67b95374bb2.png)
+![教程配图 30](images/tutorials/f45e488b16ec07d7f82224c6.png)
 
 
-![图片](images/tutorials/f45e488b16ec07d7f82224c6.png)
+![图片](images/tutorials/8bb68dcef68ae67b95374bb2.png)
 
 [跳转网页链接 &gt;&gt; ](https://trtool.yingtaoshu.org/)
 
