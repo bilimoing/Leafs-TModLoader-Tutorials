@@ -2334,7 +2334,7 @@ NPC 的贴图制作复杂且繁琐。好在社区里有一些工具，能帮我�
 
 ### 角色外观导出Mod
 
-![图片](images/tutorials/70169db54044d6dbd717dde0.png)
+![图片](images/tutorials/98059452adf775d32d1adfdf.png)
 
 [创意工坊链接&gt;&gt;](https://steamcommunity.com/sharedfiles/filedetails/?id=3819727454)
 
@@ -2342,18 +2342,13 @@ NPC 的贴图制作复杂且繁琐。好在社区里有一些工具，能帮我�
 
 ### 角色创建预设Mod
 
-![图片](images/tutorials/98059452adf775d32d1adfdf.png)
+![教程配图 30](images/tutorials/f45e488b16ec07d7f82224c6.png)
 
 [创意工坊链接&gt;&gt;](https://steamcommunity.com/sharedfiles/filedetails/?id=3493069544)
 
 **角色创建预设 Mod** 是一个泰拉瑞亚（tModLoader）模组，它的核心功能是：**创建角色的时候，允许你直接为角色搭配时装，并且能保留自己的时装搭配。**简单说，就是把一套外观存成预设，下次建角色时直接套用。也可以把你的时装搭配分享给你的朋友们。
 
-
-
 ### Mornia-Cherry的工具集
-
-![教程配图 30](images/tutorials/f45e488b16ec07d7f82224c6.png)
-
 
 ![图片](images/tutorials/8bb68dcef68ae67b95374bb2.png)
 
