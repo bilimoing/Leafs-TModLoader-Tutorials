@@ -44,6 +44,11 @@ public sealed class TutorialLibrary
         }
         var home = Find("主页");
         var links = new Dictionary<string, Tutorial>(StringComparer.OrdinalIgnoreCase);
+        var aliases = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
+        {
+            ["想要编写教程点我"] = "教程编写注意事项",
+            ["想要编写教程"] = "教程编写注意事项"
+        };
         if (home is not null)
         {
             links["https://www.kdocs.cn/l/crP1DDFrTik8"] = home;
@@ -55,7 +60,8 @@ public sealed class TutorialLibrary
                 foreach (Match match in Regex.Matches(line, @"\[([^\]]+)\]\((https?://(?:www\.)?kdocs\.cn/l/[^)]+)\)"))
                 {
                     var label = Normalize(match.Groups[1].Value);
-                    var article = Articles.FirstOrDefault(a => a.Title != "主页" && (Normalize(a.Title) == label || label.EndsWith(Normalize(a.Title), StringComparison.OrdinalIgnoreCase)));
+                    var resolvedLabel = aliases.TryGetValue(label, out var aliasTitle) ? Normalize(aliasTitle) : label;
+                    var article = Articles.FirstOrDefault(a => a.Title != "主页" && (Normalize(a.Title) == resolvedLabel || resolvedLabel.EndsWith(Normalize(a.Title), StringComparison.OrdinalIgnoreCase)));
                     if (article is null) continue;
                     article.Group = group;
                     article.Order = order++;
@@ -131,5 +137,5 @@ public sealed class TutorialLibrary
     }
     public static string Plain(string html) => WebUtility.HtmlDecode(Regex.Replace(html, "<[^>]+>", " ")).Trim();
     private static string Canonical(string url) => url.Replace("http://", "https://").Replace("https://kdocs.cn/", "https://www.kdocs.cn/").Split('?')[0].TrimEnd('/');
-    private static string Normalize(string value) => WebUtility.HtmlDecode(value).Replace("\\", "").Replace("更多Projectile", "更多Proj").Replace(">", "").Replace(" ", "").Replace("-", "").Trim().ToLowerInvariant();
+    private static string Normalize(string value) => WebUtility.HtmlDecode(value).Replace("\\", "").Replace("更多Projectile", "更多Proj").Replace(">>", "").Replace(">", "").Replace(" ", "").Replace("-", "").Trim().ToLowerInvariant();
 }
