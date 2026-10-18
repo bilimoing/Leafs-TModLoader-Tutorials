@@ -3501,5 +3501,106 @@
       "previous": "Mornia-Cherry的工具集",
       "text": ""
     }
+  ],
+  "教程编写注意事项": [
+    {
+      "url": "images/tutorials/6ce4642564604361e30e09b1.png",
+      "width": 264,
+      "height": 187.26,
+      "relationship": "rId5",
+      "wordFile": "教程编写注意事项-image1.png",
+      "previous": "使用智能文档编辑 OTL 的同学可以 点击插入：",
+      "text": ""
+    },
+    {
+      "url": "images/tutorials/644463a06e0ba486593afe2f.png",
+      "width": 553.33,
+      "height": 204.26,
+      "relationship": "rId6",
+      "wordFile": "教程编写注意事项-image2.png",
+      "previous": "三个反引号包裹，并在开头的反引号后标注语言以启用语法高亮，例如：",
+      "text": ""
+    },
+    {
+      "url": "images/tutorials/372ce52c1c9c58f1a8b34234.png",
+      "width": 553.33,
+      "height": 345.95,
+      "relationship": "rId7",
+      "wordFile": "教程编写注意事项-image3.png",
+      "previous": "图片建议居中对齐。 使用智能文档编辑 OTL 的同学可以 可拖动，粘贴，上传 /图片 文件来导入图片，支持本地上传。GIF 图片同样支持插入，请确保上传原图而非缩略图，否则动画可能无法播放。",
+      "text": ""
+    },
+    {
+      "url": "images/tutorials/70b8e07b6b9a88ca5a560e4f.png",
+      "width": 291,
+      "height": 186,
+      "relationship": "rId8",
+      "wordFile": "教程编写注意事项-image4.png",
+      "previous": "（不好用，直接用图片得了）",
+      "text": ""
+    },
+    {
+      "url": "images/tutorials/9907c0e95d3d34696e109b4f.png",
+      "width": 512,
+      "height": 367.32,
+      "relationship": "rId9",
+      "wordFile": "教程编写注意事项-image5.png",
+      "previous": "然后：",
+      "text": ""
+    },
+    {
+      "url": "images/tutorials/5d3dfc04fbaf7c31fb15a018.png",
+      "width": 14.67,
+      "height": 14.67,
+      "relationship": "rId10",
+      "wordFile": "教程编写注意事项-image6.png",
+      "previous": "使用 MD 格式编写的教程可以查看这些文章参考：",
+      "text": "HYPERLINK &quot;https://www.runoob.com/markdown/md-tutorial.html&quot; Markdown 教程 | 菜鸟教程"
+    },
+    {
+      "url": "images/tutorials/8d727c093658578bbbeead78.png",
+      "width": 14.67,
+      "height": 14.67,
+      "relationship": "rId11",
+      "wordFile": "教程编写注意事项-image7.png",
+      "previous": "HYPERLINK &quot;https://www.runoob.com/markdown/md-tutorial.html&quot; Markdown 教程 | 菜鸟教程",
+      "text": "HYPERLINK &quot;https://www.kdocs.cn/l/ctzE7gmh5r1z&quot; README"
+    },
+    {
+      "url": "images/tutorials/d9183fe48a24e2928be3c47e.ico",
+      "width": 14.67,
+      "height": 14.67,
+      "relationship": "rId12",
+      "wordFile": "教程编写注意事项-image8.ico",
+      "previous": "使用智能文档 OTL 格式的教程可以查看这些文章参考：",
+      "text": "HYPERLINK &quot;https://bbs.wps.cn/topic/36955&quot; 智能文档产品说明书①"
+    },
+    {
+      "url": "images/tutorials/d9183fe48a24e2928be3c47e.ico",
+      "width": 14.67,
+      "height": 14.67,
+      "relationship": "rId13",
+      "wordFile": "教程编写注意事项-image9.ico",
+      "previous": "HYPERLINK &quot;https://bbs.wps.cn/topic/36955&quot; 智能文档产品说明书①",
+      "text": "HYPERLINK &quot;https://bbs.wps.cn/topic/36971&quot; 智能文档产品说明书②"
+    },
+    {
+      "url": "images/tutorials/d9183fe48a24e2928be3c47e.ico",
+      "width": 14.67,
+      "height": 14.67,
+      "relationship": "rId14",
+      "wordFile": "教程编写注意事项-image10.ico",
+      "previous": "HYPERLINK &quot;https://bbs.wps.cn/topic/36971&quot; 智能文档产品说明书②",
+      "text": "HYPERLINK &quot;https://bbs.wps.cn/topic/36975&quot; 智能文档产品说明书③"
+    },
+    {
+      "url": "images/tutorials/d9183fe48a24e2928be3c47e.ico",
+      "width": 14.67,
+      "height": 14.67,
+      "relationship": "rId15",
+      "wordFile": "教程编写注意事项-image11.ico",
+      "previous": "HYPERLINK &quot;https://bbs.wps.cn/topic/36975&quot; 智能文档产品说明书③",
+      "text": "HYPERLINK &quot;https://bbs.wps.cn/topic/36977&quot; 智能文档产品说明书④"
+    }
   ]
 }
