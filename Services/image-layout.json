@@ -3229,5 +3229,277 @@
       "previous": "这样你的高尔夫球杆就被装进对应的NPC商店里面了。（虽然好像没这个教程呢，催更叶子！！！）",
       "text": ""
     }
+  ],
+  "中学生：基础城镇NPC": [
+    {
+      "url": "images/tutorials/b750be17e188ee067371e4a5.png",
+      "width": 0,
+      "height": 0,
+      "relationship": "rId5",
+      "wordFile": "中学生：基础城镇NPC-image1.png",
+      "previous": "你家向导和其他那些需要一座房子才可以入住、并且死后会复生的 NPC，即为常驻类。这也是本文的主要内容。",
+      "text": ""
+    },
+    {
+      "url": "images/tutorials/378ff47c15c1340a241adbf6.png",
+      "width": 0,
+      "height": 0,
+      "relationship": "rId6",
+      "wordFile": "中学生：基础城镇NPC-image2.png",
+      "previous": "像旅行商人那样，白天有几率刷新、黄昏时消失的 NPC。",
+      "text": ""
+    },
+    {
+      "url": "images/tutorials/86527eefada595a79a3dbc72.png",
+      "width": 0,
+      "height": 0,
+      "relationship": "rId7",
+      "wordFile": "中学生：基础城镇NPC-image3.png",
+      "previous": "也就是像骷髅商人和地牢老人那样的，允许对话或交易、却无法入住的 NPC。",
+      "text": ""
+    },
+    {
+      "url": "images/tutorials/70dbdcf674162276bdd96cbe.png",
+      "width": 0,
+      "height": 0,
+      "relationship": "rId8",
+      "wordFile": "中学生：基础城镇NPC-image4.png",
+      "previous": "还是像你家向导那样，单次攻击只显示一帧动画，发射弹幕。一般这种 NPC 会持有武器，后面会讲如何给 NPC 设置武器。",
+      "text": ""
+    },
+    {
+      "url": "images/tutorials/4fe06d5c350bed86d04d239c.png",
+      "width": 0,
+      "height": 0,
+      "relationship": "rId9",
+      "wordFile": "中学生：基础城镇NPC-image5.png",
+      "previous": "像商人一样，单次攻击有四帧动画，发射弹幕，不持有武器。这种 NPC 最为常见，也是最好做的 NPC。",
+      "text": ""
+    },
+    {
+      "url": "images/tutorials/4cbfeea77802a21a2c18da8f.png",
+      "width": 0,
+      "height": 0,
+      "relationship": "rId10",
+      "wordFile": "中学生：基础城镇NPC-image6.png",
+      "previous": "一般会自带一个（发光发热的）魔法光环。同样的，不持有武器。",
+      "text": ""
+    },
+    {
+      "url": "images/tutorials/93650c62feb014a41cd1af65.png",
+      "width": 0,
+      "height": 0,
+      "relationship": "rId11",
+      "wordFile": "中学生：基础城镇NPC-image7.png",
+      "previous": "和染料商一样，单次攻击有四帧动画，不发射弹幕，持有武器。",
+      "text": ""
+    },
+    {
+      "url": "images/tutorials/98ffafa1f53212a16a5739dd.png",
+      "width": 0,
+      "height": 0,
+      "relationship": "rId12",
+      "wordFile": "中学生：基础城镇NPC-image8.png",
+      "previous": "想要制做 城镇NPC ，第一步自然是搞到一张 城镇NPC 贴图。如果你没有准备贴图也没关系，教程这边给大家提供了一张 可爱苦力怕 贴图，大家可以下载使用。",
+      "text": ""
+    },
+    {
+      "url": "images/tutorials/13d636d118715072d0ecb346.png",
+      "width": 0,
+      "height": 0,
+      "relationship": "rId13",
+      "wordFile": "中学生：基础城镇NPC-image9.png",
+      "previous": "城镇 NPC 也 属于 NPC ，所以要继承 ModNPC 类",
+      "text": ""
+    },
+    {
+      "url": "images/tutorials/a73ec34fdffc66291a20a230.png",
+      "width": 0,
+      "height": 0,
+      "relationship": "rId14",
+      "wordFile": "中学生：基础城镇NPC-image10.png",
+      "previous": "你可能注意到了上面的 [AutoloadHead] ，这段代码就是自动加载一个NPC的 小地图图标 用的，",
+      "text": ""
+    },
+    {
+      "url": "images/tutorials/5cc6118a83b932d4f901950a.png",
+      "width": 0,
+      "height": 0,
+      "relationship": "rId15",
+      "wordFile": "中学生：基础城镇NPC-image11.png",
+      "previous": "这样子就可以不管派对形态了。",
+      "text": ""
+    },
+    {
+      "url": "images/tutorials/5b4c9f8cb5f0535d367995a4.png",
+      "width": 0,
+      "height": 0,
+      "relationship": "rId16",
+      "wordFile": "中学生：基础城镇NPC-image12.png",
+      "previous": "这样子就可以不管派对形态了。",
+      "text": ""
+    },
+    {
+      "url": "images/tutorials/6f369d74d2b4acbc2b9c6ca8.png",
+      "width": 0,
+      "height": 0,
+      "relationship": "rId17",
+      "wordFile": "中学生：基础城镇NPC-image13.png",
+      "previous": "这样子就可以不管派对形态了。",
+      "text": ""
+    },
+    {
+      "url": "images/tutorials/83907d923c1a4669f267b578.png",
+      "width": 0,
+      "height": 0,
+      "relationship": "rId18",
+      "wordFile": "中学生：基础城镇NPC-image14.png",
+      "previous": "这样子就可以不管派对形态了。",
+      "text": ""
+    },
+    {
+      "url": "images/tutorials/b58ed2fb866120f591af5028.png",
+      "width": 0,
+      "height": 0,
+      "relationship": "rId19",
+      "wordFile": "中学生：基础城镇NPC-image15.png",
+      "previous": "这边再给出我们其他形态的 NPC 图",
+      "text": ""
+    },
+    {
+      "url": "images/tutorials/ab47b0060e1fcd4610aaf0b4.gif",
+      "width": 0,
+      "height": 0,
+      "relationship": "rId20",
+      "wordFile": "中学生：基础城镇NPC-image16.gif",
+      "previous": "如果使用了这个，建议看看你套用的NPC的实际帧数，比如渔夫NPC虽然算是投掷类，但他只有23帧，不同于商人的25帧；如果 帧数写错了 或者 animationType 套错了 ，你的NPC可能就会变成“变形金刚”（） 然后我们粘贴代码，进入游戏：",
+      "text": ""
+    },
+    {
+      "url": "images/tutorials/b7f0bf73bc00268e38376bc2.gif",
+      "width": 0,
+      "height": 0,
+      "relationship": "rId21",
+      "wordFile": "中学生：基础城镇NPC-image17.gif",
+      "previous": "好的！这样一来，这个NPC就拥有了作战能力，他可以自己保护自己了！我们粘贴代码，进入世界，然后放一点怪物：",
+      "text": ""
+    },
+    {
+      "url": "images/tutorials/16d208928a93561d774da22a.png",
+      "width": 0,
+      "height": 0,
+      "relationship": "rId22",
+      "wordFile": "中学生：基础城镇NPC-image18.png",
+      "previous": "我们先看看这个NPC做成啥样了吧：",
+      "text": ""
+    },
+    {
+      "url": "images/tutorials/d54c0ea212457cd400a44efc.png",
+      "width": 0,
+      "height": 0,
+      "relationship": "rId23",
+      "wordFile": "中学生：基础城镇NPC-image19.png",
+      "previous": "一只叫**怪 的苦力怕",
+      "text": ""
+    },
+    {
+      "url": "images/tutorials/423c3dbc739aa14d26495c85.png",
+      "width": 0,
+      "height": 0,
+      "relationship": "rId24",
+      "wordFile": "中学生：基础城镇NPC-image20.png",
+      "previous": "聊天，以及我们添加的商店按钮",
+      "text": ""
+    },
+    {
+      "url": "images/tutorials/0b3f3b3a122bd9751518ca95.png",
+      "width": 0,
+      "height": 0,
+      "relationship": "rId25",
+      "wordFile": "中学生：基础城镇NPC-image21.png",
+      "previous": "神秘红色刀",
+      "text": ""
+    },
+    {
+      "url": "images/tutorials/f873d6410296ef754403117b.png",
+      "width": 0,
+      "height": 0,
+      "relationship": "rId26",
+      "wordFile": "中学生：基础城镇NPC-image22.png",
+      "previous": "进攻！！（ 打的真“准” ）",
+      "text": ""
+    },
+    {
+      "url": "images/tutorials/31fe2fb6d33858c359ff9b6f.png",
+      "width": 0,
+      "height": 0,
+      "relationship": "rId27",
+      "wordFile": "中学生：基础城镇NPC-image23.png",
+      "previous": "派对",
+      "text": ""
+    },
+    {
+      "url": "images/tutorials/b4bca4c7e5ef5b81e84e20b8.png",
+      "width": 0,
+      "height": 0,
+      "relationship": "rId28",
+      "wordFile": "中学生：基础城镇NPC-image24.png",
+      "previous": "上面那些关于NPC攻击设置函数并非只能填写固有内容， TownNPCAttackProj 表示的是当 这个NPC发射弹幕时的状态 ， 既然都发射弹幕了嘛， 你可以在里面写一些奇奇怪怪的东西",
+      "text": ""
+    },
+    {
+      "url": "images/tutorials/f3121ff2bcb91e84539f7790.png",
+      "width": 0,
+      "height": 0,
+      "relationship": "rId29",
+      "wordFile": "中学生：基础城镇NPC-image25.png",
+      "previous": "在 TownNPCAttackProj 里设置NPC发射弹幕的方式，这样还可以忽略 TownNPCAttackProjSpeed 即使近战NPC无法使用 TownNPCAttackProj ，我们还是可以在 TownNPCAttackSwing 里动手脚",
+      "text": ""
+    },
+    {
+      "url": "images/tutorials/147dfcd1429d3b2a3fe33d98.png",
+      "width": 0,
+      "height": 0,
+      "relationship": "rId30",
+      "wordFile": "中学生：基础城镇NPC-image26.png",
+      "previous": "食我泰拉刃杂修！",
+      "text": ""
+    },
+    {
+      "url": "images/tutorials/70169db54044d6dbd717dde0.png",
+      "width": 0,
+      "height": 0,
+      "relationship": "rId31",
+      "wordFile": "中学生：基础城镇NPC-image27.png",
+      "previous": "修改硬编码（可跳过）",
+      "text": "本地化教程里教过怎么用 Language.GetTextValue 获取键值、转成字符串，更多 本地化方法的 具体用法可以参考 HYPERLINK &quot;https://www.kdocs.cn/l/cgxBqiHxMrpn&quot; 模组本地化指南 基础篇 教程。"
+    },
+    {
+      "url": "images/tutorials/98059452adf775d32d1adfdf.png",
+      "width": 0,
+      "height": 0,
+      "relationship": "rId32",
+      "wordFile": "中学生：基础城镇NPC-image28.png",
+      "previous": "角色外观导出Mod",
+      "text": ""
+    },
+    {
+      "url": "images/tutorials/f45e488b16ec07d7f82224c6.png",
+      "width": 0,
+      "height": 0,
+      "relationship": "rId33",
+      "wordFile": "中学生：基础城镇NPC-image29.png",
+      "previous": "角色创建预设Mod",
+      "text": ""
+    },
+    {
+      "url": "images/tutorials/8bb68dcef68ae67b95374bb2.png",
+      "width": 0,
+      "height": 0,
+      "relationship": "rId34",
+      "wordFile": "中学生：基础城镇NPC-image30.png",
+      "previous": "Mornia-Cherry的工具集",
+      "text": ""
+    }
   ]
 }
