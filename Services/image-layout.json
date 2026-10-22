@@ -3602,5 +3602,124 @@
       "previous": "HYPERLINK &quot;https://bbs.wps.cn/topic/36975&quot; 智能文档产品说明书③",
       "text": "HYPERLINK &quot;https://bbs.wps.cn/topic/36977&quot; 智能文档产品说明书④"
     }
+  ],
+  "Coralite：自定义粒子（Dust）": [
+    {
+      "url": "images/tutorials/a7decd37b9a128978e6fe761.png",
+      "width": 43,
+      "height": 277.85,
+      "relationship": "rId5",
+      "wordFile": "Coralite：自定义粒子（Dust）-image1.png",
+      "previous": "本次教程中所使用到的粒子贴图是长这个样子的↓↓↓↓↓",
+      "text": ""
+    },
+    {
+      "url": "images/tutorials/e8388b7ab8c4205e8ae70fc8.png",
+      "width": 281,
+      "height": 159,
+      "relationship": "rId6",
+      "wordFile": "Coralite：自定义粒子（Dust）-image2.png",
+      "previous": "就和创建物品、弹幕或者其他东西那样，在 Content 里新建一个文件夹 并且起名为 Dusts ， 然后在这个文件夹内新建一个 cs文件 ，随便起一个名字（我这里使用 DemoDust 你们随意）作为文件名。然后将贴图放入其中，并保证 图片名，类名，文件名 一致。",
+      "text": ""
+    },
+    {
+      "url": "images/tutorials/7420ed5dee48e4b54f710eca.gif",
+      "width": 279,
+      "height": 229,
+      "relationship": "rId7",
+      "wordFile": "Coralite：自定义粒子（Dust）-image3.gif",
+      "previous": "接下来进入游戏来看看效果吧！",
+      "text": ""
+    },
+    {
+      "url": "images/tutorials/97e5ef2c98397871486ef3a5.gif",
+      "width": 289,
+      "height": 207,
+      "relationship": "rId8",
+      "wordFile": "Coralite：自定义粒子（Dust）-image4.gif",
+      "previous": "再进入到游戏内就可以发现粒子现在能够正常地自转了。",
+      "text": ""
+    },
+    {
+      "url": "images/tutorials/b507177cab4c2fa29e26bd05.gif",
+      "width": 249,
+      "height": 162,
+      "relationship": "rId9",
+      "wordFile": "Coralite：自定义粒子（Dust）-image5.gif",
+      "previous": "一个粒子就这样原地旋转似乎是有些太单调了，于是在这里来做一下特殊的效果吧！",
+      "text": ""
+    },
+    {
+      "url": "images/tutorials/7e9d17406fe6b369fc77d3d0.png",
+      "width": 553.33,
+      "height": 203.54,
+      "relationship": "rId10",
+      "wordFile": "Coralite：自定义粒子（Dust）-image6.png",
+      "previous": "原版的部分粒子是能够和物块产生一些互动的效果的，比如雪粒子让我们来看看源码是怎么写的.....",
+      "text": ""
+    },
+    {
+      "url": "images/tutorials/912b69424592a3a9d1c97e1e.gif",
+      "width": 346,
+      "height": 174,
+      "relationship": "rId11",
+      "wordFile": "Coralite：自定义粒子（Dust）-image7.gif",
+      "previous": "好的，现在我们进入游戏看一下效果叭~",
+      "text": ""
+    },
+    {
+      "url": "images/tutorials/08944cbcd31318db787e60a5.gif",
+      "width": 326,
+      "height": 286.4,
+      "relationship": "rId12",
+      "wordFile": "Coralite：自定义粒子（Dust）-image8.gif",
+      "previous": "进入游戏查看效果，如下。",
+      "text": ""
+    },
+    {
+      "url": "images/tutorials/1e828987379d5fae7b6ded83.png",
+      "width": 553.33,
+      "height": 66.4,
+      "relationship": "rId13",
+      "wordFile": "Coralite：自定义粒子（Dust）-image9.png",
+      "previous": "ModDust 里的 Texture 属性直接给它重写赋值成 null 的话，就会让这个粒子使用原版的粒子贴图。",
+      "text": ""
+    },
+    {
+      "url": "images/tutorials/462e12d38379f613cacf68ba.png",
+      "width": 553.33,
+      "height": 104.55,
+      "relationship": "rId14",
+      "wordFile": "Coralite：自定义粒子（Dust）-image10.png",
+      "previous": "使用 ChildSafety.SafeDust 可以判断这个粒子是否是个血腥的粒子，为 false 的话就会在更新中将它变为云的粒子，或者直接让它 active 变为 false ，源码里是这样写的。",
+      "text": ""
+    },
+    {
+      "url": "images/tutorials/e3ff7bb2ca75a306ed869e53.png",
+      "width": 553.33,
+      "height": 332.98,
+      "relationship": "rId15",
+      "wordFile": "Coralite：自定义粒子（Dust）-image11.png",
+      "previous": "使用 ChildSafety.SafeDust 可以判断这个粒子是否是个血腥的粒子，为 false 的话就会在更新中将它变为云的粒子，或者直接让它 active 变为 false ，源码里是这样写的。",
+      "text": ""
+    },
+    {
+      "url": "images/tutorials/4974c22b7f94edcb3a304c46.gif",
+      "width": 351,
+      "height": 270,
+      "relationship": "rId16",
+      "wordFile": "Coralite：自定义粒子（Dust）-image12.gif",
+      "previous": "使用 ChildSafety.SafeDust 可以判断这个粒子是否是个血腥的粒子，为 false 的话就会在更新中将它变为云的粒子，或者直接让它 active 变为 false ，源码里是这样写的。",
+      "text": ""
+    },
+    {
+      "url": "images/tutorials/6cfe98a78757e217146b3914.gif",
+      "width": 397,
+      "height": 282.39,
+      "relationship": "rId17",
+      "wordFile": "Coralite：自定义粒子（Dust）-image13.gif",
+      "previous": "试试来写一个带拖尾的粒子！",
+      "text": ""
+    }
   ]
 }
