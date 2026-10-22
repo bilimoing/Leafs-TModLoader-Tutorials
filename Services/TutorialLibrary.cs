@@ -47,7 +47,8 @@ public sealed class TutorialLibrary
         var aliases = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
         {
             ["想要编写教程点我"] = "教程编写注意事项",
-            ["想要编写教程"] = "教程编写注意事项"
+            ["想要编写教程"] = "教程编写注意事项",
+            ["Coralite：自定义粒子（Dust）"] = "Coralite：自定义粒子（Dust）"
         };
         if (home is not null)
         {
