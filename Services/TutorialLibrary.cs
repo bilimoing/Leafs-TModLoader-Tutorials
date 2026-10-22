@@ -48,7 +48,7 @@ public sealed class TutorialLibrary
         {
             ["想要编写教程点我"] = "教程编写注意事项",
             ["想要编写教程"] = "教程编写注意事项",
-            ["Coralite：自定义粒子（Dust）"] = "Coralite：自定义粒子（Dust）"
+            [Normalize("Coralite: 自定义Dust（粒子）")] = "Coralite：自定义粒子（Dust）"
         };
         if (home is not null)
         {
