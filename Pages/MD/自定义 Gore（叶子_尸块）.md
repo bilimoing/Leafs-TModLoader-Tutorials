@@ -40,20 +40,20 @@
 
 不过，在创建 **Gore** 之前，我们需要在我们的**Content**文件夹下新建一个文件夹，并且起名为**Gores**，然后在文件夹内新建**cs文件**，随便起个名字（我这里使用**DemoGore\_xxx**你们随意）作为文件名。
 
-Downloaded Pages/MD/自定义 Gore（叶子_尸块）.md -> imported-001.png ![图片](images/tutorials/extracted-037.png)
+![图片](images/tutorials/Gore-01.png)
 
-Downloaded Pages/MD/自定义 Gore（叶子_尸块）.md -> imported-001.png ![图片](images/tutorials/extracted-037.png)
+![图片](images/tutorials/Gore-02.png)
 
-Downloaded Pages/MD/自定义 Gore（叶子_尸块）.md -> imported-001.png ![图片](images/tutorials/extracted-037.png)
+![图片](images/tutorials/Gore-03.png)
 
-Downloaded Pages/MD/自定义 Gore（叶子_尸块）.md -> imported-001.png ![图片](images/tutorials/extracted-037.png)
+![图片](images/tutorials/Gore-04.png)
 
-|Downloaded Pages/MD/自定义 Gore（叶子_尸块）.md -> imported-001.png ![图片](images/tutorials/extracted-037.png)|Downloaded Pages/MD/自定义 Gore（叶子_尸块）.md -> imported-001.png ![图片](images/tutorials/extracted-037.png)|
+|![图片](images/tutorials/Gore-05.png)|![图片](images/tutorials/Gore-06.png)|
 |---|---|
 
 当然，**Gore**也需要一张贴图来显示游戏里的形象，如果你没有准备贴图也没关系，教程这边给大家提供了一些贴图，大家可以下载使用。
 
-Downloaded Pages/MD/自定义 Gore（叶子_尸块）.md -> imported-001.png ![图片](images/tutorials/extracted-037.png)
+![图片](images/tutorials/Gore-07.png)
 
 先创建 **NPC碎块** 吧，我们将对应的贴图放入其中，并保证**图片名，类名，文件名**一致。
 
@@ -156,7 +156,7 @@ public static class GoreID.Sets
 
 首先，控制碰撞的字段当然是有的嘛，不过它并不在 `ModGore` 这个类里……
 
-Downloaded Pages/MD/自定义 Gore（叶子_尸块）.md -> imported-001.png ![图片](images/tutorials/extracted-037.png)
+![图片](images/tutorials/Gore-08.png)
 
 **它藏在游戏的【设置 &gt; 图像 &gt; 质量】选项里。（没想到吧？）**
 
@@ -168,13 +168,13 @@ Downloaded Pages/MD/自定义 Gore（叶子_尸块）.md -> imported-001.png ![�
 
 **质量设置为“高”**：Gore 能够正确地与物块碰撞：
 
-Downloaded Pages/MD/自定义 Gore（叶子_尸块）.md -> imported-001.gif ![图片](images/tutorials/extracted-045.gif)
+![图片](images/tutorials/Gore-09.gif)
 
 
 
 **质量设置为“低”**：Gore 无法与物块碰撞，并且会迅速淡出屏幕，以此来节省性能资源：
 
-Downloaded Pages/MD/自定义 Gore（叶子_尸块）.md -> imported-001.gif ![图片](images/tutorials/extracted-045.gif)
+![图片](images/tutorials/Gore-10.gif)
 
 
 
@@ -229,7 +229,7 @@ public override void OnKill()
 
 之后我们进入游戏，杀死我们的史莱姆僵尸：
 
-Downloaded Pages/MD/自定义 Gore（叶子_尸块）.md -> imported-001.gif ![图片](images/tutorials/extracted-045.gif)
+![图片](images/tutorials/Gore-11.gif)
 
 *（不赖嘛\~）*
 
@@ -259,7 +259,7 @@ Downloaded Pages/MD/自定义 Gore（叶子_尸块）.md -> imported-001.gif ![�
 
 
 
-Downloaded Pages/MD/自定义 Gore（叶子_尸块）.md -> imported-001.png ![图片](images/tutorials/extracted-037.png)
+![图片](images/tutorials/Gore-12.png)
 
 和尸块一样，新建**cs文件**，随便起个名字（我这里使用**DemoGore\_Leaf**你们随意）作为文件名。将对应的贴图放入其中，并保证**图片名，类名，文件名**一致。
 
@@ -306,7 +306,7 @@ namespace DemoMod.Content.Gores
 
 如果你用了 `PaintedFallingLeaf`，贴图的列数必须是**多列序列图**（原版是 32 列）。**TML**官方给的例子图长这样：
 
-Downloaded Pages/MD/自定义 Gore（叶子_尸块）.md -> imported-001.png ![图片](images/tutorials/extracted-037.png)
+![图片](images/tutorials/Gore-13.png)
 
 在`Gore.NewGore` 里，游戏会对设为 `true` 的 Gore 设置 `Frame = new SpriteFrame(32, 8)`，8 行对应 8 种叶子的形状变体。我们只做一片普通叶子，不设这个标记，贴图单列多行即可。
 
@@ -355,7 +355,7 @@ public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, 
 
 然后我们进入游戏：
 
-Downloaded Pages/MD/自定义 Gore（叶子_尸块）.md -> imported-001.gif ![图片](images/tutorials/extracted-045.gif)
+![图片](images/tutorials/Gore-14.gif)
 
 *非常美丽啊～*
 
@@ -365,11 +365,11 @@ Downloaded Pages/MD/自定义 Gore（叶子_尸块）.md -> imported-001.gif ![�
 
 在创建爆破效果之前，我们先来看看原版的`SpecialAI`为 `7` 的**Gore** :
 
-Downloaded Pages/MD/自定义 Gore（叶子_尸块）.md -> imported-001.png ![图片](images/tutorials/extracted-037.png)
+![图片](images/tutorials/Gore-15.png)
 
 ~~*（这不是之前拿来做粒子的贴图嘛）*~~
 
-Downloaded Pages/MD/自定义 Gore（叶子_尸块）.md -> imported-001.gif ![图片](images/tutorials/extracted-045.gif)
+![图片](images/tutorials/Gore-16.gif)
 
 通过观察我们发现，这个**Gore**的贴图会随机在三帧里面选取一帧显示，然后迅速消失淡出，查看源代码我们发现，在 `UpdateLightningBunnySparks` 中，帧数随机选取发生在**生成的第一帧**：
 
@@ -413,7 +413,7 @@ if (row > 2) row = 2;
 
 #### 创建Gore 文件
 
-Downloaded Pages/MD/自定义 Gore（叶子_尸块）.md -> imported-001.png ![图片](images/tutorials/extracted-037.png)
+![图片](images/tutorials/Gore-17.png)
 
 和尸块一样，新建**cs文件**，随便起个名字（我这里使用**DemoGore\_Explosion**你们随意）作为文件名。将对应的贴图放入其中，并保证**图片名，类名，文件名**一致。
 
@@ -547,7 +547,7 @@ Projectile.Resize(16, 16);
 
 然后进入游戏：
 
-Downloaded Pages/MD/自定义 Gore（叶子_尸块）.md -> imported-001.gif ![图片](images/tutorials/extracted-045.gif)
+![图片](images/tutorials/Gore-18.gif)
 
 非常不错\~
 
@@ -557,7 +557,7 @@ Downloaded Pages/MD/自定义 Gore（叶子_尸块）.md -> imported-001.gif ![�
 
 ### 刀痕 ModGore 模板
 
-Downloaded Pages/MD/自定义 Gore（叶子_尸块）.md -> imported-001.png ![图片](images/tutorials/extracted-037.png)
+![图片](images/tutorials/Gore-19.png)
 
 和尸块一样，新建**cs文件**，随便起个名字（我这里使用**DemoGore\_KnifeMark**你们随意）作为文件名。将对应的贴图放入其中，并保证**图片名，类名，文件名**一致。
 
@@ -709,7 +709,7 @@ public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int da
 
 然后进入游戏就能看到：
 
-Downloaded Pages/MD/自定义 Gore（叶子_尸块）.md -> imported-001.gif ![图片](images/tutorials/extracted-045.gif)
+![图片](images/tutorials/Gore-20.gif)
 
 不错嘛，不过粒子好像写多了，限制也没写，这些内容你们自己补上吧。
 

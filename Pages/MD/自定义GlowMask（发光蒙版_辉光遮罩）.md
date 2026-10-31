@@ -100,7 +100,7 @@ namespace DemoMod.Content.Items
 
 #### 1 对比物品栏：
 
-Downloaded Pages/MD/自定义GlowMask（发光蒙版_辉光遮罩）.md -> imported-001.png ![图片](images/tutorials/extracted-057.png)
+![图片](images/tutorials/GlowMask-01.png)
 
 *好吧，好像看不出来*
 
@@ -108,17 +108,17 @@ Downloaded Pages/MD/自定义GlowMask（发光蒙版_辉光遮罩）.md -> impor
 
 #### 2 对比掉落物：
 
-Downloaded Pages/MD/自定义GlowMask（发光蒙版_辉光遮罩）.md -> imported-001.png ![图片](images/tutorials/extracted-057.png)
+![图片](images/tutorials/GlowMask-02.png)
 
 在白天情况下差异同样很小，不过嘛，一到了夜晚....
 
-Downloaded Pages/MD/自定义GlowMask（发光蒙版_辉光遮罩）.md -> imported-001.png ![图片](images/tutorials/extracted-057.png)
+![图片](images/tutorials/GlowMask-03.png)
 
 你看，瞬间就露馅了：仿制品的黄色纹路黯淡，而原版飞龙身上的火焰依然清晰可见。
 
 #### 3 对比手持物：
 
-|Downloaded Pages/MD/自定义GlowMask（发光蒙版_辉光遮罩）.md -> imported-001.png ![图片](images/tutorials/extracted-057.png)|Downloaded Pages/MD/自定义GlowMask（发光蒙版_辉光遮罩）.md -> imported-001.png ![图片](images/tutorials/extracted-057.png)|
+|![图片](images/tutorials/GlowMask-04.png)|![图片](images/tutorials/GlowMask-05.png)|
 |---|---|
 
 当玩家挥舞武器时，两把武器的 **差** **距** 更加明显了。
@@ -135,7 +135,7 @@ Downloaded Pages/MD/自定义GlowMask（发光蒙版_辉光遮罩）.md -> impor
 
 在创建 **GlowMask** 之前，我们需要先给它安排一个存放的位置。你可以将它放在需要添加发光蒙版的贴图旁边；也可以单独在 `Content` 文件夹下新建一个名为 `GlowMasks` 的文件夹，专门用来放置蒙版贴图。
 
-|Downloaded Pages/MD/自定义GlowMask（发光蒙版_辉光遮罩）.md -> imported-001.png ![图片](images/tutorials/extracted-057.png)|Downloaded Pages/MD/自定义GlowMask（发光蒙版_辉光遮罩）.md -> imported-001.png ![图片](images/tutorials/extracted-057.png)|
+|![图片](images/tutorials/GlowMask-06.png)|![图片](images/tutorials/GlowMask-07.png)|
 |---|---|
 
 当然，发光蒙版也需要一张贴图来显示游戏里的形象。如果你还没有准备贴图也没关系，教程这边给大家提供了一些贴图素材，大家可以下载使用。
@@ -170,7 +170,7 @@ public short glowMask;
 
 
 
-Downloaded Pages/MD/自定义GlowMask（发光蒙版_辉光遮罩）.md -> imported-001.jpeg ![图片](images/tutorials/extracted-064.jpeg)
+![图片](images/tutorials/GlowMask-08.jpeg)
 
 *嗨嗨，开玩笑的（qwq）*
 
@@ -420,15 +420,15 @@ public override void SetStaticDefaults()
 
 
 
-Downloaded Pages/MD/自定义GlowMask（发光蒙版_辉光遮罩）.md -> imported-001.png ![图片](images/tutorials/extracted-057.png)
+![图片](images/tutorials/GlowMask-09.png)
 
 物品栏
 
-Downloaded Pages/MD/自定义GlowMask（发光蒙版_辉光遮罩）.md -> imported-001.gif ![图片](images/tutorials/extracted-066.gif)
+![图片](images/tutorials/GlowMask-10.gif)
 
 掉落物
 
-Downloaded Pages/MD/自定义GlowMask（发光蒙版_辉光遮罩）.md -> imported-001.gif ![图片](images/tutorials/extracted-066.gif)
+![图片](images/tutorials/GlowMask-11.gif)
 
 手持使用
 
@@ -456,16 +456,16 @@ public virtual string GlowTexture => Texture + "_Glow"; //TODO: 这样做很浪�
 
 这意味着，我们不需要像物品那样写个复杂的加载，只需要将准备好的 **发光蒙版** 贴图，放到你的弹幕源码旁：
 
-Downloaded Pages/MD/自定义GlowMask（发光蒙版_辉光遮罩）.md -> imported-001.png ![图片](images/tutorials/extracted-057.png)
+![图片](images/tutorials/GlowMask-12.png)
 
 将这张贴图重命名为：**`你的弹幕类名 + _Glow`**，并保证 **图片名、类名、文件名 一致**。完成以后进入游戏，我们就能看到：
 
-|Downloaded Pages/MD/自定义GlowMask（发光蒙版_辉光遮罩）.md -> imported-001.png ![图片](images/tutorials/extracted-057.png)|Downloaded Pages/MD/自定义GlowMask（发光蒙版_辉光遮罩）.md -> imported-001.png ![图片](images/tutorials/extracted-057.png)|
+|![图片](images/tutorials/GlowMask-13.png)|![图片](images/tutorials/GlowMask-14.png)|
 |---|---|
 
 左：原版，右：发光蒙版
 
-|Downloaded Pages/MD/自定义GlowMask（发光蒙版_辉光遮罩）.md -> imported-001.png ![图片](images/tutorials/extracted-057.png)|Downloaded Pages/MD/自定义GlowMask（发光蒙版_辉光遮罩）.md -> imported-001.png ![图片](images/tutorials/extracted-057.png)|
+|![图片](images/tutorials/GlowMask-15.png)|![图片](images/tutorials/GlowMask-16.png)|
 |---|---|
 
 左：原版，右：发光蒙版
@@ -574,18 +574,18 @@ public override void AdjustMultiTileVineParameters(int i, int j,
 
 
 
-|Downloaded Pages/MD/自定义GlowMask（发光蒙版_辉光遮罩）.md -> imported-001.png ![图片](images/tutorials/extracted-057.png)|Downloaded Pages/MD/自定义GlowMask（发光蒙版_辉光遮罩）.md -> imported-001.png ![图片](images/tutorials/extracted-057.png)|
+|![图片](images/tutorials/GlowMask-17.png)|![图片](images/tutorials/GlowMask-18.png)|
 |---|---|
 
 发光蒙版的贴图制作起来其实非常简单。我们只需要把原贴图中需要发光的部位单独抠出来。丢进绘图软件或在线网站里：
 
-Downloaded Pages/MD/自定义GlowMask（发光蒙版_辉光遮罩）.md -> imported-001.png ![图片](images/tutorials/extracted-057.png)
+![图片](images/tutorials/GlowMask-19.png)
 
 然后调整一下它的透明度，就可以直接在游戏内使用了。这里处理网站使用的是：
 
 [tModWebTools &gt;&gt; ](https://trtool.yingtaoshu.org/) 这是一个面向泰拉瑞亚 模组/资源包 开发的在线工具站，除了贴图处理它还涵盖特效编辑、装备帧生成、解包、xnb 编辑等常用功能。
 
-Downloaded Pages/MD/自定义GlowMask（发光蒙版_辉光遮罩）.md -> imported-001.png ![图片](images/tutorials/extracted-057.png)
+![图片](images/tutorials/GlowMask-20.png)
 
 注意：贴图**越不透明**（不透明度越高），绘制出来的效果就越接近原版颜色；贴图**越透明**（不透明度越低），绘制出来的颜色就越发白；不过也别调得太透明，否则贴图可能就直接“消失”看不见了。
 
@@ -593,11 +593,11 @@ Downloaded Pages/MD/自定义GlowMask（发光蒙版_辉光遮罩）.md -> impor
 
 具体数值大家可以根据自己的需求自行调整。一般把透明度调到 **50%** 或 **75%** 就差不多了。我们把处理好的贴图放入文件：
 
-Downloaded Pages/MD/自定义GlowMask（发光蒙版_辉光遮罩）.md -> imported-001.png ![图片](images/tutorials/extracted-057.png)
+![图片](images/tutorials/GlowMask-21.png)
 
 然后我们进入游戏：
 
-Downloaded Pages/MD/自定义GlowMask（发光蒙版_辉光遮罩）.md -> imported-001.png ![图片](images/tutorials/extracted-057.png)
+![图片](images/tutorials/GlowMask-22.png)
 
 ~~*（好像过于亮了，颜色以及挥动透明度什么的，你们就自己调调吧）*~~
 
@@ -628,7 +628,7 @@ public override void SetStaticDefaults()
 
 
 
-Downloaded Pages/MD/自定义GlowMask（发光蒙版_辉光遮罩）.md -> imported-001.gif ![图片](images/tutorials/extracted-066.gif)
+![图片](images/tutorials/GlowMask-23.gif)
 
 那......自定义**GlowMask** 教程到这里就结束啦！写到这里，说实话，连我自己都没想到这篇文章会变得这么长。一开始我以为发光蒙版只是个很简单的内容，随便讲讲就能收尾，结果真开始写才发现问题是一环扣着一环。
 
