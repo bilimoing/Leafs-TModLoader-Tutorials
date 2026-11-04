@@ -92,6 +92,11 @@ public sealed class TutorialLibrary
                 }
             }
             var html = document.ToHtml(pipeline);
+            // Honor exported line breaks in prose and tables while preserving code examples.
+            html = Regex.Replace(html,
+                @"(<pre\b[^>]*>.*?</pre>|<code\b[^>]*>.*?</code>)|&lt;br\s*/?&gt;",
+                match => match.Groups[1].Success ? match.Value : "<br />",
+                RegexOptions.IgnoreCase | RegexOptions.Singleline);
             var imageIndex = 0;
             layouts.TryGetValue(article.Title, out var imageLayouts);
             html = Regex.Replace(html, @"<img\b[^>]*>", match =>
