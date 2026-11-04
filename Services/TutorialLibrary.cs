@@ -58,11 +58,14 @@ public sealed class TutorialLibrary
             foreach (var line in home.Source.Split('\n'))
             {
                 if (line.StartsWith("## ")) group = line[3..].Replace("**", "").Trim();
-                foreach (Match match in Regex.Matches(line, @"\[([^\]]+)\]\((https?://(?:www\.)?kdocs\.cn/l/[^)]+)\)"))
+                foreach (Match match in Regex.Matches(line, @"\[([^\]]+)\]\(([^)]+)\)"))
                 {
                     var label = Normalize(match.Groups[1].Value);
                     var resolvedLabel = aliases.TryGetValue(label, out var aliasTitle) ? Normalize(aliasTitle) : label;
-                    var article = Articles.FirstOrDefault(a => a.Title != "主页" && (Normalize(a.Title) == resolvedLabel || resolvedLabel.EndsWith(Normalize(a.Title), StringComparison.OrdinalIgnoreCase)));
+                    var destination = match.Groups[2].Value;
+                    var article = destination.EndsWith(".md", StringComparison.OrdinalIgnoreCase)
+                        ? Find(Uri.UnescapeDataString(destination.Split('/').Last()[..^3]))
+                        : Articles.FirstOrDefault(a => a.Title != "主页" && (Normalize(a.Title) == resolvedLabel || resolvedLabel.EndsWith(Normalize(a.Title), StringComparison.OrdinalIgnoreCase)));
                     if (article is null) continue;
                     article.Group = group;
                     article.Order = order++;
